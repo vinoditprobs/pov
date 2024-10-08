@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/tt-firs-neue-trl');
+* {
+    box-sizing: border-box;
+}
+:root{
+    --bs-border-color: #c1c1c1
+}
+body {
+    font-family: 'TT Firs Neue Trl', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;  
+}
