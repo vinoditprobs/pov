@@ -1,4 +1,9 @@
+$primary: #203864;
+$secondary: #D62328;
+
 @import url('https://fonts.cdnfonts.com/css/tt-firs-neue-trl');
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/swiper/swiper-bundle.min.css";
 * {
     box-sizing: border-box;
 }
@@ -9,4 +14,8 @@ body {
     font-family: 'TT Firs Neue Trl', sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;  
+    ::selection {
+        background-color: rgba($color: $primary, $alpha: 0.5);
+        color: white;
+    }
 }
