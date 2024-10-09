@@ -13,6 +13,13 @@ export class HomeComponent {
     ngOnInit(){
       this.scrollMagic.initSM_ForHome
     }
+
+    slideAssets = [
+      { 
+        image: 'images/home/banner-1.jpg', 
+        title: 'expertise',
+      }
+    ];
    
 
 }

@@ -1,0 +1,12 @@
+<div class="swiper slideShow z-0" [ngClass]="SliderZoomInOut ? 'zoomInOut' : '' " >
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let slide of sliderSlides" >
+        <img [src]="slide.image" [alt]="slide.title" class="slide_bg" >
+      </div>
+    </div>
+  <div class="swiper-pagination aside" *ngIf="sliderPagination" ></div>
+ <div *ngIf="sliderNavigation" >
+    <div class="swiper-button-next" ></div>
+    <div class="swiper-button-prev" ></div>
+ </div>
+  </div>

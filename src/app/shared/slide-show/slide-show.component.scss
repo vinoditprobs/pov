@@ -1,0 +1,38 @@
+
+
+
+.slideShow{
+    width: 100%;
+    height: 100%;
+    .swiper-wrapper{
+        height: 100%;
+        .swiper-slide{
+            height: 100%;
+            overflow: hidden;
+            .slide_bg{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    &.zoomInOut{
+        .swiper-wrapper{
+            .swiper-slide{
+                .slide_bg{
+                    transform: scale(1);
+                    transition: transform linear 15s;
+                }
+               &.swiper-slide-active{
+                    .slide_bg{
+                        transform: scale(1.3);
+                       // opacity: 0 !important;
+                    }
+               }
+            }
+        }
+    }
+}
+
+
