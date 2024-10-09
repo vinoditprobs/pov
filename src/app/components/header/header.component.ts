@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +7,12 @@ import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  @Input() navBarColor : string = 'transToLight'
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object){}
 
   fixedHeader:boolean = false
-
+  
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     if (isPlatformBrowser(this.platformId)) {
