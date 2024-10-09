@@ -29,8 +29,8 @@ body {
 
 .navigationBar{
     height: 80px;
-    background-color: $light;
-    color: $dark;
+    background-color:transparent;
+    color: $light;
     display: flex;
     align-items: center;
     position: fixed;
@@ -46,8 +46,8 @@ body {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background-color: $dark;
-        color: $light;
+        background-color: $light;
+        color: $dark;
         border-radius: 50%;
         .pi{
             transition: transform ease-in-out 0.2s;
@@ -59,6 +59,39 @@ body {
             }
         }
     }
+    &.dark{
+        background-color: $dark;
+        color: $light;
+    }
+    &.light{
+        background-color: $light;
+        color: $dark;
+        .hamburger{
+            background-color: $dark;
+            color: $light;
+        }
+    }
+    &.transToDark{
+        transition: background-color ease 0.2s, color ease 0.2s;
+       &.fixed{
+        background-color: $dark;
+       }
+    }
+    &.transToLight{
+        transition: background-color ease 0.2s, color ease 0.2s;
+        .hamburger{
+            transition: background-color ease 0.2s, color ease 0.2s;
+        }
+        
+       &.fixed{
+        background-color: $light;
+        color: $dark;
+        .hamburger{
+            background-color: $dark;
+            color: $light;
+        }
+       }
+    }
 }
 .logo{
     display: inline-block;
@@ -69,8 +102,10 @@ body {
     letter-spacing: 1px;
 }
 main{
-    min-height: calc(100vh - 188px);
-    padding-top: 80px;
+    min-height: calc(100vh - 108px);
+}
+.navSpace{
+    height: 80px;
 }
 
 .container{
@@ -140,8 +175,8 @@ section{
 }
 
 .minFit{
-    min-height: calc(100vh - 80px) !important;
+    min-height: 100vh!important;
 }
 .maxFit{
-    height: calc(100vh - 80px) !important;
+    height:100vh !important;
 }

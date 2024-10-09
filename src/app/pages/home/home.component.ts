@@ -13,5 +13,6 @@ export class HomeComponent {
     ngOnInit(){
       this.scrollMagic.initSM_ForHome
     }
+   
 
 }
