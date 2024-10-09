@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollmagicService } from '../../services/scrollmagic.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  constructor(private scrollMagic: ScrollmagicService){}
+
+    ngOnInit(){
+      this.scrollMagic.initSM_ForHome
+    }
 
 }
