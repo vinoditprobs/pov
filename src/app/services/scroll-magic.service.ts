@@ -11,7 +11,7 @@ export class ScrollMagicService {
   constructor(@Inject(PLATFORM_ID) private platformId: Object, @Inject(DOCUMENT) private document: Document) {}
 
   initScrollMagic() {
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId)){
       const controller = new ScrollMagic.Controller();
 
       const shesKeys = this.document.querySelector('.shes_keys');
