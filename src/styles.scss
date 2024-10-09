@@ -72,15 +72,15 @@ body {
         }
     }
     &.transToDark{
-        transition: background-color ease 0.2s, color ease 0.2s;
+        transition: background-color ease 0.5s, color ease 0.5s;
        &.fixed{
         background-color: $dark;
        }
     }
     &.transToLight{
-        transition: background-color ease 0.2s, color ease 0.2s;
+        transition: background-color ease 0.5s, color ease 0.5s;
         .hamburger{
-            transition: background-color ease 0.2s, color ease 0.2s;
+            transition: background-color ease 0.5s, color ease 0.5s;
         }
         
        &.fixed{

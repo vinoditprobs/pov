@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScrollmagicService } from '../../services/scrollmagic.service';
+import { ScrollMagicService } from '../../services/scroll-magic.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +8,11 @@ import { ScrollmagicService } from '../../services/scrollmagic.service';
 })
 export class HomeComponent {
 
-  constructor(private scrollMagic: ScrollmagicService){}
+  constructor(private ScrollMagicService: ScrollMagicService){}
 
     ngOnInit(){
-      this.scrollMagic.initSM_ForHome
+      this.ScrollMagicService.initScrollMagic()
     }
-
     slideAssets = [
       { 
         image: 'images/home/banner-1.jpg', 
