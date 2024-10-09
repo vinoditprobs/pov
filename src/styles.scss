@@ -7,6 +7,8 @@ $light:#ffffff;
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/swiper/swiper-bundle.min.css";
 @import "primeicons/primeicons.css";
+@import "splitting/dist/splitting.css";
+@import "splitting/dist/splitting-cells.css";
 
 * {
     box-sizing: border-box;
@@ -35,6 +37,7 @@ body {
     display: flex;
     align-items: center;
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
@@ -70,7 +73,6 @@ body {
 }
 main{
     min-height: calc(100vh - 188px);
-    background-color: #d2d2d2;
     padding-top: 80px;
 }
 
@@ -131,4 +133,18 @@ main{
         }
        
     }
+}
+
+
+
+
+section{
+    position: relative;
+}
+
+.minFit{
+    min-height: calc(100vh - 80px) !important;
+}
+.maxFit{
+    height: calc(100vh - 80px) !important;
 }
