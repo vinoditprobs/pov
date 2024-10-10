@@ -16,7 +16,7 @@ export class HeaderComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     if (isPlatformBrowser(this.platformId)) {
-      if(window.pageYOffset > 50){
+      if(window.pageYOffset > 100){
           this.fixedHeader = true
       }else{
          this.fixedHeader = false

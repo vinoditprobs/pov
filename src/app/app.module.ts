@@ -14,6 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { WorkComponent } from './pages/work/work.component';
 import { EthosComponent } from './pages/ethos/ethos.component';
 import { SlideShowComponent } from './shared/slide-show/slide-show.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SlideShowComponent } from './shared/slide-show/slide-show.component';
     ContactComponent,
     WorkComponent,
     EthosComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

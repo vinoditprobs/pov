@@ -1,6 +1,6 @@
 <main>
-    <section style="background-color: antiquewhite;" >
-        <div class="bg" >
+    <section >
+        <div class="bg bannerBg" >
             <span class="overlay" style="background-color: rgba(0, 0, 0, 0.1);" ></span>
             <app-slide-show [sliderSlides]="slideAssets" [sliderNavigation]="false" [sliderPagination]="false"
             [SliderZoomInOut]="false"></app-slide-show>
@@ -8,9 +8,23 @@
         <div class="container" >
             <div class="row minFit align-items-center" >
                 <div class="col-sm-12 text-center" >
-                    <h1 class="display-1 text-light shes_keys" style="transform: translateY(200px);" >
-                       <span class="fw-light" >CREATIVITY</span> <br><span class="fw-light" >FOR</span> <br><span class="fw-bold" >INFLUENCE</span>
+                    <h1 class="display-1 text-light headline" >
+                       CREATIVITY<br>FOR<br><strong>INFLUENCE</strong>
                     </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-secondary" >
+        <div class="container-fuied container_space " >
+            <div class="row mb-3" >
+                <div class="col-sm-12 text-center" >
+                    <h2 class="fs-3 fw-semibold" >CLIENTS TICKER</h2>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-sm-12" >
+                    <app-clients></app-clients>
                 </div>
             </div>
         </div>

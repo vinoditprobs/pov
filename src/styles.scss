@@ -1,5 +1,5 @@
 $primary: #000000;
-$secondary: #434343;
+$secondary: #F7F7F7;
 $dark: #000000;
 $light:#ffffff;
 
@@ -25,7 +25,9 @@ body {
     }
 }
 
-
+strong{
+    font-weight: 700;
+}
 
 .navigationBar{
     height: 80px;
@@ -72,15 +74,15 @@ body {
         }
     }
     &.transToDark{
-        transition: background-color ease 0.5s, color ease 0.5s;
+        transition: background-color ease 0.75s, color ease 0.75s;
        &.fixed{
         background-color: $dark;
        }
     }
     &.transToLight{
-        transition: background-color ease 0.5s, color ease 0.5s;
+        transition: background-color ease 0.75s, color ease 0.75s;
         .hamburger{
-            transition: background-color ease 0.5s, color ease 0.5s;
+            transition: background-color ease 0.75s, color ease 0.75s;
         }
         
        &.fixed{
@@ -108,7 +110,7 @@ main{
     height: 80px;
 }
 
-.container{
+.container, .container-fuied{
     &.container_space{
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -119,6 +121,8 @@ main{
 .footer{
     background-color: $dark;
     color: $light;
+    position: relative;
+    z-index: 9;
 }
 
 .social_links_list{
@@ -172,6 +176,7 @@ main{
 
 section{
     position: relative;
+    overflow: hidden;
 }
 
 .minFit{
