@@ -174,10 +174,7 @@ main{
 
 
 
-section{
-    position: relative;
-    overflow: hidden;
-}
+
 
 .minFit{
     min-height: 100vh!important;
@@ -186,8 +183,9 @@ section{
     height:100vh !important;
 }
 
-
 section{
+    position: relative;
+    overflow: hidden;
     .bg{
         position: absolute;
         left: 0;
@@ -211,6 +209,59 @@ section{
     .container{
         position: relative;
         z-index: 2;
+    }
+}
+.parallax{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    .parallax_bg{
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        z-index: 1;
+        .overlay{
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.0);
+            pointer-events: none;
+            z-index: 1;
+        }
+    }
+    .parallax_title, .parallax_bottom_title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        padding: 0rem 1rem;
+        .title{
+            font-size: calc(1.625rem + 4.5vw);
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $light;
+            transform: scale(0);
+            transform-origin: left center;
+            margin: 0;
+            list-style: 0;
+        }
+    }
+    .parallax_bottom_title{
+        text-align: right;
+        top: inherit;
+        left: inherit;
+        right: 0;
+        bottom: 0;
+        .title{
+            transform: scale(1);
+            transform-origin: right center;
+        }
     }
 }
 
