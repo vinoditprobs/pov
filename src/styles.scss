@@ -361,6 +361,64 @@ section{
     }
 }
 
+
+.spot_light{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    margin: 0 0.05em;
+    animation: rotateSpotlight 7s infinite linear;
+    pointer-events: none;
+    
+    &::after{
+        content:'';
+        position: absolute;
+        left: 51%;
+    top: -0.7em;
+    width: 30vw;
+    background-image: url(/images/sfot.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 2em;
+    opacity: 0.5;
+    z-index: -2;
+    }
+    &::before{
+        content: '';
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgb(238, 238, 238);
+        z-index: 2;
+    }
+}
+
+@keyframes rotateSpotlight {
+    0% {
+      transform: rotate(0deg) scaleX(1.5);
+    }
+    25% {
+        transform: rotate(90deg) scaleX(1);
+      }
+    50% {
+    transform: rotate(180deg) scaleX(0.5);
+        }
+    75% {
+        transform: rotate(270deg) scaleX(0.4);
+            }
+    100% {
+      transform: rotate(360deg) scaleX(1.5);
+    }
+  }
+
+
 @media(min-width: 1200px){
 .display-1 {
     font-size: 7rem;
