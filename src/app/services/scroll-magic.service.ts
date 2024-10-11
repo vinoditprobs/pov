@@ -43,6 +43,19 @@ export class ScrollMagicService {
 
       const parallaxBg = this.document.querySelectorAll('.parallax');
 
+      
+      parallaxBg.forEach((element, index) => {
+        const scene0 = new ScrollMagic.Scene({
+          triggerElement: element,
+          triggerHook: 1,
+          duration: '100%'
+        })
+        .setTween(element.querySelector('.parallax_bg .video_player video'), {y: "100%"})
+        //.addIndicators({ name: `Parallax ${index + 1}` })
+        .addTo(controller);
+      });
+      
+
       parallaxBg.forEach((element, index) => {
         const scene = new ScrollMagic.Scene({
           triggerElement: element, 

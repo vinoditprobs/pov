@@ -213,10 +213,11 @@ section{
 }
 .parallax{
     position: relative;
+    top: 0;
     overflow: hidden;
     z-index: 2;
     .parallax_bg{
-        position: relative;
+        position: absolute;
         left: 0;
         top: 0;
         width: 100%;
@@ -233,6 +234,13 @@ section{
             background-color: rgba($color: #000000, $alpha: 0.0);
             pointer-events: none;
             z-index: 1;
+        }
+        .video_player{
+            video{
+                position: relative;
+                top: -100%;
+            }
+           
         }
     }
     .parallax_title, .parallax_bottom_title{
