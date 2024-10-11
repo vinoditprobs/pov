@@ -17,6 +17,22 @@ export class HomeComponent {
       { 
         image: 'images/home/banner-1.jpg', 
         title: 'expertise',
+      },
+      { 
+        image: 'images/home/banner-2.jpg', 
+        title: 'expertise',
+      },
+      { 
+        image: 'images/home/banner-3.jpg', 
+        title: 'expertise',
+      },
+      { 
+        image: 'images/home/banner-4.jpg', 
+        title: 'expertise',
+      },
+      { 
+        image: 'images/home/banner-5.jpg', 
+        title: 'expertise',
       }
     ];
    

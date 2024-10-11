@@ -31,6 +31,7 @@ export class SlideShowComponent {
        loop:true,
       //autoHeight: false,
        effect: "fade",
+       direction:'vertical',
        navigation: {
          nextEl: ".swiper-button-next",
          prevEl: ".swiper-button-prev",
@@ -43,7 +44,7 @@ export class SlideShowComponent {
        speed: 2000,
        
        autoplay: {
-         delay: 5000,
+         delay: 4000,
          disableOnInteraction: true,
        }
        

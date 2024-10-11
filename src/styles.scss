@@ -370,7 +370,7 @@ section{
     background-color: transparent;
     position: relative;
     margin: 0 0.05em;
-    animation: rotateSpotlight 7s infinite linear;
+    
     pointer-events: none;
     
     &::after{
@@ -383,8 +383,10 @@ section{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 2em;
-    opacity: 0.5;
+    opacity: 0.35;
     z-index: -2;
+    transform-origin:left 50%;
+    animation: rotateSpotlight 10s infinite ease-out 0.2s;
     }
     &::before{
         content: '';
@@ -402,19 +404,19 @@ section{
 
 @keyframes rotateSpotlight {
     0% {
-      transform: rotate(0deg) scaleX(1.5);
+      transform: rotate(0deg) scaleX(1.1);
     }
     25% {
-        transform: rotate(90deg) scaleX(1);
+        transform: rotate(90deg) scaleX(0.9);
       }
     50% {
-    transform: rotate(180deg) scaleX(0.5);
+    transform: rotate(180deg) scaleX(0.6);
         }
     75% {
         transform: rotate(270deg) scaleX(0.4);
             }
     100% {
-      transform: rotate(360deg) scaleX(1.5);
+      transform: rotate(360deg) scaleX(1.1);
     }
   }
 
