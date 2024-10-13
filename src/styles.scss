@@ -569,6 +569,7 @@ section{
         top: 50%;
         transform: translate(-50%,-50%);
         background-color: rgb(238, 238, 238);
+        border: 0.08em solid $dark;
         z-index: 2;
     }
 }
