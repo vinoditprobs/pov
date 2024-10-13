@@ -22,7 +22,8 @@ body {
     font-family: 'TT Firs Neue Trl', sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    background-color: $light;  
+    background-color: $light;
+    scroll-behavior: smooth;
     color: $dark;
     ::selection {
         background-color: rgba($color: $primary, $alpha: 0.5);
