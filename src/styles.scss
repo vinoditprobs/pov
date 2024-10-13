@@ -13,6 +13,8 @@ $light:#ffffff;
 :root{
     --bs-border-color: #c1c1c1
 }
+
+
 body {
     font-family: 'TT Firs Neue Trl', sans-serif;
     font-optical-sizing: auto;
@@ -95,6 +97,7 @@ strong{
        }
     }
 }
+
 .logo{
     display: inline-block;
     text-decoration: none;
@@ -109,6 +112,160 @@ main{
 .navSpace{
     height: 80px;
 }
+
+
+a {
+    &.clear {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &.btn {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+button {
+    &.clear {
+        text-decoration: none;
+        color: inherit;
+        background-color: transparent;
+        border: none;
+        padding: inherit;
+        text-align: left;
+    }
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-check:checked+.btn,
+:not(.btn-check)+.btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+    color: var(--bs-white);
+
+    &:hover {
+        color: var(--bs-white);
+    }
+}
+
+.p-ripple{
+    &.primary_ripple{
+        .p-ink{
+            background: rgba($color: $primary, $alpha: 0.5);
+        }
+    }
+    &.secondary_ripple{
+        .p-ink{
+            background: rgba($color: $secondary, $alpha: 0.5);
+        }
+    }
+}
+
+.btn{
+    &.btn-link{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 500;
+        position: relative;
+        height: auto;
+        min-height: 32px;
+        overflow: visible;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 20px;
+            height: 2px;
+            background-color: $secondary;
+            transition: width cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+        }
+        &:hover{
+            &::after{
+                width: 100%;
+            }
+        }
+        &:focus, &:focus-visible, &:active{
+            color: inherit;
+            &:hover{
+                color: inherit;
+            }
+        }
+    }
+    &.btn-lg{
+        &.btn-link{
+            padding-left: 0;
+            padding-right: 0;
+        }  
+    }
+}
+
+
+.colUpAnim {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    &.visible{
+        opacity: 1;
+        transform: none;
+    }
+}
+.colDownAnim {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    &.visible{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.colLeftAnim {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    &.visible{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.colRightAnim {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    &.visible{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.colRightAnim,.colLeftAnim,.colUpAnim,.colDownAnim{
+    &:nth-child(2){
+        transition-delay: 0.25s;
+    }
+    &:nth-child(3){
+        transition-delay: 0.5s;
+    }
+    &:nth-child(4){
+        transition-delay: 0.75s;
+    }
+    &:nth-child(5){
+        transition-delay: 1s;
+    }
+    &:nth-child(6){
+        transition-delay: 1.25s;
+    }
+    &:nth-child(7){
+        transition-delay: 1.5s;
+    }
+}
+
 
 .container, .container-fuied{
     &.container_space{
@@ -436,3 +593,13 @@ section{
     font-size: 7rem;
 }
 }
+
+@media(max-width: 768px){
+.sm-vert-text{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    transform-origin: 0;
+    text-orientation: mixed;
+}
+}
+
