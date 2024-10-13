@@ -64,7 +64,7 @@ export class ScrollMagicService {
           triggerHook: 1,
           duration: '100%'
         })
-        .setTween(element.querySelector('.parallax_bg .video_player video'), {y: "100%",  ease:'sine.out' })
+        .setTween(element.querySelector('.parallax_bg .video_player video'), {y: "100%",  ease:'liner' })
         //.addIndicators({ name: `Parallax ${index + 1}` })
         .addTo(controller);
       });
