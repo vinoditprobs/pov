@@ -21,19 +21,19 @@
         <nav>
             <ul>
                 <li>
-                    <a routerLink="" class="menu_link active" >H<span class="mainChar" >o</span>me</a>
+                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()" class="menu_link" >H<span class="mainChar" >o</span>me</a>
                 </li>
                 <li>
-                    <a routerLink="" class="menu_link" >Ab<span class="mainChar" >o</span>ut Us</a>
+                    <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()" class="menu_link" >Ab<span class="mainChar" >o</span>ut Us</a>
                 </li>
                 <li>
-                    <a routerLink="" class="menu_link" >Our W<span class="mainChar" >o</span>rk</a>
+                    <a routerLink="/work" routerLinkActive="active" (click)="closeMenu()" class="menu_link" >Our W<span class="mainChar" >o</span>rk</a>
                 </li>
                 <li>
-                    <a routerLink="" class="menu_link" >Eth<span class="mainChar" >0</span>s</a>
+                    <a routerLink="/ethos" routerLinkActive="active" (click)="closeMenu()" class="menu_link" >Eth<span class="mainChar" >0</span>s</a>
                 </li>
                 <li>
-                    <a routerLink="" class="menu_link" >C<span class="mainChar" >o</span>ntact Us</a>
+                    <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()" class="menu_link" >C<span class="mainChar" >o</span>ntact Us</a>
                 </li>
             </ul>
         </nav>
