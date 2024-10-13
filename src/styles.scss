@@ -7,6 +7,9 @@ $light:#ffffff;
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/swiper/swiper-bundle.min.css";
 @import "primeicons/primeicons.css";
+html{
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
 }

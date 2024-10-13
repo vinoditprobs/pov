@@ -71,7 +71,7 @@ export class ScrollMagicService {
       
 
       parallaxBg.forEach((element, index) => {
-        const scene = new ScrollMagic.Scene({
+      new ScrollMagic.Scene({
           triggerElement: element, 
           triggerHook: 0.12,
           duration: '85%'
