@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
 
 @Component({
@@ -12,7 +12,7 @@ export class HeaderComponent {
 
   menuStatus: boolean = false
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object){}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,  @Inject(DOCUMENT) private document: Document){}
 
   fixedHeader:boolean = false
   
@@ -29,10 +29,18 @@ export class HeaderComponent {
   }
 
   openMenu(){
-    this.menuStatus = true
+    this.menuStatus = true;
+    const body = this.document.querySelector('body')
+    if(this.menuStatus){
+      body?.classList.add('stopScroll');
+    }else{
+      body?.classList.remove('stopScroll');
+    }
   }
   closeMenu(){
     this.menuStatus = false
+    const body = this.document.querySelector('body')
+    body?.classList.remove('stopScroll');
   }
 
 }

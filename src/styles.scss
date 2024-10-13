@@ -29,6 +29,9 @@ body {
         background-color: rgba($color: $primary, $alpha: 0.5);
         color: white;
     }
+    &.stopScroll{
+        overflow: hidden;
+    }
 }
 
 strong{
