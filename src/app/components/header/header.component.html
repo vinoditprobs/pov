@@ -8,11 +8,34 @@
                     <a href="" title="Point Of View" class="logo" >P.O.V.</a>
                 </div>
                 <div class="col-8 text-end " >
-                    <button class="hamburger" >
+                    <button class="hamburger" (click)="openMenu()" >
                         <i class="pi pi-ellipsis-v"></i>
                     </button>
                 </div>
             </div>
         </div>        
+    </div>
+
+    <div class="menu" [ngClass]="menuStatus ? 'open' : '' " >
+        <button class="clear md p_icon close fs-4" (click)="closeMenu()" ><i class="pi pi-times" ></i></button>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="" class="menu_link active" >H<span class="mainChar" >o</span>me</a>
+                </li>
+                <li>
+                    <a routerLink="" class="menu_link" >Ab<span class="mainChar" >o</span>ut Us</a>
+                </li>
+                <li>
+                    <a routerLink="" class="menu_link" >Our W<span class="mainChar" >o</span>rk</a>
+                </li>
+                <li>
+                    <a routerLink="" class="menu_link" >Eth<span class="mainChar" >0</span>s</a>
+                </li>
+                <li>
+                    <a routerLink="" class="menu_link" >C<span class="mainChar" >o</span>ntact Us</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>

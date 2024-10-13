@@ -9,6 +9,9 @@ import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/co
 export class HeaderComponent {
   @Input() navBarColor : string = 'transToLight'
 
+
+  menuStatus: boolean = false
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object){}
 
   fixedHeader:boolean = false
@@ -23,6 +26,13 @@ export class HeaderComponent {
       }
        
     }
+  }
+
+  openMenu(){
+    this.menuStatus = true
+  }
+  closeMenu(){
+    this.menuStatus = false
   }
 
 }
