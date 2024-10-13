@@ -12,7 +12,8 @@ export class SlideShowComponent {
   @Input() sliderSlides: any[] = [];
   @Input() sliderPagination: boolean = true;
   @Input() sliderNavigation: boolean = true;
-  @Input() SliderZoomInOut: boolean = true
+  @Input() animStyle: string = ''
+  
    
    private swiper: Swiper | undefined;
  
@@ -29,20 +30,14 @@ export class SlideShowComponent {
        slidesPerView: 1,
        spaceBetween: 0,
        loop:true,
+       centeredSlides:true,
       //autoHeight: false,
-       effect: "fade",
-       direction:'vertical',
-       navigation: {
-         nextEl: ".swiper-button-next",
-         prevEl: ".swiper-button-prev",
-       },
-       pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-       },
+       //effect: "fade",
+      // direction:'vertical',
+       navigation: false,
+       pagination: false,
        allowTouchMove: false,
        speed: 2000,
-       
        autoplay: {
          delay: 4000,
          disableOnInteraction: true,
