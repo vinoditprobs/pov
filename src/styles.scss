@@ -41,7 +41,7 @@ strong{
 .navigationBar{
     height: 80px;
     background-color:transparent;
-    color: $light;
+    color: $dark;
     display: flex;
     align-items: center;
     position: fixed;
@@ -57,8 +57,8 @@ strong{
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background-color: $light;
-        color: $dark;
+        background-color: $dark;
+        color: $light;
         border-radius: 50%;
         .pi{
             transition: transform ease-in-out 0.2s;
@@ -73,34 +73,45 @@ strong{
     &.dark{
         background-color: $dark;
         color: $light;
+        .hamburger{
+            background-color: $light;
+            color: $dark;   
+        }
     }
     &.light{
         background-color: $light;
         color: $dark;
-        .hamburger{
-            background-color: $dark;
-            color: $light;
-        }
     }
     &.transToDark{
-        transition: background-color ease 0.75s, color ease 0.75s;
-       &.fixed{
-        background-color: $dark;
-       }
-    }
-    &.transToLight{
+        background-color: transparent;
+        color: $light;
         transition: background-color ease 0.75s, color ease 0.75s;
         .hamburger{
+            background-color: $light;
+            color: $dark;
+            }
+        &.fixed{
+        background-color: $dark;
+       }
+       
+    }
+    &.transToLight{
+        background-color: transparent;
+        color: $light;
+        transition: background-color ease 0.75s, color ease 0.75s;
+        .hamburger{
+            background-color: $light;
+            color: $dark;
             transition: background-color ease 0.75s, color ease 0.75s;
         }
-        
+    
        &.fixed{
         background-color: $light;
         color: $dark;
         .hamburger{
             background-color: $dark;
             color: $light;
-        }
+            }
        }
     }
 }

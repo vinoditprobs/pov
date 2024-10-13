@@ -7,9 +7,6 @@ import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/co
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  @Input() navBarColor : string = 'transToLight'
-
-
   menuStatus: boolean = false
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,  @Inject(DOCUMENT) private document: Document){}

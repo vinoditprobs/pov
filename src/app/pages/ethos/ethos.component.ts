@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavbarThemeService } from '../../services/navbar-theme.service';
 
 @Component({
   selector: 'app-ethos',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './ethos.component.scss'
 })
 export class EthosComponent {
-
+  constructor(private NavbarThemeService: NavbarThemeService){}
+  ngOnInit(){
+    this.NavbarThemeService.changeHeaderTheme('light')
+  }
 }
