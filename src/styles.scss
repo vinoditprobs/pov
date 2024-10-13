@@ -588,6 +588,38 @@ section{
   }
 
 
+  .parallax_box_rows{
+    .row{
+        margin-bottom: 2rem;
+        .sm-vert-text{
+            transform-origin: 3px;  
+            text-align: right;
+        }
+
+        &:nth-child(even){
+            .sm-vert-text{
+                transform-origin: calc(100% - 10px); 
+                text-align: left;
+            }
+            .col{
+                &:first-child{
+                    order: 1 !important;
+                }
+                &:last-child{
+                    order: 0 !important;
+                }
+            }
+        }
+    }
+
+  }
+
+  .cover{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit:  cover !important;
+  }
+
 @media(min-width: 1200px){
 .display-1 {
     font-size: 7rem;
@@ -598,8 +630,14 @@ section{
 .sm-vert-text{
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    transform-origin: 0;
+    transform-origin: calc(100% - 5px);
     text-orientation: mixed;
+    &.origin-left{
+        transform-origin: 3px;  
+    }
+    &.origin-right{
+        transform-origin: calc(100% - 10px); 
+    }
 }
 }
 

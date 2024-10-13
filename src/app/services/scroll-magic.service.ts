@@ -16,6 +16,20 @@ export class ScrollMagicService {
     if (isPlatformBrowser(this.platformId)){
       const controller = new ScrollMagic.Controller();
 
+      const revealElements = this.document.querySelectorAll(
+        ".colUpAnim, .colDownAnim, .colLeftAnim, .colRightAnim, .box_card"
+      );
+      for (let i = 0; i < revealElements.length; i++) {
+        new ScrollMagic.Scene({
+          triggerElement: revealElements[i],
+          offset: 50,
+          triggerHook: 0.9,
+        })
+          .setClassToggle(revealElements[i], "visible")
+          .addTo(controller);
+      }
+    
+ 
       const headline = this.document.querySelector('.headline');
       //let shesKeys = gsap.to(".shes_keys", 1, {className: "shes_keys"});
       if(headline){
@@ -50,7 +64,7 @@ export class ScrollMagicService {
           triggerHook: 1,
           duration: '100%'
         })
-        .setTween(element.querySelector('.parallax_bg .video_player video'), {y: "100%",  ease:'liner' })
+        .setTween(element.querySelector('.parallax_bg .video_player video'), {y: "100%",  ease:'sine.out' })
         //.addIndicators({ name: `Parallax ${index + 1}` })
         .addTo(controller);
       });
