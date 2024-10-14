@@ -805,6 +805,35 @@ section{
 }
 
 
+.tag_list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 1.5rem;
+    justify-content: space-between;
+    li{
+        flex-shrink: 0;
+        text-align: center;
+        width: 20%;
+        .tag{
+            display: inline-block;
+            padding:0.65rem 1.25rem;
+            background-color: $dark;
+            border: 1px solid $dark;
+            border-radius: 6px;
+            color: $light;
+            width: 100%;
+            transition: all ease-out 0.25s;
+            font-weight: 400;
+            cursor: url('/images/cursor.png') 16 16, auto;
+            &:hover{
+                background-color: transparent;
+                color: $dark;
+            }
+        }
+    }
+}
+
 
 @media(min-width: 1200px){
 .display-1 {
