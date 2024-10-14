@@ -1,7 +1,9 @@
 <div class="swiper galleryTiker">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let client of gallery" >
-        <img src="{{client.img}}" alt="{{client.title}}" class="client_logo" >
+      <div class="swiper-slide" *ngFor="let thum of gallery" >
+        <div class="ratio ratio-1x1 overflow-hidden bg-secondary " >
+          <img src="{{thum.img}}" alt="{{thum.title}}" class="cover"  >
+        </div>
       </div>
     </div>
     <div class="swiper-pagination"></div>

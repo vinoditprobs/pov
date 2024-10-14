@@ -28,8 +28,8 @@ export class GalleryTickerComponent {
       if (isPlatformBrowser(this.platformId)) {
   
         this.swiper = new Swiper(".galleryTiker", {
-          slidesPerView: 3,
-          spaceBetween: 10,
+          slidesPerView: 1.2,
+          spaceBetween: 24,
           freeMode: true,
           watchSlidesProgress: true,
           loop: true,
@@ -43,16 +43,13 @@ export class GalleryTickerComponent {
           },
           breakpoints: {
             640: {
-              slidesPerView: 3,
-              spaceBetween: 10,
+              slidesPerView: 1.2
             },
             768: {
-              slidesPerView: 4,
-              spaceBetween: 20,
+              slidesPerView: 2.2
             },
             1024: {
-              slidesPerView: 5,
-              spaceBetween: 50,
+              slidesPerView: 4.5
             },
           },
         });

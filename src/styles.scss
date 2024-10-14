@@ -396,7 +396,7 @@ button {
 }
 
 
-.container, .container-fuied{
+.container, .container-fluid{
     &.container_space{
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -767,6 +767,7 @@ section{
         font-weight: 300;
         //filter: drop-shadow(5px 0  0 transparent);
         transition: all ease 0.25s;
+        cursor: url('/images/cursor.png') 16 16, auto;
     }
     .key_list{
         margin: 0;
