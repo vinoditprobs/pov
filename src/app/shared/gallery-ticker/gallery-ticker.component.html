@@ -1,0 +1,8 @@
+<div class="swiper galleryTiker">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let client of gallery" >
+        <img src="{{client.img}}" alt="{{client.title}}" class="client_logo" >
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>

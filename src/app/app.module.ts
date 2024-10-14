@@ -16,6 +16,7 @@ import { EthosComponent } from './pages/ethos/ethos.component';
 import { SlideShowComponent } from './shared/slide-show/slide-show.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { PlayerComponent } from './shared/player/player.component';
+import { GalleryTickerComponent } from './shared/gallery-ticker/gallery-ticker.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PlayerComponent } from './shared/player/player.component';
     EthosComponent,
     SlideShowComponent,
     ClientsComponent,
-    PlayerComponent
+    PlayerComponent,
+    GalleryTickerComponent
   ],
   imports: [
     BrowserModule,
