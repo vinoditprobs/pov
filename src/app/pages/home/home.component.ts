@@ -1,6 +1,5 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScrollMagicService } from '../../services/scroll-magic.service';
-import { DOCUMENT } from '@angular/common';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
 
 @Component({

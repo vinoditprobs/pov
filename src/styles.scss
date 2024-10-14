@@ -811,6 +811,8 @@ section{
     flex-wrap: wrap;
     gap: 2.5rem 1.5rem;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
     li{
         flex-shrink: 0;
         text-align: center;
@@ -831,6 +833,25 @@ section{
                 color: $dark;
             }
         }
+    }
+}
+
+.povArt{
+    width: 80vw;
+    min-width: 50%;
+    max-width: 650px;
+    margin: 0 auto;
+    transform: scale(0);
+    opacity: 1;
+    transform-origin: center center;
+    .char_o{
+
+    }
+    .char_p{
+        
+    }
+    .char_v{
+        
     }
 }
 
@@ -896,6 +917,12 @@ section{
     }
     &.origin-right{
         transform-origin: calc(100% - 10px); 
+    }
+}
+.tag_list{
+    gap: 1.5rem 1rem;
+    li{
+        width: 30%;
     }
 }
 }

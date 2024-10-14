@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
+import { ScrollMagicService } from '../../services/scroll-magic.service';
 
 @Component({
   selector: 'app-about',
@@ -7,8 +8,7 @@ import { NavbarThemeService } from '../../services/navbar-theme.service';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  constructor(private NavbarThemeService: NavbarThemeService){}
-
+  constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService,){}
 
   gallery = [
     {
@@ -48,6 +48,7 @@ export class AboutComponent {
   ngOnInit(){
    
     this.NavbarThemeService.changeHeaderTheme('dark');
+    this.ScrollMagicService.initScrollMagic();
     //alert();
 
   }

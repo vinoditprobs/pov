@@ -103,6 +103,39 @@ export class ScrollMagicService {
         //.addIndicators({ name: `Parallax ${index + 1}` })
         .addTo(controller);
       });
+
+
+
+
+
+     
+      const povArtSection = this.document.querySelector('.povArtSection');
+        if (povArtSection) {
+            new ScrollMagic.Scene({
+              triggerElement:povArtSection, 
+              triggerHook:0,
+              duration: '75%'
+              // Adjust the duration as needed
+            })
+            //.setTween(povArtSection, { backgroundColor: 'red' }) 
+            .setPin(povArtSection) // Add units to 'y'
+            //.addIndicators({ name: `Parallax` })  // Uncomment for debugging if needed
+            .addTo(controller);
+        }
+
+        const povArt = this.document.querySelector('.povArt');
+        if (povArt) {
+            new ScrollMagic.Scene({
+              triggerElement:povArtSection, 
+              triggerHook:0,
+              duration: '100%'
+              // Adjust the duration as needed
+            })
+            .setTween(povArt, {  scale:1.3, opacity:1 })
+            //.addIndicators({ name: `Parallax` })  // Uncomment for debugging if needed
+            .addTo(controller);
+        }
+
           
     }
   }
