@@ -10,7 +10,7 @@ export class AboutComponent {
   constructor(private NavbarThemeService: NavbarThemeService){}
   ngOnInit(){
    
-    this.NavbarThemeService.changeHeaderTheme('light');
+    this.NavbarThemeService.changeHeaderTheme('dark');
     //alert();
   }
 }
