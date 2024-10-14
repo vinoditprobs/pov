@@ -469,6 +469,10 @@ button {
     height:100vh !important;
 }
 
+.minInnerFit{
+    min-height: calc(100vh - 80px) !important;
+}
+
 section{
     position: relative;
     overflow: hidden;
@@ -750,9 +754,104 @@ section{
     object-fit:  cover !important;
   }
 
+.keyFeatures{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .title{
+        font-size: calc(1.5rem + 3.5vw);
+        display: inline-block;
+        margin-right: 0.5em;
+        line-height: 1;
+        flex-shrink: 0; 
+        font-weight: 300;
+        //filter: drop-shadow(5px 0  0 transparent);
+        transition: all ease 0.25s;
+    }
+    .key_list{
+        margin: 0;
+        padding: 0;
+        display: inline-flex;
+        list-style: none;
+        overflow-x: auto;
+        li{
+            float: left;
+            width: calc(1.5rem + 3vw);
+            height: calc(1.5rem + 3vw);
+            background-color: $secondary;
+            margin-right: 1vw;
+            margin-bottom: 0.5em;
+            flex-shrink: 0; 
+            overflow: hidden;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    &:hover{
+        .title{
+            font-weight: 600;
+           // filter: drop-shadow(5px 0  0 $black);
+        }
+    }
+}
+
+
+
 @media(min-width: 1200px){
 .display-1 {
     font-size: 7rem;
+}
+
+.keyFeatures{
+    .key_list{
+        visibility: hidden;
+        pointer-events: none;
+        li{
+           opacity: 0;
+           transition: all ease-out 0.3s;
+           transform: translateX(-50px);
+           &:nth-child(2){
+            transition-delay: 0.15s;
+           }
+           &:nth-child(3){
+            transition-delay: 0.30s;
+           }
+           &:nth-child(4){
+            transition-delay: 0.45s;
+           }
+           &:nth-child(5){
+            transition-delay: 0.60s;
+           }
+           &:nth-child(6){
+            transition-delay: 0.75s;
+           }
+           &:nth-child(7){
+            transition-delay: 0.90s;
+           }
+           &:nth-child(8){
+            transition-delay: 1.05s;
+           }
+        }
+    }
+    &:hover{
+        .key_list{
+            visibility: visible;
+            pointer-events: all;
+            li{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+    }
 }
 }
 

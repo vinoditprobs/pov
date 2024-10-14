@@ -14,7 +14,7 @@ export class NavbarThemeService {
         navBar.classList.remove('transToLight', 'dark', 'light', 'transToDark');
         navBar.classList.add(theme);
       }
-      console.log('Theme', theme);
+    //  console.log('Theme', theme);
   }
 
 }
