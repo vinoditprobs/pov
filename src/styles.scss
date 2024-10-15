@@ -139,9 +139,10 @@ strong{
     justify-content: center;
     backdrop-filter: blur(30px);
     transform: translateX(100%);
-    transition: all ease-in-out 0.35s;
-    opacity: 0;
+    transition: all ease-out 0.5s;
+    opacity: 1;
     visibility: hidden;
+    overflow: hidden;
     .close{
         position: absolute;
         right: 1.5rem;
@@ -153,6 +154,8 @@ strong{
         height: 100%;
         text-align: center;
         overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform ease-out 0.5s;
         ul{
             display: flex;
             margin: 0 auto;
@@ -232,6 +235,9 @@ strong{
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
+        nav{
+            transform: translateX(0);
+        }
     }
 }
 
@@ -841,17 +847,16 @@ section{
     min-width: 50%;
     max-width: 650px;
     margin: 0 auto;
-    transform: scale(0);
     opacity: 1;
     transform-origin: center center;
     .char_o{
-
+        transform: scale(0);
     }
     .char_p{
-        
+        transform:translateX(22%);
     }
     .char_v{
-        
+        transform:translateX(-20%);
     }
 }
 

@@ -123,16 +123,46 @@ export class ScrollMagicService {
             .addTo(controller);
         }
 
-        const povArt = this.document.querySelector('.povArt');
-        if (povArt) {
+        // const povArt = this.document.querySelector('.povArt');
+        // if (povArt) {
+        //     new ScrollMagic.Scene({
+        //       triggerElement:povArtSection, 
+        //       triggerHook:0,
+        //       duration: '50%'
+        //     })
+        //     .setTween(povArt, {  scale:1.2, opacity:0 })
+        //     .addTo(controller);
+        // }
+
+        const charO = this.document.querySelector('.char_o');
+        if (charO) {
             new ScrollMagic.Scene({
               triggerElement:povArtSection, 
               triggerHook:0,
-              duration: '100%'
-              // Adjust the duration as needed
+              duration: '50%'
             })
-            .setTween(povArt, {  scale:1.3, opacity:1 })
-            //.addIndicators({ name: `Parallax` })  // Uncomment for debugging if needed
+            .setTween(charO, {  scale:1, ease:'power2.out' })
+            .addTo(controller);
+        }
+        const charP = this.document.querySelector('.char_p');
+        if (charP) {
+            new ScrollMagic.Scene({
+              triggerElement:povArtSection, 
+              triggerHook:0,
+              duration: '50%'
+            })
+            .setTween(charP, {  x:0, ease:'power2.out' })
+            .addTo(controller);
+        }
+
+        const charV = this.document.querySelector('.char_v');
+        if (charV) {
+            new ScrollMagic.Scene({
+              triggerElement:povArtSection, 
+              triggerHook:0,
+              duration: '50%'
+            })
+            .setTween(charV, {  x:0, ease:'power2.out' })
             .addTo(controller);
         }
 
