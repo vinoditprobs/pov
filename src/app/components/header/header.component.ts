@@ -1,5 +1,6 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
+import { LoaderService } from '../../services/loader.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,12 @@ import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/co
 export class HeaderComponent {
   menuStatus: boolean = false
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,  @Inject(DOCUMENT) private document: Document){}
+  
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,  @Inject(DOCUMENT) private document: Document, public _loader: LoaderService){
+    
+  }
+  loadingElem: boolean = false;
+  
 
   fixedHeader:boolean = false
   
@@ -39,5 +45,15 @@ export class HeaderComponent {
     const body = this.document.querySelector('body')
     body?.classList.remove('stopScroll');
   }
+
+
+  ngOnInit(): void {
+    this._loader.loading$.subscribe((isLoading: boolean) => {
+      this.loadingElem = isLoading;
+    });
+  
+    this._loader.show();
+    
+   }
 
 }
