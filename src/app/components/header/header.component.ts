@@ -54,6 +54,7 @@ export class HeaderComponent {
   
     this._loader.show();
     
+   
    }
 
 }
