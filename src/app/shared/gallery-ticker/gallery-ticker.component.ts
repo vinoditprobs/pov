@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID, Renderer2, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID, Renderer2, ElementRef, Input, AfterViewInit } from '@angular/core';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import Swiper from 'swiper';
 
@@ -7,12 +7,10 @@ import Swiper from 'swiper';
   templateUrl: './gallery-ticker.component.html',
   styleUrl: './gallery-ticker.component.scss'
 })
-export class GalleryTickerComponent {
+export class GalleryTickerComponent implements AfterViewInit {
   @Input() gallery: any = []
 
   private swiper: Swiper | undefined;
-
-  
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -20,13 +18,9 @@ export class GalleryTickerComponent {
     private el: ElementRef,
     @Inject(DOCUMENT) private document: Document) { }
 
-
-  
-
     private initSwiper() {
 
       if (isPlatformBrowser(this.platformId)) {
-  
         this.swiper = new Swiper(".galleryTiker", {
           slidesPerView: 1.2,
           spaceBetween: 24,
@@ -58,7 +52,7 @@ export class GalleryTickerComponent {
       }
     }
 
-    ngOnInit():void{
+    ngAfterViewInit():void{
       this.initSwiper();
     }
 

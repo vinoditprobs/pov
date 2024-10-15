@@ -52,9 +52,8 @@ export class HeaderComponent {
       this.loadingElem = isLoading;
     });
   
-    this._loader.show();
+  //  this._loader.show();
     
-   
    }
 
 }

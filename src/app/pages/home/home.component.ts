@@ -48,7 +48,7 @@ export class HomeComponent implements AfterViewInit {
     ngAfterViewInit(){
       setTimeout(()=> {
         this._loader.hide();
-      }, 1000)
+      }, 500)
      
     }
 
