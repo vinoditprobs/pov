@@ -17,6 +17,7 @@ import { SlideShowComponent } from './shared/slide-show/slide-show.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { PlayerComponent } from './shared/player/player.component';
 import { GalleryTickerComponent } from './shared/gallery-ticker/gallery-ticker.component';
+import { ParallaxKeywordComponent } from './components/parallax-keyword/parallax-keyword.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GalleryTickerComponent } from './shared/gallery-ticker/gallery-ticker.c
     SlideShowComponent,
     ClientsComponent,
     PlayerComponent,
-    GalleryTickerComponent
+    GalleryTickerComponent,
+    ParallaxKeywordComponent
   ],
   imports: [
     BrowserModule,
