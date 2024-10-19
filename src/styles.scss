@@ -545,12 +545,12 @@ section{
         left: 0;
         z-index: 4;
         padding: 0rem 1rem;
+        width: 100%;
         .title{
             font-size: calc(1.625rem + 4.5vw);
             text-transform: uppercase;
             font-weight: 600;
             color: $light;
-            transform: scale(0);
             transform-origin: left center;
             margin: 0;
             list-style: 0;
@@ -564,6 +564,7 @@ section{
         bottom: 0;
         display: flex;
         align-items: flex-end;
+        justify-content: flex-end;
         .title{
             transform: scale(1);
             transform-origin: right center;

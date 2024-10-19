@@ -96,7 +96,7 @@ export class ScrollMagicService {
       parallaxBg.forEach((element, index) => {
         const scene2 = new ScrollMagic.Scene({
           triggerElement: element.querySelector('.parallax_bottom_title .title'), 
-          triggerHook: 0.7,
+          triggerHook: 0.5,
           duration: '25%'
         })
         .setTween(element.querySelector('.parallax_bottom_title .title'), { scale: '0' })
