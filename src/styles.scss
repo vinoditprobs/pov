@@ -482,6 +482,8 @@ button {
 section{
     position: relative;
     overflow: hidden;
+    background-color: $light;
+    z-index: 8;
     .bg{
         position: absolute;
         left: 0;

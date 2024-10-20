@@ -16,6 +16,25 @@ export class ScrollMagicService {
     if (isPlatformBrowser(this.platformId)){
       const controller = new ScrollMagic.Controller();
 
+
+      const parallaxKeywordSection = this.document.querySelectorAll('.parallaxKeywordSection .parallaxKeyword')
+
+      parallaxKeywordSection.forEach((item) => {
+        const title = item.querySelector('.title');
+        const bg = item.querySelector('.bg')
+
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 0,
+          duration: "100%"
+        })
+        .setPin(bg, {pushFollowers: false })
+        .addIndicators()
+        .addTo(controller);
+
+      })
+
+
       const revealElements = this.document.querySelectorAll(
         ".colUpAnim, .colDownAnim, .colLeftAnim, .colRightAnim, .box_card"
       );
