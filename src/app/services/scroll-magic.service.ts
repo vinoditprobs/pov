@@ -20,7 +20,8 @@ export class ScrollMagicService {
       const parallaxKeywordSection = this.document.querySelectorAll('.parallaxKeywordSection .parallaxKeyword')
 
       parallaxKeywordSection.forEach((item) => {
-        const title = item.querySelector('.title');
+        const topTitle = item.querySelector('.parallax_title .title');
+        const bottomTitle = item.querySelector('.parallax_bottom_title .title');
         const bg = item.querySelector('.bg')
 
         new ScrollMagic.Scene({
@@ -31,6 +32,38 @@ export class ScrollMagicService {
         .setPin(bg, {pushFollowers: false })
         .addIndicators()
         .addTo(controller);
+
+        new ScrollMagic.Scene({
+          triggerElement: topTitle,
+          triggerHook: 0.5,
+          duration: "50%"
+        })
+        .setTween(topTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
+        .addIndicators()
+        .addTo(controller);
+
+        new ScrollMagic.Scene({
+          triggerElement: topTitle,
+          triggerHook: 0.15,
+          duration: "50%"
+        })
+        .setPin(topTitle)
+        .addIndicators()
+        .addTo(controller);
+
+
+        new ScrollMagic.Scene({
+          triggerElement: bottomTitle,
+          triggerHook: 0.5,
+          duration: "50%"
+        })
+        .setTween(bottomTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
+        .addIndicators()
+        .addTo(controller);
+
+
+       
+   
 
       })
 
