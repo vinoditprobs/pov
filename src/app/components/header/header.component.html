@@ -40,6 +40,9 @@
     </div>
 </header>
 
+<div class="overlay" (click)="closeMenu()" [ngClass]="menuStatus ? 'show' : '' "  >
+
+</div>
 
 <!--<div *ngIf="loadingElem" class="loader" >
     Loading...
