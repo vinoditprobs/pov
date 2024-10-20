@@ -30,7 +30,6 @@ export class ScrollMagicService {
           duration: "100%"
         })
         .setPin(bg, {pushFollowers: false })
-        .addIndicators()
         .addTo(controller);
 
         new ScrollMagic.Scene({
@@ -39,7 +38,6 @@ export class ScrollMagicService {
           duration: "50%"
         })
         .setTween(topTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
-        .addIndicators()
         .addTo(controller);
 
         new ScrollMagic.Scene({
@@ -48,9 +46,7 @@ export class ScrollMagicService {
           duration: "50%"
         })
         .setPin(topTitle)
-        .addIndicators()
         .addTo(controller);
-
 
         new ScrollMagic.Scene({
           triggerElement: bottomTitle,
@@ -58,13 +54,7 @@ export class ScrollMagicService {
           duration: "50%"
         })
         .setTween(bottomTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
-        .addIndicators()
         .addTo(controller);
-
-
-       
-   
-
       })
 
 
@@ -107,60 +97,56 @@ export class ScrollMagicService {
 
 
 
-      const parallaxBg = this.document.querySelectorAll('.parallax');
-
-      
-      parallaxBg.forEach((element, index) => {
-        const scene0 = new ScrollMagic.Scene({
-          triggerElement: element,
-          triggerHook: 1,
-          duration: '100%'
-        })
-        .setTween(element.querySelector('.parallax_bg .video_player video'), {y: "100%",  ease:'liner' })
-        //.addIndicators({ name: `Parallax ${index + 1}` })
-        .addTo(controller);
-      });
+      // const parallaxBg = this.document.querySelectorAll('.parallax');
+      // parallaxBg.forEach((element, index) => {
+      //   const scene0 = new ScrollMagic.Scene({
+      //     triggerElement: element,
+      //     triggerHook: 1,
+      //     duration: '100%'
+      //   })
+      //   .setTween(element.querySelector('.parallax_bg .video_player video'), {y: "100%",  ease:'liner' })
+      //   //.addIndicators({ name: `Parallax ${index + 1}` })
+      //   .addTo(controller);
+      // });
       
 
-      parallaxBg.forEach((element, index) => {
-      new ScrollMagic.Scene({
-          triggerElement: element, 
-          triggerHook: 0.12,
-          duration: '85%'
-        })
-        .setPin(element.querySelector('.parallax_title .title'))
-        //.addIndicators({ name: `Parallax ${index + 1}` })
-        .addTo(controller);
-      });
+      // parallaxBg.forEach((element, index) => {
+      // new ScrollMagic.Scene({
+      //     triggerElement: element, 
+      //     triggerHook: 0.12,
+      //     duration: '85%'
+      //   })
+      //   .setPin(element.querySelector('.parallax_title .title'))
+      //   //.addIndicators({ name: `Parallax ${index + 1}` })
+      //   .addTo(controller);
+      // });
 
-      parallaxBg.forEach((element, index) => {
-        const scene = new ScrollMagic.Scene({
-          triggerElement: element, 
-          triggerHook: 0.25,
-          duration: '25%'
-        })
-        .setTween(element.querySelector('.parallax_title .title'), { scale: '1',  ease:'power2.out' })
-        //.addIndicators({ name: `Parallax ${index + 1}` })
-        .addTo(controller);
-      });
-
-
-      parallaxBg.forEach((element, index) => {
-        const scene2 = new ScrollMagic.Scene({
-          triggerElement: element.querySelector('.parallax_bottom_title .title'), 
-          triggerHook: 0.5,
-          duration: '25%'
-        })
-        .setTween(element.querySelector('.parallax_bottom_title .title'), { scale: '0' })
-        //.addIndicators({ name: `Parallax ${index + 1}` })
-        .addTo(controller);
-      });
+      // parallaxBg.forEach((element, index) => {
+      //   const scene = new ScrollMagic.Scene({
+      //     triggerElement: element, 
+      //     triggerHook: 0.25,
+      //     duration: '25%'
+      //   })
+      //   .setTween(element.querySelector('.parallax_title .title'), { scale: '1',  ease:'power2.out' })
+      //   //.addIndicators({ name: `Parallax ${index + 1}` })
+      //   .addTo(controller);
+      // });
 
 
+      // parallaxBg.forEach((element, index) => {
+      //   const scene2 = new ScrollMagic.Scene({
+      //     triggerElement: element.querySelector('.parallax_bottom_title .title'), 
+      //     triggerHook: 0.5,
+      //     duration: '25%'
+      //   })
+      //   .setTween(element.querySelector('.parallax_bottom_title .title'), { scale: '0' })
+      //   //.addIndicators({ name: `Parallax ${index + 1}` })
+      //   .addTo(controller);
+      // });
 
 
 
-     
+
       const povArtSection = this.document.querySelector('.povArtSection');
         if (povArtSection) {
             new ScrollMagic.Scene({
