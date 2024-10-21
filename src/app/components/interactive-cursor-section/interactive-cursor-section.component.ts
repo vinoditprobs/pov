@@ -28,9 +28,9 @@ export class InteractiveCursorSectionComponent {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)){
-      if (window.innerWidth <= 1200) {
-        this.startAutoItemGeneration();
-      }
+      // if (window.innerWidth <= 1200) {
+      //   this.startAutoItemGeneration();
+      // }
       this.startAutoItemGeneration();
     }
 
