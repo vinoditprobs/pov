@@ -8,4 +8,41 @@
             <app-interactive-cursor-section></app-interactive-cursor-section>
         </div>
     </section>
+    <section>
+        <div class="container container_space " >
+            <div class="row gx-lg-5 align-items-center " >
+                <div class="col-sm-12 col-md-12 col-lg-4" >
+                    <div class="fs-5" >
+                        <p>We’re not interested in the latest trends, buzzwords, or fleeting styles. Forget swiping through endless feeds, cookie-cutter templates, or the ‘hot’ design gimmicks. We don’t need fluff, overused slogans, or design that tries too hard to be clever.</p>
+                        <p>We crave work that tells epic tales and bold thinking that transports us and offers unique experiences. We want to be captivated by creativity that sparks conversation, challenges perspectives, and shows that someone truly cares about creating it. We yearn for ideas that make us feel invested  and draw us in so deeply that we forget the world around us. </p>
+                        <p>We’re after that kind of approach —something crafted with passion, meant to be seen and felt.</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-8" >
+                    <div class="ratio ratio-16x9 bg-dark" >
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary" >
+        <div class="container-fluid py-3 " >
+            <div class="row" >
+                <div class="col-sm-12" >
+                    <app-gallery-ticker [gallery]="clients" [reverseDirection]="false" ></app-gallery-ticker>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-dark" >
+        <div class="container-fluid py-3 " >
+            <div class="row" >
+                <div class="col-sm-12" >
+                    <app-gallery-ticker [gallery]="clients" [reverseDirection]="true" ></app-gallery-ticker>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
