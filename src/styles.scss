@@ -97,13 +97,15 @@ strong{
     &.transToLight{
         .bg{
             background-color: $light;
-            opacity: 0;
+            //opacity: 0;
+            transform: translateY(-100%);
         }
     }
     &.transToDark{
         .bg{
             background-color: $dark;
-            opacity: 0;
+           // opacity: 0;
+            transform: translateY(-100%);
         }
     }
     .logo{

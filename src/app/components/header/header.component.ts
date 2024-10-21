@@ -22,6 +22,7 @@ export class HeaderComponent{
     if (isPlatformBrowser(this.platformId)) {
       const navbarBg = this.document.querySelector('.navigationBar > .bg') as HTMLDivElement | null;
       if (this.hasStickyClass) {
+        /* // For Opacity
         const scrollPosition = window.pageYOffset;
         const opacityIncreaseFactor = 1 / 80; // Adjust this value to control the speed of opacity change
         let opacity = scrollPosition * opacityIncreaseFactor;
@@ -29,6 +30,14 @@ export class HeaderComponent{
         if(navbarBg){
           navbarBg.style.opacity = opacity.toString();
         }
+        */
+
+      const scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
+       const translateY = Math.min(scrollTop / 80, 1);
+        if(navbarBg){
+          navbarBg.style.transform = `translateY(${(-1 + translateY) * 100}%)`;
+        }
+
       }
     }
   }
@@ -58,12 +67,14 @@ export class HeaderComponent{
       if(value){
         let navbarBg = this.document.querySelector('.navigationBar > .bg') as HTMLDivElement | null;
         if(navbarBg){
-          navbarBg.style.opacity = '0';
+          //navbarBg.style.opacity = '0';
+          navbarBg.style.transform = `translateY(-100%)`;
         }
       }else{
         let navbarBg = this.document.querySelector('.navigationBar > .bg') as HTMLDivElement | null;
         if(navbarBg){
-          navbarBg.style.opacity = '1';
+         // navbarBg.style.opacity = '1';
+         navbarBg.style.transform = `translateY(0)`;
         }
       }
     });
