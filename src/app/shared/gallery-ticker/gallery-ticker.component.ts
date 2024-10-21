@@ -5,13 +5,14 @@ import Swiper from 'swiper';
 @Component({
   selector: 'app-gallery-ticker',
   templateUrl: './gallery-ticker.component.html',
-  styleUrl: './gallery-ticker.component.scss'
+  styleUrls: ['./gallery-ticker.component.scss']
 })
 export class GalleryTickerComponent implements AfterViewInit {
   @Input() gallery: any = []
   @Input() tickerType: string = 'client'
   @Input() reverseDirection: boolean = false
 
+  public swiperId: string = `swiper-${Math.random().toString(36).substring(2, 15)}`; // Unique ID
   private swiper: Swiper | undefined;
 
   constructor(
@@ -20,43 +21,39 @@ export class GalleryTickerComponent implements AfterViewInit {
     private el: ElementRef,
     @Inject(DOCUMENT) private document: Document) { }
 
-    private initSwiper() {
-
-      if (isPlatformBrowser(this.platformId)) {
-        this.swiper = new Swiper(".galleryTiker", {
-          slidesPerView: 1.2,
-          spaceBetween: 24,
-          freeMode: true,
-          watchSlidesProgress: true,
-          loop: true,
-          navigation: false,
-          pagination: false,
-          allowTouchMove: true,
-          speed: 3000,
-          autoplay: {
-            delay: 0,
-            pauseOnMouseEnter: true,
-            reverseDirection: this.reverseDirection
+  private initSwiper() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.swiper = new Swiper(`#${this.swiperId}`, {  // Use unique ID selector
+        slidesPerView: 1.2,
+        spaceBetween: 24,
+        freeMode: true,
+        watchSlidesProgress: true,
+        loop: true,
+        navigation: false,
+        pagination: false,
+        allowTouchMove: true,
+        speed: 3000,
+        autoplay: {
+          delay: 0,
+          pauseOnMouseEnter: true,
+          reverseDirection: this.reverseDirection
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1.2
           },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.2
-            },
-            768: {
-              slidesPerView: 2.2
-            },
-            1024: {
-              slidesPerView: 4.5
-            },
+          768: {
+            slidesPerView: 2.2
           },
-        });
-
-  
-      }
+          1024: {
+            slidesPerView: 4.5
+          },
+        },
+      });
     }
+  }
 
-    ngAfterViewInit():void{
-      this.initSwiper();
-    }
-
+  ngAfterViewInit(): void {
+    this.initSwiper();
+  }
 }
