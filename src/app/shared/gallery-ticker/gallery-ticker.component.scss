@@ -3,11 +3,15 @@
     .swiper-wrapper{
         transition-timing-function:linear;
         text-align: center;
-        .client_logo{
-            width: 100%;
-            max-width: 230px;
-        }
+        
     }
 }
 
 
+.client_logo{
+    width: 100%;
+    max-width: 200px;
+}
+.invertLogo .client_logo{
+    filter: invert(1) !important;
+} 
