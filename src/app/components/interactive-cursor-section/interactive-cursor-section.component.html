@@ -1,0 +1,10 @@
+<div class="maincontainer" (mousemove)="onMouseMove($event)">
+    <!-- Display floating items based on the logic -->
+    <div *ngFor="let item of items" 
+         [style.top.px]="item.top" [style.left.px]="item.left" 
+         class="floating-item" [ngClass]="item.type">
+      <img *ngIf="item.type === 'image'" [src]="item.src" alt="Random Image">
+      <span *ngIf="item.type === 'text'">{{ item.text }}</span>
+    </div>
+  </div>
+  
