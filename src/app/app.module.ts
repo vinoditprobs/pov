@@ -19,6 +19,7 @@ import { PlayerComponent } from './shared/player/player.component';
 import { GalleryTickerComponent } from './shared/gallery-ticker/gallery-ticker.component';
 import { ParallaxKeywordComponent } from './components/parallax-keyword/parallax-keyword.component';
 import { InteractiveCursorSectionComponent } from './components/interactive-cursor-section/interactive-cursor-section.component';
+import { CursorComponent } from './shared/cursor/cursor.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { InteractiveCursorSectionComponent } from './components/interactive-curs
     PlayerComponent,
     GalleryTickerComponent,
     ParallaxKeywordComponent,
-    InteractiveCursorSectionComponent
+    InteractiveCursorSectionComponent,
+    CursorComponent
   ],
   imports: [
     BrowserModule,

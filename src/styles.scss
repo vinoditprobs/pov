@@ -13,6 +13,8 @@ html{
 * {
     box-sizing: border-box;
 }
+
+  
 :root{
     --bs-border-color: #c1c1c1
 }
@@ -298,6 +300,11 @@ button {
             height: 2px;
             background-color: $dark;
             transition: width cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+        }
+        &.text-white{
+            &::after{
+                background-color: $light;
+            }
         }
         &:hover{
             &::after{
@@ -762,14 +769,14 @@ section{
     align-items: center;
     justify-content: flex-start;
     .title{
-        font-size: calc(1.5rem + 3.5vw);
+        font-size: calc(1.5rem + 3.3vw);
         display: inline-block;
         margin-right: 0.5em;
         line-height: 1;
         flex-shrink: 0; 
         font-weight: 300;
         //filter: drop-shadow(5px 0  0 transparent);
-        transition: all ease 0.25s;
+        transition: font-size 0.3s ease, text-shadow 0.3s ease;
         cursor: url('/images/cursor.png') 16 16, auto;
     }
     .key_list{
@@ -802,6 +809,7 @@ section{
     &:hover{
         .title{
             font-weight: 600;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
            // filter: drop-shadow(5px 0  0 $black);
         }
     }
