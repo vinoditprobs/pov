@@ -9,6 +9,6 @@ import { NavbarThemeService } from '../../services/navbar-theme.service';
 export class EthosComponent {
   constructor(private NavbarThemeService: NavbarThemeService){}
   ngOnInit(){
-    this.NavbarThemeService.changeHeaderTheme('light')
+    this.NavbarThemeService.changeHeaderTheme('dark')
   }
 }
