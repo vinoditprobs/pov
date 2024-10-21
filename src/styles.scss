@@ -213,7 +213,7 @@ strong{
     visibility: visible;
     pointer-events: all;
     opacity: 1;
-    transition: all ease-in 0.5s;
+    transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
     transform: translateX(0);
     }
 }
