@@ -10,6 +10,7 @@ import Swiper from 'swiper';
 export class GalleryTickerComponent implements AfterViewInit {
   @Input() gallery: any = []
   @Input() tickerType: string = 'client'
+  @Input() reverseDirection: boolean = false
 
   private swiper: Swiper | undefined;
 
@@ -34,7 +35,8 @@ export class GalleryTickerComponent implements AfterViewInit {
           speed: 3000,
           autoplay: {
             delay: 0,
-            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            reverseDirection: this.reverseDirection
           },
           breakpoints: {
             640: {

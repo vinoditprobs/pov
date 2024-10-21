@@ -1,6 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
-import { isPlatformBrowser, DOCUMENT } from '@angular/common';
-import Swiper from 'swiper';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-clients',
@@ -9,7 +7,7 @@ import Swiper from 'swiper';
 })
 export class ClientsComponent {
 
-  gallery = [
+  clients = [
     {
       img:'images/clients/skechers.png',
       title:'Skechers'
