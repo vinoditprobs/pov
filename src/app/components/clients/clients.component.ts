@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID, Renderer2, ElementRef } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import Swiper from 'swiper';
 
@@ -7,7 +7,7 @@ import Swiper from 'swiper';
   templateUrl: './clients.component.html',
   styleUrl: './clients.component.scss'
 })
-export class ClientsComponent {
+export class ClientsComponent implements AfterViewInit {
 
   private swiper: Swiper | undefined;
 
@@ -109,7 +109,7 @@ export class ClientsComponent {
       }
     }
 
-    ngOnInit():void{
+    ngAfterViewInit(){
       this.initSwiper();
     }
 
