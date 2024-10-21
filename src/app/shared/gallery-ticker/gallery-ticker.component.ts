@@ -11,6 +11,7 @@ export class GalleryTickerComponent implements AfterViewInit {
   @Input() gallery: any = []
   @Input() tickerType: string = 'client'
   @Input() reverseDirection: boolean = false
+  @Input() invert:boolean = false
 
   public swiperId: string = `swiper-${Math.random().toString(36).substring(2, 15)}`; // Unique ID
   private swiper: Swiper | undefined;
@@ -32,7 +33,7 @@ export class GalleryTickerComponent implements AfterViewInit {
         navigation: false,
         pagination: false,
         allowTouchMove: true,
-        speed: 3000,
+        speed: 5000,
         autoplay: {
           delay: 0,
           pauseOnMouseEnter: true,
