@@ -41,8 +41,7 @@ export class HomeComponent implements AfterViewInit {
     ngOnInit(){
       this.ScrollMagicService.initScrollMagic();
       this.NavbarThemeService.changeHeaderTheme('transToLight');
-      console.log('From Home')
-      
+      console.log('From Home');
     }
 
     ngAfterViewInit(){
