@@ -9,6 +9,7 @@ import Swiper from 'swiper';
 })
 export class GalleryTickerComponent implements AfterViewInit {
   @Input() gallery: any = []
+  @Input() tickerType: string = 'client'
 
   private swiper: Swiper | undefined;
 
