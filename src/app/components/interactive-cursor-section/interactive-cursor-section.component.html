@@ -1,5 +1,4 @@
-<div class="maincontainer" (mousemove)="onMouseMove($event)">
-    <!-- Display floating items based on the logic -->
+<div class="interactiveAria" (mousemove)="onMouseMove($event)">
     <div *ngFor="let item of items" 
          [style.top.px]="item.top" [style.left.px]="item.left" 
          class="floating-item" [ngClass]="item.type">
