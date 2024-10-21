@@ -69,6 +69,7 @@
     .subject_para{
         font-size: 16px;
         line-height: 1.2;
+        transition: max-height ease 0.25s;
     }
     .subject_keywords{
         list-style: none;
@@ -88,6 +89,9 @@
         // &::before{
         //     transform: translateY(0);
         // }
+        .subject_para{
+                max-height: 300px;
+        }
     }
    }
 }
