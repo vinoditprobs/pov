@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
+import { ScrollMagicService } from '../../services/scroll-magic.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,8 +8,9 @@ import { NavbarThemeService } from '../../services/navbar-theme.service';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  constructor(private NavbarThemeService: NavbarThemeService){}
+  constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService){}
   ngOnInit(){
-    this.NavbarThemeService.changeHeaderTheme('dark')
+    this.NavbarThemeService.changeHeaderTheme('dark');
+    this.ScrollMagicService.initScrollMagic();
   }
 }

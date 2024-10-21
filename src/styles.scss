@@ -402,6 +402,7 @@ button {
         display: inline-block;
         width: 100%;
         max-width: 400px;
+        position: relative;
         img{
             width: 100%;
             height: auto;
@@ -847,6 +848,20 @@ section{
     opacity: 0.5;
     transform-origin: center center;
 }
+
+
+.clip-text {
+    color: #68d0e0;
+    @supports (background-clip:text) or (-webkit-background-clip:text) {
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: url('/images/option-8.gif');
+      background-size:200%;
+      background-position:center center;
+      background-repeat: no-repeat;
+    }
+  }
 
 
 @media(min-width: 1200px){
