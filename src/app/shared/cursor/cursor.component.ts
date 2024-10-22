@@ -45,7 +45,21 @@ export class CursorComponent {
         });
       }
     });
+
+    const links = this.document.querySelectorAll('.link');
+    links.forEach((link) => {
+      link.addEventListener('mouseenter', ()  => {
+        this.cursor.classList.add('active');
+        this.follower.classList.add('active');
+      })
+      link.addEventListener('mouseleave', ()  => {
+        this.cursor.classList.remove('active');
+        this.follower.classList.remove('active');
+      }) 
+    })
+    
   }
+
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent): void {
@@ -54,26 +68,4 @@ export class CursorComponent {
   }
 
 
-  //const test = this.document.querySelector('.cursor') as HTMLElement;
-
-
-  @HostListener('mouseenter', ['$event.target'])
-onMouseEnter(target: HTMLElement): void {
-  // Check if the target has the 'link' class
-  if (target.classList.contains('link')) {
-    console.log(target);
-    this.cursor.classList.add('active');
-    this.follower.classList.add('active');
-  }
-}
-
-@HostListener('mouseleave', ['$event.target'])
-onMouseLeave(target: HTMLElement): void {
-  // Check if the target has the 'link' class
-  if (target.classList.contains('link') && this.cursor && this.follower) {
-    this.cursor.classList.remove('active');
-    this.follower.classList.remove('active');
-  }
-}
- 
 }
