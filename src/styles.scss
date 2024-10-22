@@ -673,7 +673,6 @@ section{
     }
 }
 
-
 .spot_light{
     display: inline-block;
     width: 22px;
@@ -892,6 +891,15 @@ section{
             img{
                 width: 100%;
                 height: auto;
+            }
+        }
+    }
+    &.invert{
+        li{
+            .logo{
+                img{
+                   filter: invert(1);
+                }
             }
         }
     }
