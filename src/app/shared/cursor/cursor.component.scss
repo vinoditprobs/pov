@@ -8,7 +8,8 @@
   
   .cursor {
     position: absolute;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+    mix-blend-mode: difference;
     width: 10px;
     height: 10px;
     border-radius: 100%;
@@ -19,20 +20,24 @@
     transition: 0.3s ease-in-out transform, 0.2s ease-in-out opacity;
     &.star{
       background-color: rgba(255, 0, 0, 1);
+      mix-blend-mode: normal;
     }
     &.active {
       opacity: 0.5;
       transform: scale(0);
+      mix-blend-mode: normal;
     }
   
     &.hovered {
       opacity: 0.08;
+      mix-blend-mode: normal;
     }
   }
   
   .cursor-follower {
     position: absolute;
-    background-color: rgba(223, 223, 223, 0.4);
+    background-color: rgba(223, 223, 223, 1);
+    mix-blend-mode: difference;
     background-position: center center;
     background-size: contain;
     width: 25px;
@@ -46,14 +51,17 @@
     &.star{
       background-image: url('/stage/images/cursor.svg');
       background-color: rgba(223, 223, 223, 0);
+      mix-blend-mode: normal;
     }
     &.active {
-      opacity: 0.7;
+      opacity: 0.6;
       transform: scale(3);
+      mix-blend-mode:lighten;
     }
   
     &.hovered {
       opacity: 0.08;
+      mix-blend-mode: normal;
     }
   }
   
