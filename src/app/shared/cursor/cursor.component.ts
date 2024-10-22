@@ -45,7 +45,7 @@ export class CursorComponent {
     });
 
   const links = this.document.querySelectorAll('.link');
-  console.log('Links:', links); // Log the links to check if they exist
+  //console.log('Links:', links); // Log the links to check if they exist
 
   if (links.length > 0) {
     // Use Array.from to ensure compatibility
@@ -60,7 +60,7 @@ export class CursorComponent {
       });
     });
   } else {
-    console.warn('No elements with the class "link" found.');
+    //console.warn('No elements with the class "link" found.');
   }
 
   const starCursor = this.document.querySelectorAll('.starCursor');
