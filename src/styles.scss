@@ -122,6 +122,11 @@ strong{
         color: $light;
         letter-spacing: 1px;
         mix-blend-mode: difference;
+        width: 100%;
+        max-width: 60px;
+        img{
+            width: 100%;
+        }
     }
 }
 
