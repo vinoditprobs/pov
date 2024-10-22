@@ -840,7 +840,7 @@ section{
             width: 100%;
             transition: all ease-out 0.25s;
             font-weight: 400;
-            cursor: url('/images/cursor.png') 16 16, auto;
+           // cursor: url('/images/cursor.png') 16 16, auto;
             &:hover{
                 background-color: transparent;
                 color: $dark;
