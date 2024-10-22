@@ -9,7 +9,7 @@ import { Observable, catchError, of } from 'rxjs';
 })
 export class DataService {
 
-  clients = 'data/clients.json'
+  private clients = 'data/clients.json'
 
   constructor(private http: HttpClient) { }
 

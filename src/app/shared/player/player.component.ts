@@ -19,7 +19,7 @@ export class PlayerComponent {
   constructor(@Inject(DOCUMENT) private document: Document,  @Inject(PLATFORM_ID) private platformId: Object,){}
 
   playing: boolean = false
-  muted: boolean = false
+  muted: boolean = true
 
   ngOnInit(){}
 
@@ -48,11 +48,11 @@ export class PlayerComponent {
     if (this.playing) {
       this.playing = false;
       this.video.nativeElement.pause(); 
-      !this.muted;
+      this.muted = false
     } else {
       this.playing = true;
       this.video.nativeElement.play(); 
-      !this.muted;
+      this.muted = false
     }
   }
 
