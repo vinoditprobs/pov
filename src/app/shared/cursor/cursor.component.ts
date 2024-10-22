@@ -44,33 +44,38 @@ export class CursorComponent {
       }
     });
 
-    const links = this.document.querySelectorAll('.link');
-    if(links){
-      links.forEach((link) => {
-        link.addEventListener('mouseenter', ()  => {
-          this.cursor.classList.add('active');
-          this.follower.classList.add('active');
-        })
-        link.addEventListener('mouseleave', ()  => {
-          this.cursor.classList.remove('active');
-          this.follower.classList.remove('active');
-        }) 
-      })
-    }
+  const links = this.document.querySelectorAll('.link');
+  console.log('Links:', links); // Log the links to check if they exist
 
-    const starCursor = this.document.querySelectorAll('.starCursor');
-    if(starCursor){
-      starCursor.forEach((star) => {
-        star.addEventListener('mouseenter', ()  => {
-          this.cursor.classList.add('star');
-          this.follower.classList.add('star');
-        })
-        star.addEventListener('mouseleave', ()  => {
-          this.cursor.classList.remove('star');
-          this.follower.classList.remove('star');
-        }) 
-      })
-    }
+  if (links.length > 0) {
+    // Use Array.from to ensure compatibility
+    Array.from(links).forEach((link) => {
+      link.addEventListener('mouseenter', () => {
+        this.cursor.classList.add('active');
+        this.follower.classList.add('active');
+      });
+      link.addEventListener('mouseleave', () => {
+        this.cursor.classList.remove('active');
+        this.follower.classList.remove('active');
+      });
+    });
+  } else {
+    console.warn('No elements with the class "link" found.');
+  }
+
+  const starCursor = this.document.querySelectorAll('.starCursor');
+  if (starCursor.length > 0) {
+    Array.from(starCursor).forEach((star) => {
+      star.addEventListener('mouseenter', () => {
+        this.cursor.classList.add('star');
+        this.follower.classList.add('star');
+      });
+      star.addEventListener('mouseleave', () => {
+        this.cursor.classList.remove('star');
+        this.follower.classList.remove('star');
+      });
+    });
+  }
     
   }
 
