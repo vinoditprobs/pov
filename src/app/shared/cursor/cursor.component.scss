@@ -44,7 +44,7 @@
     pointer-events: none;
     transition: 0.3s ease-in-out transform, 0.2s ease-in-out opacity;
     &.star{
-      background-image: url('/images/cursor.svg');
+      background-image: url('/stage/images/cursor.svg');
       background-color: rgba(223, 223, 223, 0);
     }
     &.active {

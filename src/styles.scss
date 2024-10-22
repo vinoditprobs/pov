@@ -205,7 +205,7 @@ strong{
     height: 100%;
     background-color: rgba($color: $dark, $alpha: 0.5);
     z-index: 999;
-    cursor: url('/images/close.png') 16 16, auto;
+    cursor: url('/stage/images/close.png') 16 16, auto;
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
@@ -692,7 +692,7 @@ section{
         left: 51%;
     top: -0.7em;
     width: 30vw;
-    background-image: url(/images/sfot.png);
+    background-image: url('/stage/images/sfot.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 2em;
@@ -866,7 +866,7 @@ section{
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: url('/images/option-8.gif');
+      background-image: url('/stage/images/option-8.gif');
       background-size:200%;
       background-position:center center;
       background-repeat: no-repeat;
