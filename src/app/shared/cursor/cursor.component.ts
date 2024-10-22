@@ -57,6 +57,19 @@ export class CursorComponent {
         this.follower.classList.remove('active');
       }) 
     })
+
+
+    const starCursor = this.document.querySelectorAll('.starCursor');
+    starCursor.forEach((star) => {
+      star.addEventListener('mouseenter', ()  => {
+        this.cursor.classList.add('star');
+        this.follower.classList.add('star');
+      })
+      star.addEventListener('mouseleave', ()  => {
+        this.cursor.classList.remove('star');
+        this.follower.classList.remove('star');
+      }) 
+    })
     
   }
 
