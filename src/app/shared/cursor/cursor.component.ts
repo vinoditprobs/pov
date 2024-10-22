@@ -8,8 +8,6 @@ import { TweenMax } from 'gsap';
   styleUrl: './cursor.component.scss'
 })
 export class CursorComponent {
-
-  links: any
   
   posX: number = 0;
   posY: number = 0;
@@ -47,29 +45,32 @@ export class CursorComponent {
     });
 
     const links = this.document.querySelectorAll('.link');
-    links.forEach((link) => {
-      link.addEventListener('mouseenter', ()  => {
-        this.cursor.classList.add('active');
-        this.follower.classList.add('active');
+    if(links){
+      links.forEach((link) => {
+        link.addEventListener('mouseenter', ()  => {
+          this.cursor.classList.add('active');
+          this.follower.classList.add('active');
+        })
+        link.addEventListener('mouseleave', ()  => {
+          this.cursor.classList.remove('active');
+          this.follower.classList.remove('active');
+        }) 
       })
-      link.addEventListener('mouseleave', ()  => {
-        this.cursor.classList.remove('active');
-        this.follower.classList.remove('active');
-      }) 
-    })
-
+    }
 
     const starCursor = this.document.querySelectorAll('.starCursor');
-    starCursor.forEach((star) => {
-      star.addEventListener('mouseenter', ()  => {
-        this.cursor.classList.add('star');
-        this.follower.classList.add('star');
+    if(starCursor){
+      starCursor.forEach((star) => {
+        star.addEventListener('mouseenter', ()  => {
+          this.cursor.classList.add('star');
+          this.follower.classList.add('star');
+        })
+        star.addEventListener('mouseleave', ()  => {
+          this.cursor.classList.remove('star');
+          this.follower.classList.remove('star');
+        }) 
       })
-      star.addEventListener('mouseleave', ()  => {
-        this.cursor.classList.remove('star');
-        this.follower.classList.remove('star');
-      }) 
-    })
+    }
     
   }
 
