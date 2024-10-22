@@ -745,7 +745,7 @@ section{
 
         &:nth-child(even){
             .sm-vert-text{
-                transform-origin: calc(100% - 10px); 
+               // transform-origin: calc(100% - 10px); 
                 text-align: left;
             }
             .col{
@@ -972,10 +972,22 @@ section{
     }
 }
 .tag_list{
-    gap: 1.5rem 1rem;
+    gap:1rem 0.5rem;
     li{
         width: 30%;
+        .tag{
+            font-size: 15px;
+            padding: 0.5rem 1rem;
+        }
     }
 }
+.listOfClients{
+    gap: 0;
+    li{
+        width: 50%;
+        padding: 0.5rem;
+    }
+}
+
 }
 
