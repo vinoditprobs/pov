@@ -17,6 +17,7 @@ html{
 .lh-small{
     line-height: 1;
 }
+
   
 :root{
     --bs-border-color: #c1c1c1
@@ -982,6 +983,29 @@ section{
         }
     }
 }
+
+.outcomes_section{
+    .heading{
+        font-size: calc(1.575rem + 4vw);
+        line-height: 1;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+    .keyword{
+        font-size: calc(2rem + 10vw);
+        line-height: 1;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    .title{
+         font-size: calc(1.2rem + 0.75vw);
+         display: inline-block;
+         margin: 0 auto;
+         text-align: left;
+         line-height: 1.2;
+    }
+}
+
 
 @media(min-width: 1200px){
 .display-1 {
