@@ -85,8 +85,8 @@ export class ScrollMagicService {
       rightKeyFeatures.forEach(rightFeature => {
         new ScrollMagic.Scene({
           triggerElement: rightFeature,
-          triggerHook: 0.9,
-          duration: "40%"
+          triggerHook: 0.95,
+          duration: "55%"
         })
         .setTween(rightFeature, { scale: '1', ease:'power2.out' })
         .addTo(controller);
