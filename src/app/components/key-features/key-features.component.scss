@@ -25,14 +25,24 @@
         li{
             width: 100%;
             .feature{
-                font-size: calc(1.625rem + 2.5vw);
-                font-weight: 300;
+                font-size: calc(1.625rem + 4.5vw);
+                font-weight: 700;
                 line-height: 1;
                 margin-bottom: 0;
                 text-transform: uppercase;
                 mix-blend-mode: difference;
+                transform: scale(0);
+                transform-origin: left top;
                 color: #fff;
             }
+        }
+        &.rightKey{
+            li{
+                .feature{
+                    transform: scale(1);
+                    transform-origin: right 100%;
+                }
+            }   
         }
     }
 }

@@ -71,14 +71,24 @@ export class ScrollMagicService {
       })
 
       const leftKeyFeatures = this.document.querySelectorAll('.leftKey .feature')
-
-      leftKeyFeatures.forEach(features => {
+      leftKeyFeatures.forEach(leftFeature => {
         new ScrollMagic.Scene({
-          triggerElement: features,
-          triggerHook: 0.6,
+          triggerElement: leftFeature,
+          triggerHook: 0.55,
+          duration: "40%"
+        })
+        .setTween(leftFeature, { scale: '1', ease:'power2.out' })
+        .addTo(controller);
+      })
+
+      const rightKeyFeatures = this.document.querySelectorAll('.rightKey .feature')
+      rightKeyFeatures.forEach(rightFeature => {
+        new ScrollMagic.Scene({
+          triggerElement: rightFeature,
+          triggerHook: 0.60,
           duration: "50%"
         })
-        .setTween(features, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
+        .setTween(rightFeature, { scale: '0', ease:'power2.out' })
         .addTo(controller);
       })
       
