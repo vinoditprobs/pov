@@ -17,75 +17,63 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-12">
-                    <figure class="projectCard ">
-                        <div class="ratio ratio-21x9 bg-dark img"><img src="images/home/banner-3.jpg" alt=""></div>
-                        <figcaption class="p-4 p-lg-5" >
-                            <h3 class="title">Essence</h3>
-                            <p class="description">We created a voice
-                                for the brand around Surf
-                                , Sand & Luxury. We wanted the message and medium to come together to `tell a story.
-                            </p>
-                            <ul class="projectCategories">
-                                <li>
-                                    <button class="category">Experiences</button>
-                                </li>
-                                <li>
-                                    <button class="category">Digital</button>
-                                </li>
-                                <li>
-                                    <button class="category">Innovations</button>
-                                </li>
-                            </ul>
-                        </figcaption>
-                    </figure>
+                    <a routerLink="" class="link clear opacity-100" >
+                        <figure class="projectCard ">
+                            <div class="ratio ratio-21x9 bg-dark img"><img src="images/home/banner-3.jpg" alt=""></div>
+                            <figcaption >
+                                <h3 class="title">Skechers</h3>
+                                <p class="description h-auto">We created a voice
+                                    POV handles the composite creative 
+    mandate for global sports shoe and
+     apparel major Skechers in India.
+                                </p>
+                                 <ul class="projectCategories">
+                                    <li>
+                                        <button class="category">Experiences</button>
+                                    </li>
+                                    <li>
+                                        <button class="category">Digital</button>
+                                    </li>
+                                    <li>
+                                        <button class="category">Innovations</button>
+                                    </li>
+                                </ul> 
+                            </figcaption>
+                        </figure>
+                    </a>
 
                 </div>
             </div>
         </div>
     </section>
-    <!-- <section class="bg-light mb-4">
-        <div class="container py-2">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="projectCategories">
-                        <li>
-                            <button class="category active">All</button>
-                        </li>
-                        <li>
-                            <button class="category">Experiences</button>
-                        </li>
-                        <li>
-                            <button class="category">Digital</button>
-                        </li>
-                        <li>
-                            <button class="category">Innovations</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
+ 
     <section>
         <div class="container">
-            <div class="row gx-lg-5">
+            <div class="row justify-content-center " >
+                <div class="col-sm-12 col-md-12 col-lg-10" >
+                    <div class="row gx-lg-5">
                 
-                <div *ngFor="let project of projects" class="col-sm-12 col-md-6 mb-4" >
-                    <figure class="projectCard">
-                        <div class="ratio ratio-4x3 bg-dark img">
-                            <img src="{{project.image}}" alt="" >
+                        <div *ngFor="let project of projects" class="col-sm-12 col-md-6 mb-4 colUpAnim" >
+                            <a class="clear link opacity-100" routerLink="{{project.exploreUrl}}" >
+                                <figure class="projectCard">
+                                    <div class="ratio ratio-4x3 bg-dark img">
+                                        <img src="{{project.image}}" alt="" >
+                                    </div>
+                                    <figcaption>
+                                        <h3 class="title ">{{project.title}}</h3>
+                                        <p class="description">{{project.description}}</p>
+                                        <ul class="projectCategories mt-auto">
+                                            <li *ngFor="let category of project.categories" >
+                                                <button class="category">{{category}}</button>
+                                            </li>
+                                        </ul>
+                                    </figcaption>
+                                </figure>
+                            </a>
                         </div>
-                        <figcaption>
-                            <h3 class="title ">{{project.title}}</h3>
-                            <p class="description">{{project.description}}</p>
-                            <ul class="projectCategories mt-auto">
-                                <li *ngFor="let category of project.categories" >
-                                    <button class="category">{{category}}</button>
-                                </li>
-                            </ul>
-                        </figcaption>
-                    </figure>
+                       
+                    </div>
                 </div>
-               
             </div>
         </div>
     </section>
