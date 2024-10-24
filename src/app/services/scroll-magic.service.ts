@@ -68,9 +68,21 @@ export class ScrollMagicService {
         })
         .setPin(featureBg, {pushFollowers: false })
         .addTo(controller);
+      })
 
+      const leftKeyFeatures = this.document.querySelectorAll('.leftKey .feature')
+
+      leftKeyFeatures.forEach(features => {
+        new ScrollMagic.Scene({
+          triggerElement: features,
+          triggerHook: 0.6,
+          duration: "50%"
+        })
+        .setTween(features, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
+        .addTo(controller);
       })
       
+
         
 
 
