@@ -24,6 +24,15 @@ import { ParallaxKeywordComponent } from './components/parallax-keyword/parallax
 import { InteractiveCursorSectionComponent } from './components/interactive-cursor-section/interactive-cursor-section.component';
 import { CursorComponent } from './shared/cursor/cursor.component';
 import { KeyFeaturesComponent } from './components/key-features/key-features.component';
+import { SkechersComponent } from './pages/projects/skechers/skechers.component';
+import { EssenceComponent } from './pages/projects/essence/essence.component';
+import { KaveriComponent } from './pages/projects/kaveri/kaveri.component';
+import { ZoiComponent } from './pages/projects/zoi/zoi.component';
+import { BaggitComponent } from './pages/projects/baggit/baggit.component';
+import { OzeeComponent } from './pages/projects/ozee/ozee.component';
+import { EverEnviroComponent } from './pages/projects/ever-enviro/ever-enviro.component';
+import { One360Component } from './pages/projects/one-360/one-360.component';
+import { CccComponent } from './pages/projects/ccc/ccc.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +51,16 @@ import { KeyFeaturesComponent } from './components/key-features/key-features.com
     ParallaxKeywordComponent,
     InteractiveCursorSectionComponent,
     CursorComponent,
-    KeyFeaturesComponent
+    KeyFeaturesComponent,
+    SkechersComponent,
+    EssenceComponent,
+    KaveriComponent,
+    ZoiComponent,
+    BaggitComponent,
+    OzeeComponent,
+    EverEnviroComponent,
+    One360Component,
+    CccComponent
   ],
   imports: [
     BrowserModule,
