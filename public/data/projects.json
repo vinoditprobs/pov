@@ -3,14 +3,14 @@
       "title": "Essence",
       "description": "We created a voice for the brand around Surf, Sand & Luxury. We wanted the message and medium to come together to `tell a story.",
       "image": "images/projects/essence.jpg",
-      "categories": ["Experience",  "Innovations"],
+      "categories": ["Experience"],
       "exploreUrl": ""
     },
     {
       "title": "Kaveri",
       "description": "Built around the voice ‘Everyday Beautiful’, we gave the brand a unique identity & communication palette that embraced a global idiom without losing its Indian roots..",
       "image": "images/projects/kaveri.jpg",
-      "categories": ["Experience", "Digital", "Innovations"],
+      "categories": ["Digital", "Innovations"],
       "exploreUrl": ""
     },
     {
@@ -24,14 +24,14 @@
       "title": "Baggit",
       "description": "We saw Baggit as an opportunity to evolve a brand voice that was different from the cataloguish nature of the category.",
       "image": "images/projects/baggit.jpg",
-      "categories": ["Experience", "Digital", "Innovations"],
+      "categories": ["Experience", "Innovations"],
       "exploreUrl": ""
     },
     {
       "title": "Ozee",
       "description": "We identified a natural constituent for OZEE—young, individualistic—that expects the world to revolve around their pace of life.",
       "image": "images/projects/ozee.jpg",
-      "categories": ["Experience", "Digital", "Innovations"],
+      "categories": ["Experience", "Digital"],
       "exploreUrl": ""
     },
     {
@@ -45,7 +45,7 @@
       "title": "360 ONE",
       "description": "Built around the voice ‘Everyday Beautiful’, we gave the brand a unique identity & communication palette that embraced a global idiom without losing its Indian roots.",
       "image": "images/projects/360-one.jpg",
-      "categories": ["Experience", "Digital", "Innovations"],
+      "categories": [ "Digital", "Innovations"],
       "exploreUrl": ""
     },
     {
