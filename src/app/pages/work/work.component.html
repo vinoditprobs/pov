@@ -53,7 +53,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-10" >
                     <div class="row gx-lg-5">
                 
-                        <div *ngFor="let project of projects" class="col-sm-12 col-md-6 mb-4 colUpAnim" >
+                        <div *ngFor="let project of visibleProjects" class="col-sm-12 col-md-6 mb-4 " >
                             <a class="clear link opacity-100" routerLink="{{project.exploreUrl}}" >
                                 <figure class="projectCard">
                                     <div class="ratio ratio-4x3 bg-dark img">
@@ -73,6 +73,11 @@
                         </div>
                        
                     </div>
+                </div>
+            </div>
+            <div class="row" *ngIf="visibleProjects.length < projects.length" >
+                <div class="col-sm-12 text-center" >
+                    <button class="btn btn-primary btn-lg" (click)="loadMore()" >Load More</button>
                 </div>
             </div>
         </div>

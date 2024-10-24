@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit} from '@angular/core';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
 import { ScrollMagicService } from '../../services/scroll-magic.service';
 import { DataService } from '../../services/data.service';
@@ -8,9 +8,12 @@ import { DataService } from '../../services/data.service';
   templateUrl: './work.component.html',
   styleUrl: './work.component.scss'
 })
-export class WorkComponent {
+export class WorkComponent implements AfterViewInit {
 
   projects: any = []
+  visibleProjects: any = []
+
+  itemsVisible: number = 4
 
   constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService, private DataService: DataService){}
   ngOnInit(){
@@ -18,11 +21,24 @@ export class WorkComponent {
     this.ScrollMagicService.initScrollMagic();
 
     this.DataService.getProjects().subscribe(data => {
-
       this.projects = data
-
     })
 
+   
+
+  }
+
+  ngAfterViewInit(){
+    this.updateVisibleProjects();
+  }
+
+  updateVisibleProjects(){
+    this.visibleProjects = this.projects.slice(0, this.itemsVisible)
+  }
+
+  loadMore(){
+    this.itemsVisible += 4;
+    this.updateVisibleProjects()
   }
 
 }
