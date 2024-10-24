@@ -47,15 +47,15 @@ export class WorkComponent {
 
   loadMore(){
     this.itemsVisible += 4;
-    this.updateVisibleProjects()
+    this.updateVisibleProjects();
   }
 
   onSelectCategory(category: string) {
     if (this.selectedCategory === category) {
-      this.selectedCategory = null;  // Deselect if the same category is clicked
-      this.visibleProjects = this.filteredProjects;  // Show all projects
+      this.selectedCategory = null; 
+      this.visibleProjects = this.filteredProjects;  
     } else {
-      this.selectedCategory = category;  // Select new category
+      this.selectedCategory = category; 
       this.visibleProjects = this.filteredProjects.filter((project: projectInterface) =>
         project.categories.includes(category)
       );
