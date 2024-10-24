@@ -17,45 +17,61 @@ export class ScrollMagicService {
       const controller = new ScrollMagic.Controller();
 
 
-      const parallaxKeywordSection = this.document.querySelectorAll('.parallaxKeywordSection .parallaxKeyword')
+      // const parallaxKeywordSection = this.document.querySelectorAll('.parallaxKeywordSection .parallaxKeyword')
+      // parallaxKeywordSection.forEach((item) => {
+      //   const topTitle = item.querySelector('.parallax_title .title');
+      //   const bottomTitle = item.querySelector('.parallax_bottom_title .title');
+      //   const bg = item.querySelector('.bg')
 
-      parallaxKeywordSection.forEach((item) => {
-        const topTitle = item.querySelector('.parallax_title .title');
-        const bottomTitle = item.querySelector('.parallax_bottom_title .title');
-        const bg = item.querySelector('.bg')
+      //   new ScrollMagic.Scene({
+      //     triggerElement: item,
+      //     triggerHook: 0,
+      //     duration: "100%"
+      //   })
+      //   .setPin(bg, {pushFollowers: false })
+      //   .addTo(controller);
 
+      //   new ScrollMagic.Scene({
+      //     triggerElement: topTitle,
+      //     triggerHook: 0.5,
+      //     duration: "50%"
+      //   })
+      //   .setTween(topTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
+      //   .addTo(controller);
+
+      //   new ScrollMagic.Scene({
+      //     triggerElement: topTitle,
+      //     triggerHook: 0.15,
+      //     duration: "50%"
+      //   })
+      //   .setPin(topTitle)
+      //   .addTo(controller);
+
+      //   new ScrollMagic.Scene({
+      //     triggerElement: bottomTitle,
+      //     triggerHook: 0.5,
+      //     duration: "50%"
+      //   })
+      //   .setTween(bottomTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
+      //   .addTo(controller);
+      // })
+
+
+      const keyFeaturesSection = this.document.querySelectorAll('.keyFeaturesSection');
+     
+      keyFeaturesSection.forEach((featuresSection) => {
+        const featureBg = featuresSection.querySelector('.featureBg');
         new ScrollMagic.Scene({
-          triggerElement: item,
-          triggerHook: 0,
-          duration: "100%"
-        })
-        .setPin(bg, {pushFollowers: false })
-        .addTo(controller);
-
-        new ScrollMagic.Scene({
-          triggerElement: topTitle,
-          triggerHook: 0.5,
-          duration: "50%"
-        })
-        .setTween(topTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
-        .addTo(controller);
-
-        new ScrollMagic.Scene({
-          triggerElement: topTitle,
+          triggerElement: featuresSection,
           triggerHook: 0.15,
-          duration: "50%"
+          duration: "230%"
         })
-        .setPin(topTitle)
+        .setPin(featureBg, {pushFollowers: false })
         .addTo(controller);
 
-        new ScrollMagic.Scene({
-          triggerElement: bottomTitle,
-          triggerHook: 0.5,
-          duration: "50%"
-        })
-        .setTween(bottomTitle, { fontSize:'calc(1.625rem + 4.5vw)', fontWeight:700, ease:'power2.out' })
-        .addTo(controller);
       })
+      
+        
 
 
       const revealElements = this.document.querySelectorAll(
