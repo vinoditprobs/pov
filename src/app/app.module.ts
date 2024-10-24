@@ -22,6 +22,7 @@ import { GalleryTickerComponent } from './shared/gallery-ticker/gallery-ticker.c
 import { ParallaxKeywordComponent } from './components/parallax-keyword/parallax-keyword.component';
 import { InteractiveCursorSectionComponent } from './components/interactive-cursor-section/interactive-cursor-section.component';
 import { CursorComponent } from './shared/cursor/cursor.component';
+import { KeyFeaturesComponent } from './components/key-features/key-features.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CursorComponent } from './shared/cursor/cursor.component';
     GalleryTickerComponent,
     ParallaxKeywordComponent,
     InteractiveCursorSectionComponent,
-    CursorComponent
+    CursorComponent,
+    KeyFeaturesComponent
   ],
   imports: [
     BrowserModule,
