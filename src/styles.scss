@@ -877,6 +877,40 @@ section{
       background-position:center center;
       background-repeat: no-repeat;
     }
+    &.magnifying{
+        background-image: url('/stage/images/magnifying.png');
+        background-size:30% auto;
+        background-position: -48% -25%;
+        &.visible{
+            animation: magnifying ease-in-out 5s forwards 0.3s;
+            @keyframes magnifying {
+                0%{
+                    background-position: -48% -25%;
+                }
+                25%{
+                    background-position:152% -25%;;
+                }
+                26%{
+                    background-position:152%  130%;
+                }
+                50%{
+                    background-position:-18%  130%;
+                }
+                65%{
+                    background-position:-18% 130%;
+                    background-size:30% auto;
+                }
+                76%{
+                    background-position:50%  50%;
+                    background-size:30% auto;
+                }
+                100%{
+                    background-position:50%  50%;
+                    background-size:175% auto;
+                }
+            }
+        }
+    }
   }
 
 

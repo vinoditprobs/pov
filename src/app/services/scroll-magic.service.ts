@@ -59,7 +59,7 @@ export class ScrollMagicService {
 
 
       const revealElements = this.document.querySelectorAll(
-        ".colUpAnim, .colDownAnim, .colLeftAnim, .colRightAnim, .box_card"
+        ".colUpAnim, .colDownAnim, .colLeftAnim, .colRightAnim, .customAnim"
       );
       for (let i = 0; i < revealElements.length; i++) {
         new ScrollMagic.Scene({
