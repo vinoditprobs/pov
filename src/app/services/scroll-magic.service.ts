@@ -64,7 +64,7 @@ export class ScrollMagicService {
         new ScrollMagic.Scene({
           triggerElement: featuresSection,
           triggerHook: 0.12,
-          duration: "230%"
+          duration: "300%"
         })
         .setPin(featureBg, {pushFollowers: false })
         .addTo(controller);
@@ -85,10 +85,10 @@ export class ScrollMagicService {
       rightKeyFeatures.forEach(rightFeature => {
         new ScrollMagic.Scene({
           triggerElement: rightFeature,
-          triggerHook: 0.60,
-          duration: "50%"
+          triggerHook: 0.9,
+          duration: "40%"
         })
-        .setTween(rightFeature, { scale: '0', ease:'power2.out' })
+        .setTween(rightFeature, { scale: '1', ease:'power2.out' })
         .addTo(controller);
       })
       
