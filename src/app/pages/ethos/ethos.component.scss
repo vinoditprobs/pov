@@ -69,7 +69,9 @@
     .subject_para{
         font-size: 16px;
         line-height: 1.2;
-        transition: max-height ease 0.25s;
+        transition: max-height ease 0.6s;
+        max-height: 0;
+        overflow: hidden;
     }
     .subject_keywords{
         list-style: none;
@@ -90,7 +92,7 @@
         //     transform: translateY(0);
         // }
         .subject_para{
-                max-height: 300px;
+                max-height: 100px;
         }
     }
    }
