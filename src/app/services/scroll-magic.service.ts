@@ -63,7 +63,7 @@ export class ScrollMagicService {
         const featureBg = featuresSection.querySelector('.featureBg');
         new ScrollMagic.Scene({
           triggerElement: featuresSection,
-          triggerHook: 0.15,
+          triggerHook: 0.12,
           duration: "230%"
         })
         .setPin(featureBg, {pushFollowers: false })
