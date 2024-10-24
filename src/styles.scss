@@ -966,6 +966,12 @@ section{
         display: flex;
         flex-wrap: wrap;
         align-items: start;
+        a{
+            display: inline-flex;
+        flex-wrap: wrap;
+        align-items: start;
+        width:100%;
+        }
         .title{
             font-size: calc(1.5rem + 1.8vw);
             font-weight: 300;
@@ -1191,6 +1197,11 @@ section{
         padding: 0.5rem;
     }
 }
-
+.projectCard{
+    
+    figcaption{
+        padding: 1rem 0;
+    }
+}
 }
 

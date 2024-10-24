@@ -17,19 +17,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <a routerLink="" class="link clear opacity-100" >
                         <figure class="projectCard ">
-                            <div class="ratio ratio-21x9 bg-dark img"><img src="images/home/banner-3.jpg" alt=""></div>
+                            <a class="clear link opacity-100 img" routerLink="" >
+                                <div class="ratio ratio-21x9 bg-dark"><img src="images/home/banner-3.jpg" alt=""></div>
+                            </a>
                             <figcaption >
+                                <a class="clear link opacity-100 img mb-2" routerLink="" >
                                 <h3 class="title">Skechers</h3>
                                 <p class="description h-auto">We created a voice
                                     POV handles the composite creative 
     mandate for global sports shoe and
      apparel major Skechers in India.
                                 </p>
-                                 <ul class="projectCategories">
+                            </a>
+                                 <ul class="projectCategories" style="pointer-events: none;" >
                                     <li>
-                                        <button class="category">Experiences</button>
+                                        <button class="category" >Experiences</button>
                                     </li>
                                     <li>
                                         <button class="category">Digital</button>
@@ -40,8 +43,6 @@
                                 </ul> 
                             </figcaption>
                         </figure>
-                    </a>
-
                 </div>
             </div>
         </div>
@@ -62,7 +63,7 @@
                                     </a>
                                     
                                     <figcaption>
-                                        <a class="clear link opacity-100" routerLink="{{project.exploreUrl}}" >
+                                        <a class="clear link opacity-100 mb-2" routerLink="{{project.exploreUrl}}" >
                                         <h3 class="title "> {{project.title}}</h3>
                                         <p class="description">{{project.description}}</p>
                                         </a>
