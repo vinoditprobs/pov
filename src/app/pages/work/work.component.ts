@@ -3,6 +3,15 @@ import { NavbarThemeService } from '../../services/navbar-theme.service';
 import { ScrollMagicService } from '../../services/scroll-magic.service';
 import { DataService } from '../../services/data.service';
 
+
+interface projectInterface{
+  title: string,
+  description: string
+  image: string
+  categories: string[],
+  exploreUrl: string
+}
+
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
@@ -12,6 +21,8 @@ export class WorkComponent {
 
   projects: any = []
   visibleProjects: any = []
+  filteredProjects: any = []
+  selectedCategory: string | null = null;
 
   itemsVisible: number = 4
 
@@ -22,6 +33,7 @@ export class WorkComponent {
 
     this.DataService.getProjects().subscribe(data => {
       this.projects = data
+      this.filteredProjects = this.projects;
     })
 
     this.updateVisibleProjects();
@@ -30,7 +42,7 @@ export class WorkComponent {
 
 
   updateVisibleProjects(){
-    this.visibleProjects = this.projects.slice(0, this.itemsVisible)
+    this.visibleProjects = this.filteredProjects.slice(0, this.itemsVisible)
   }
 
   loadMore(){
@@ -38,4 +50,17 @@ export class WorkComponent {
     this.updateVisibleProjects()
   }
 
+  onSelectCategory(category: string) {
+    if (this.selectedCategory === category) {
+      this.selectedCategory = null;  // Deselect if the same category is clicked
+      this.visibleProjects = this.filteredProjects;  // Show all projects
+    } else {
+      this.selectedCategory = category;  // Select new category
+      this.visibleProjects = this.filteredProjects.filter((project: projectInterface) =>
+        project.categories.includes(category)
+      );
+    }
+  }
+
+  
 }

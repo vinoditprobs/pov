@@ -1024,7 +1024,7 @@ section{
             color: $dark;
             mix-blend-mode: difference;
             font-size: 15px;
-            &.active{
+            &.selected{
                 background-color: $dark;
                 color: $light;
             }
