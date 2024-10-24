@@ -53,9 +53,9 @@
                 <div class="col-sm-12 col-md-12 col-lg-10" >
                     <div class="row gx-lg-5">
                 
-                        <div *ngFor="let project of visibleProjects" class="col-sm-12 col-md-6 mb-4 " >
+                        <div *ngFor="let project of visibleProjects" class="col-sm-12 col-md-6 mb-4 fadeOutUp " pAnimateOnScroll enterClass="fadeInUp" leaveClass="fadeOutUp"  >
                             <a class="clear link opacity-100" routerLink="{{project.exploreUrl}}" >
-                                <figure class="projectCard">
+                                <figure class="projectCard" >
                                     <div class="ratio ratio-4x3 bg-dark img">
                                         <img src="{{project.image}}" alt="" >
                                     </div>
