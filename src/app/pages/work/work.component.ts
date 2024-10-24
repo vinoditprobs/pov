@@ -48,18 +48,24 @@ export class WorkComponent {
   loadMore(){
     this.itemsVisible += 4;
     this.updateVisibleProjects();
+    console.log('Selected ', this.filteredProjects)
+    console.log('visibleProjects ', this.visibleProjects)
   }
 
   onSelectCategory(category: string) {
     if (this.selectedCategory === category) {
-      this.selectedCategory = null; 
-      this.visibleProjects = this.filteredProjects;  
+      this.selectedCategory = null;
+      this.filteredProjects = this.projects;  
     } else {
-      this.selectedCategory = category; 
-      this.visibleProjects = this.filteredProjects.filter((project: projectInterface) =>
+      this.selectedCategory = category;
+      this.filteredProjects = this.projects.filter((project: projectInterface) =>
         project.categories.includes(category)
       );
     }
+    this.itemsVisible = 4;
+    this.updateVisibleProjects();
+    console.log('Selected ', this.filteredProjects)
+    console.log('visibleProjects ', this.visibleProjects)
   }
 
   
