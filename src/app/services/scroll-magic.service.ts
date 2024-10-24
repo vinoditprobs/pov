@@ -64,7 +64,7 @@ export class ScrollMagicService {
         new ScrollMagic.Scene({
           triggerElement: featuresSection,
           triggerHook: 0.12,
-          duration: "300%"
+          duration: "210%"
         })
         .setPin(featureBg, {pushFollowers: false })
         .addTo(controller);
