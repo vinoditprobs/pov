@@ -33,7 +33,9 @@ import { BaggitComponent } from './pages/work/baggit/baggit.component';
 import { EverEnviroComponent } from './pages/work/ever-enviro/ever-enviro.component';
 import { OzeeComponent } from './pages/work/ozee/ozee.component';
 import { One360Component } from './pages/work/one-360/one-360.component';
-import { Error404Component } from './pages/error-404/error-404.component'
+import { Error404Component } from './pages/error-404/error-404.component';
+import { NaharExcaliburComponent } from './pages/work/nahar-excalibur/nahar-excalibur.component';
+import { FullertonGrihashaktiComponent } from './pages/work/fullerton-grihashakti/fullerton-grihashakti.component'
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { Error404Component } from './pages/error-404/error-404.component'
     EverEnviroComponent,
     OzeeComponent,
     One360Component,
-    Error404Component
+    Error404Component,
+    NaharExcaliburComponent,
+    FullertonGrihashaktiComponent
   ],
   imports: [
     BrowserModule,

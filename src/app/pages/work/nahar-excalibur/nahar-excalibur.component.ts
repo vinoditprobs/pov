@@ -3,11 +3,11 @@ import { NavbarThemeService } from '../../../services/navbar-theme.service';
 import { ScrollMagicService } from '../../../services/scroll-magic.service';
 
 @Component({
-  selector: 'app-skechers',
-  templateUrl: './skechers.component.html',
-  styleUrl: './skechers.component.scss'
+  selector: 'app-nahar-excalibur',
+  templateUrl: './nahar-excalibur.component.html',
+  styleUrl: './nahar-excalibur.component.scss'
 })
-export class SkechersComponent {
+export class NaharExcaliburComponent {
   constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService){}
   ngOnInit(){
     this.NavbarThemeService.changeHeaderTheme('dark');
