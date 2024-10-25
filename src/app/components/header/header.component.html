@@ -28,7 +28,7 @@
                     <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()" class="menu_link link" >About Us</a>
                 </li>
                 <li>
-                    <a routerLink="/work" routerLinkActive="active" (click)="closeMenu()" class="menu_link link" >Our Work</a>
+                    <a routerLink="/work" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()" class="menu_link link" >Our Work</a>
                 </li>
                 <li>
                     <a routerLink="/ethos" routerLinkActive="active" (click)="closeMenu()" class="menu_link link" >ETHOS</a>
