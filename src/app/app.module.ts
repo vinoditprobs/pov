@@ -35,7 +35,8 @@ import { OzeeComponent } from './pages/work/ozee/ozee.component';
 import { One360Component } from './pages/work/one-360/one-360.component';
 import { Error404Component } from './pages/error-404/error-404.component';
 import { NaharExcaliburComponent } from './pages/work/nahar-excalibur/nahar-excalibur.component';
-import { FullertonGrihashaktiComponent } from './pages/work/fullerton-grihashakti/fullerton-grihashakti.component'
+import { FullertonGrihashaktiComponent } from './pages/work/fullerton-grihashakti/fullerton-grihashakti.component';
+import { SuggestProjectsComponent } from './components/suggest-projects/suggest-projects.component'
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { FullertonGrihashaktiComponent } from './pages/work/fullerton-grihashakt
     One360Component,
     Error404Component,
     NaharExcaliburComponent,
-    FullertonGrihashaktiComponent
+    FullertonGrihashaktiComponent,
+    SuggestProjectsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+<div class="row justify-content-center " >
+    <div class="col-sm-12" >
+        <div class="row gx-lg-5">
+            <div *ngFor="let project of visibleProjects" class="col-sm-12 col-md-6 col-lg-4 mb-4 fadeOutUp " pAnimateOnScroll enterClass="fadeInUp" leaveClass="fadeOutUp"  >
+                <!-- <a class="clear link opacity-100" routerLink="{{project.exploreUrl}}" >  </a> -->
+                    <figure class="projectCard" >
+                        <a class="clear link opacity-100 img" routerLink="{{project.exploreUrl}}" > 
+                            <div class="ratio ratio-4x3 bg-dark ">
+                                <img src="{{project.image}}" alt="" >
+                            </div>
+                        </a>
+                        
+                        <figcaption>
+                            <a class="clear link opacity-100 mb-2" routerLink="{{project.exploreUrl}}" >
+                            <h3 class="title "> {{project.title}}</h3>
+                            <p class="description">{{project.description}}</p>
+                            </a>
+                        </figcaption>
+                    </figure>
+              
+            </div>
+           
+        </div>
+    </div>
+</div>
