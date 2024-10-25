@@ -32,7 +32,8 @@ import { ZoiComponent } from './pages/work/zoi/zoi.component';
 import { BaggitComponent } from './pages/work/baggit/baggit.component';
 import { EverEnviroComponent } from './pages/work/ever-enviro/ever-enviro.component';
 import { OzeeComponent } from './pages/work/ozee/ozee.component';
-import { One360Component } from './pages/work/one-360/one-360.component'
+import { One360Component } from './pages/work/one-360/one-360.component';
+import { Error404Component } from './pages/error-404/error-404.component'
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { One360Component } from './pages/work/one-360/one-360.component'
     BaggitComponent,
     EverEnviroComponent,
     OzeeComponent,
-    One360Component
+    One360Component,
+    Error404Component
   ],
   imports: [
     BrowserModule,
