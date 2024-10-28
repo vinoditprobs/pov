@@ -115,9 +115,9 @@ export class ScrollMagicService {
       if(headline){
         new ScrollMagic.Scene({
           triggerHook: 0,
-          duration: "30%"
+          duration: "20%"
         })
-        .setTween(headline, { y: '30%', scale: '1.2', autoAlpha: 0, })
+        .setTween(headline, { y: '20%', autoAlpha: 0, })
         //.addIndicators()
         .addTo(controller);
       }
