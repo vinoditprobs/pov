@@ -122,6 +122,22 @@ export class ScrollMagicService {
         .addTo(controller);
       }
 
+
+      const brandSeek = this.document.querySelector('.brandSeek');
+      //let shesKeys = gsap.to(".shes_keys", 1, {className: "shes_keys"});
+      if(brandSeek){
+        new ScrollMagic.Scene({
+          triggerElement: brandSeek,
+          triggerHook: 0.5,
+          duration: '50%'
+        })
+        .setTween(brandSeek, { y:'20%', ease:'power2.out' })
+        //.addIndicators()
+        .addTo(controller);
+      }
+
+      
+
       const bannerBg = this.document.querySelector('.bannerBg');
       if(bannerBg){
         new ScrollMagic.Scene({
