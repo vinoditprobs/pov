@@ -24,20 +24,22 @@ export class WorkComponent {
   filteredProjects: any = []
   selectedCategory: string | null = null;
 
-  itemsVisible: number = 4
+  itemsVisible: number = 8
 
   constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService, private DataService: DataService){}
   ngOnInit(){
+    
     this.NavbarThemeService.changeHeaderTheme('dark');
     this.ScrollMagicService.initScrollMagic();
+    
 
     this.DataService.getProjects().subscribe(data => {
       this.projects = data
       this.filteredProjects = this.projects;
+      this.updateVisibleProjects();
     })
 
-    this.updateVisibleProjects();
-
+    
   }
 
 
