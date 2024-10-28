@@ -38,7 +38,7 @@ body {
     &.stopScroll{
         overflow: hidden;
     }
-    cursor: none !important;
+    
 }
 
 strong{
@@ -1127,6 +1127,9 @@ section{
     opacity: 1;
 }
 
+.starCursor {
+    cursor: none !important;
+  }
 
 @media(min-width: 1200px){
 .display-1 {
