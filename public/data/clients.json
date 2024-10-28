@@ -5,29 +5,21 @@
       "category": "Footwear"
     },
     {
-      "img": "images/clients/zee-digital.png",
-      "title": "Zee Digital",
-      "category": "Media"
+      "img": "images/clients/garden-vareli.png",
+      "title": "Garden Vareli",
+      "category": "Textile"
     },
-    {
-      "img": "images/clients/nahar.png",
-      "title": "Nahar",
-      "category": "Real Estate"
-    },
+
     {
       "img": "images/clients/kaveri.png",
       "title": "Kaveri",
       "category": "Agriculture"
     },
+
     {
-      "img": "images/clients/icici.png",
-      "title": "ICICI Prudential",
-      "category": "Finance"
-    },
-    {
-      "img": "images/clients/garden-vareli.png",
-      "title": "Garden Vareli",
-      "category": "Textile"
+      "img": "images/clients/baggit.png",
+      "title": "Baggit",
+      "category": "Fashion"
     },
     {
       "img": "images/clients/essence.png",
@@ -35,9 +27,14 @@
       "category": "Advertising"
     },
     {
-      "img": "images/clients/baggit.png",
-      "title": "Baggit",
-      "category": "Fashion"
+      "img": "images/clients/360-one.png",
+      "title": "360 One",
+      "category": "Wealth Management"
+    },
+    {
+      "img": "images/clients/icici.png",
+      "title": "ICICI Prudential",
+      "category": "Finance"
     },
     {
       "img": "images/clients/aditya-birla-group.png",
@@ -45,19 +42,66 @@
       "category": "Conglomerate"
     },
     {
-      "img": "images/clients/360-one.png",
-      "title": "360 One",
-      "category": "Wealth Management"
+      "img": "images/clients/nahar.png",
+      "title": "Nahar",
+      "category": "Real Estate"
     },
     {
-      "img": "images/clients/shemaroo.png",
-      "title": "Shemaroo",
+      "img": "images/clients/sammaan-capital.png",
+      "title": "Sammaan Capital",
+      "category": "Cinema"
+    },
+    {
+      "img": "images/clients/zee-digital.png",
+      "title": "Zee Digital",
+      "category": "Media"
+    },
+    {
+      "img": "images/clients/comedy-walas.png",
+      "title": "Comedy Walas",
+      "category": "Cinema"
+    },
+    {
+      "img": "images/clients/mini-plex.png",
+      "title": "Mini Plex.png",
+      "category": "Cinema"
+    },
+    {
+      "img": "images/clients/zoi.png",
+      "title": "Zoi",
+      "category": "Cinema"
+    },
+    {
+      "img": "images/clients/ccc.png",
+      "title": "ccc",
+      "category": "Cinema"
+    },
+    {
+      "img": "images/clients/puls-care.png",
+      "title": "Puls Care",
+      "category": "Cinema"
+    },
+    {
+      "img": "images/clients/grihashakti.png",
+      "title": "Grihashakti",
+      "category": "Cinema"
+    },
+    {
+      "img": "images/clients/ever-enviro.png",
+      "title": "ever-enviro",
       "category": "Entertainment"
+    },    
+    {
+      "img": "images/clients/bionxt.png",
+      "title": "Bionxt",
+      "category": "Cinema"
     },
     {
-      "img": "images/clients/aditya-birla-group.png",
-      "title": "Mini Plex",
+      "img": "images/clients/capital-xb.png",
+      "title": "Capital XB",
       "category": "Cinema"
     }
+  
+    
   ]
   

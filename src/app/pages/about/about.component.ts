@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
 import { ScrollMagicService } from '../../services/scroll-magic.service';
 import { LoaderService } from '../../services/loader.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-about',
@@ -9,7 +10,10 @@ import { LoaderService } from '../../services/loader.service';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService, public _loader: LoaderService){
+
+  clients: any = []
+  
+  constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService, public _loader: LoaderService, private DataService: DataService){
     this._loader.show();
   }
 
@@ -55,60 +59,16 @@ export class AboutComponent {
     //alert();
     setTimeout(()=> {
       this._loader.hide();
-    }, 500)
+    }, 500);
+
+
+    this.DataService.getClients().subscribe(data => {
+      this.clients = data
+    })
 
   }
   
 
-  clients = [
-    {
-      img:'images/clients/skechers.png',
-      title:'Skechers'
-    },
-    {
-      img:'images/clients/zee-digital.png',
-      title:'Zee Digital'
-    },
-    {
-      img:'images/clients/nahar.png',
-      title:'Nahar'
-    },
-    {
-      img:'images/clients/kaveri.png',
-      title:'Kaveri'
-    },
-    {
-      img:'images/clients/icici.png',
-      title:'ICICI Prudential'
-    },
-    {
-      img:'images/clients/garden-vareli.png',
-      title:'Garden Vareli'
-    },
-    {
-      img:'images/clients/essence.png',
-      title:'Essence'
-    },
-    {
-      img:'images/clients/baggit.png',
-      title:'Baggit'
-    },
-    {
-      img:'images/clients/aditya-birla-group.png',
-      title:'Aditya Birla Group'
-    },
-    {
-      img:'images/clients/360-one.png',
-      title:'360 One'
-    },
-    {
-      img:'images/clients/shemaroo.png',
-      title:'Shemaroo'
-    },
-    {
-      img:'images/clients/aditya-birla-group.png',
-      title:'Mini Plex'
-    },
-  ]
+
 
 }
