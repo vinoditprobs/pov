@@ -22,7 +22,7 @@ export class InteractiveCursorSectionComponent {
   autoItemInterval: any; // Interval for automatic item generation
   lastX: number = 0;
   lastY: number = 0;
-  minDistance: number = 100; // Minimum distance in pixels to trigger new items
+  minDistance: number = 150; // Minimum distance in pixels to trigger new items
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,){}
 

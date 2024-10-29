@@ -25,9 +25,10 @@
   }
   
   .floating-item.image img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 4px;
+    object-fit: cover;
   }
   
   /* Example floating animation */
