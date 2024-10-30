@@ -59,7 +59,6 @@ export class CursorService {
       });
 
       const starCursor = this.document.querySelectorAll('.starCursor');
-      console.log(starCursor);
       Array.from(starCursor).forEach((star) => {
         star.addEventListener('mouseenter', () => {
           this.cursor.classList.add('star');
