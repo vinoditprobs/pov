@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollMagicService } from '../../services/scroll-magic.service';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
-import { CursorService } from '../../services/cursor.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,7 @@ export class HomeComponent {
 
   navBarColor : string = 'transToLight'
 
-  constructor(private ScrollMagicService: ScrollMagicService, private NavbarThemeService: NavbarThemeService, private CursorService: CursorService){
+  constructor(private ScrollMagicService: ScrollMagicService, private NavbarThemeService: NavbarThemeService){
     
   }
     slideAssets = [
@@ -51,7 +50,5 @@ export class HomeComponent {
     ngOnInit(){
       this.ScrollMagicService.initScrollMagic();
       this.NavbarThemeService.changeHeaderTheme('transToLight');
-      this.CursorService.initializeCursorAnimation()
     }
-
 }

@@ -1,4 +1,4 @@
-import { Injectable, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TweenMax } from 'gsap';
 
@@ -7,7 +7,6 @@ import { TweenMax } from 'gsap';
 })
 export class CursorService {
 
- 
   posX: number = 0;
   posY: number = 0;
   mouseX: number = 0;
@@ -15,9 +14,12 @@ export class CursorService {
   cursor!: HTMLElement;
   follower!: HTMLElement;
 
-  constructor(@Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
-  initializeCursorAnimation(){
+  initializeCursorAnimation(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.cursor = this.document.querySelector('.cursor') as HTMLElement;
       this.follower = this.document.querySelector('.cursor-follower') as HTMLElement;
@@ -42,45 +44,36 @@ export class CursorService {
         requestAnimationFrame(animate);
       };
 
-      // Start the animation loop
       requestAnimationFrame(animate);
 
       const links = this.document.querySelectorAll('.link');
-      if (links.length > 0) {
-        Array.from(links).forEach((link) => {
-          link.addEventListener('mouseenter', () => {
-            this.cursor.classList.add('active');
-            this.follower.classList.add('active');
-          });
-          link.addEventListener('mouseleave', () => {
-            this.cursor.classList.remove('active');
-            this.follower.classList.remove('active');
-          });
+      Array.from(links).forEach((link) => {
+        link.addEventListener('mouseenter', () => {
+          this.cursor.classList.add('active');
+          this.follower.classList.add('active');
         });
-      } else {
-        console.warn('No elements with the class "link" found.');
-      }
+        link.addEventListener('mouseleave', () => {
+          this.cursor.classList.remove('active');
+          this.follower.classList.remove('active');
+        });
+      });
 
       const starCursor = this.document.querySelectorAll('.starCursor');
-      if (starCursor.length > 0) {
-        Array.from(starCursor).forEach((star) => {
-          star.addEventListener('mouseenter', () => {
-            this.cursor.classList.add('star');
-            this.follower.classList.add('star');
-          });
-          star.addEventListener('mouseleave', () => {
-            this.cursor.classList.remove('star');
-            this.follower.classList.remove('star');
-          });
+      Array.from(starCursor).forEach((star) => {
+        star.addEventListener('mouseenter', () => {
+          this.cursor.classList.add('star');
+          this.follower.classList.add('star');
         });
-      }
+        star.addEventListener('mouseleave', () => {
+          this.cursor.classList.remove('star');
+          this.follower.classList.remove('star');
+        });
+      });
     }
   }
 
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent): void {
+  updateMousePosition(event: MouseEvent): void {
     this.mouseX = event.pageX;
     this.mouseY = event.pageY;
   }
-
 }

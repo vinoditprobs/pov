@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
 import { ScrollMagicService } from '../../services/scroll-magic.service';
 import { DataService } from '../../services/data.service';
+import { CursorService } from '../../services/cursor.service';
+
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
-export class AboutComponent {
+export class AboutComponent{
 
   clients: any = []
   
@@ -81,8 +83,6 @@ export class AboutComponent {
     })
 
   }
-  
-
 
 
 }
