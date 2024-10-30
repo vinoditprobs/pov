@@ -411,6 +411,9 @@ button {
     color: $light;
     position: relative;
     z-index: 9;
+    .container{
+        mix-blend-mode: difference;
+    }
     .logo{
         display: inline-block;
         width: 100%;
