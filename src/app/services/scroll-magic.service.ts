@@ -14,7 +14,7 @@ export class ScrollMagicService {
 
   initScrollMagic() {
     if (isPlatformBrowser(this.platformId)){
-      const controller = new ScrollMagic.Controller();
+      const controller = new ScrollMagic.Controller({ refreshInterval: 0 });
 
 
       // const parallaxKeywordSection = this.document.querySelectorAll('.parallaxKeywordSection .parallaxKeyword')
@@ -108,8 +108,21 @@ export class ScrollMagicService {
           .setClassToggle(revealElements[i], "visible")
           .addTo(controller);
       }
-    
- 
+
+
+
+      const parallaxUp = this.document.querySelectorAll(".parallaxUp");
+      parallaxUp.forEach(item => {
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 0.5, // Adjust to 0.5 if you want to start earlier
+          duration: '50%', // Adjust duration as desired
+          tweenChanges: true
+        })
+          .setTween(gsap.to(item, { y: -300 })) // Moves item 500px down from its current position
+          .addTo(controller);
+      });
+      
       const headline = this.document.querySelector('.headline');
       //let shesKeys = gsap.to(".shes_keys", 1, {className: "shes_keys"});
       if(headline){

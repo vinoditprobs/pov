@@ -1131,6 +1131,18 @@ section{
     cursor: none !important;
   }
 
+  .parallaxUp {
+    will-change: transform;
+    
+  }
+img{
+    &.parallaxUp{
+        width: 100%;
+        height: auto;
+    }
+    
+}
+
 @media(min-width: 1200px){
 .display-1 {
     font-size: 7rem;
