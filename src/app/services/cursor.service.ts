@@ -40,11 +40,11 @@ export class CursorService {
             top: this.mouseY
           }
         });
-
         requestAnimationFrame(animate);
       };
 
       requestAnimationFrame(animate);
+      
 
       const links = this.document.querySelectorAll('.link');
       Array.from(links).forEach((link) => {

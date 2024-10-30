@@ -7,7 +7,7 @@
 //   }
 
   body{
-
+    cursor: none !important;
   }
 
   .cursor {
@@ -22,7 +22,7 @@
     pointer-events: none;
     user-select: none;
     transition: 0.3s ease-in-out transform, 0.2s ease-in-out opacity;
-    display: none;
+    display: none; //disabled
     &.star{
       background-color: rgba(255, 0, 0, 1);
       mix-blend-mode: normal;
@@ -51,7 +51,7 @@
     transform: translate(5px, 5px);
     user-select: none;
     pointer-events: none;
-    transition: 0.3s ease-in-out transform, 0.2s ease-in-out opacity;
+    transition:all 0.2s ease-out ;
     &.star{
       background-image: url('/stage/images/cursor.svg');
       background-color: rgba(223, 223, 223, 0);
