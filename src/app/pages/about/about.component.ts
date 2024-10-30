@@ -35,21 +35,25 @@ export class AboutComponent {
       title:''
     },
     {
-      img:'images/about/gallery/about-gallery-1.jpg',
+      img:'images/about/gallery/about-gallery-5.jpg',
       title:''
     },
     {
-      img:'images/about/gallery/about-gallery-2.jpg',
+      img:'images/about/gallery/about-gallery-6.jpg',
       title:''
     },
     {
-      img:'images/about/gallery/about-gallery-3.jpg',
+      img:'images/about/gallery/about-gallery-7.jpg',
       title:''
     },
     {
-      img:'images/about/gallery/about-gallery-4.jpg',
+      img:'images/about/gallery/about-gallery-8.jpg',
       title:''
     },
+    {
+      img:'images/about/gallery/about-gallery-9.jpg',
+      title:''
+    }
   ]
 
   ngOnInit(){
