@@ -1,6 +1,7 @@
 import { Component, HostListener, Inject, OnInit, AfterViewInit, PLATFORM_ID } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TweenMax } from 'gsap';
+import { gsap } from "gsap";
 
 @Component({
   selector: 'app-cursor',
