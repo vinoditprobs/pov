@@ -11,6 +11,7 @@ export class NavbarThemeService {
   private stickyClassSubject = new BehaviorSubject<boolean>(false);
   hasStickyClass$ = this.stickyClassSubject.asObservable();
 
+
   constructor(@Inject(DOCUMENT) private document: Document) { }
   
   hasStickyClass:boolean = false
@@ -28,8 +29,16 @@ export class NavbarThemeService {
     const navbar = this.document.querySelector('.navigationBar') as HTMLDivElement | null;
     const classesToCheck = ['transToLight', 'transToDark'];
     const hasStickyClass = classesToCheck.some(className => navbar?.classList.contains(className));  
-   
     this.stickyClassSubject.next(hasStickyClass);
   }
+
+  changeFooterTheme(theme:string){
+    const footer = this.document.querySelector('.footer')
+    if(footer){
+      footer.classList.remove('dark', 'light',);
+      footer.classList.add(theme);
+    }
+}
+
 
 }

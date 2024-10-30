@@ -10,7 +10,8 @@ import { ScrollMagicService } from '../../services/scroll-magic.service';
 export class ContactComponent {
   constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService){}
   ngOnInit(){
-    this.NavbarThemeService.changeHeaderTheme('dark');
+    this.NavbarThemeService.changeHeaderTheme('light');
+    this.NavbarThemeService.changeFooterTheme('light');
     this.ScrollMagicService.initScrollMagic();
   }
 }
