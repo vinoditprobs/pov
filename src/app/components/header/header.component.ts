@@ -1,6 +1,5 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, Input, PLATFORM_ID, AfterViewInit } from '@angular/core';
-import { LoaderService } from '../../services/loader.service';
+import { Component, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class HeaderComponent{
   fixedHeader: boolean = false
   hasStickyClass: boolean = false
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,  @Inject(DOCUMENT) private document: Document, public _loader: LoaderService,  private NavbarThemeService: NavbarThemeService){}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,  @Inject(DOCUMENT) private document: Document, private NavbarThemeService: NavbarThemeService){}
   loadingElem: boolean = true;
 
   @HostListener('window:scroll', ['$event'])
@@ -22,6 +21,7 @@ export class HeaderComponent{
     if (isPlatformBrowser(this.platformId)) {
       const navbarBg = this.document.querySelector('.navigationBar > .bg') as HTMLDivElement | null;
       if (this.hasStickyClass) {
+
         /* // For Opacity
         const scrollPosition = window.pageYOffset;
         const opacityIncreaseFactor = 1 / 80; // Adjust this value to control the speed of opacity change
@@ -58,9 +58,7 @@ export class HeaderComponent{
   }
 
   ngOnInit(): void {
-    this._loader.loading$.subscribe((isLoading: boolean) => {
-      this.loadingElem = isLoading;
-    });
+   
     this.NavbarThemeService.hasStickyClass$.subscribe((value) => {
       this.hasStickyClass = value;
 
