@@ -14,8 +14,8 @@ export class AboutComponent{
 
   clients: any = []
   
-  constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService, private DataService: DataService){}
-
+  constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService, private DataService: DataService, private cursorService: CursorService){}
+ 
   gallery = [
     {
       id:1,
@@ -77,6 +77,7 @@ export class AboutComponent{
    
     this.NavbarThemeService.changeHeaderTheme('dark');
     this.ScrollMagicService.initScrollMagic();
+    this.cursorService.initializeCursorAnimation();
 
     this.DataService.getClients().subscribe(data => {
       this.clients = data
