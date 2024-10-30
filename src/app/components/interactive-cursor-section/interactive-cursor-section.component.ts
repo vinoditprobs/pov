@@ -9,13 +9,29 @@ import { isPlatformBrowser, DOCUMENT } from "@angular/common"
 export class InteractiveCursorSectionComponent {
   items: any[] = [];
   possibleItems = [
-    { type: 'text', text: 'CRAFT' },
-    { type: 'text', text: 'AESTHETIC' },
-    { type: 'text', text: 'ART' },
-    { type: 'text', text: 'SPORTS' },
-    { type: 'image', src: 'images/home/banner-1.jpg' },
-    { type: 'image', src: 'images/home/banner-2.jpg' },
-    { type: 'image', src: 'images/home/banner-3.jpg' }
+    { type: 'text', text: 'People' },
+    { type: 'text', text: 'Craft' },
+    { type: 'text', text: 'Aesthetic' },
+    { type: 'text', text: 'Art' },
+    { type: 'text', text: 'Fashion' },
+    { type: 'text', text: 'Sports' },
+    { type: 'text', text: 'Installations' },
+    { type: 'text', text: 'Culture' },
+    { type: 'text', text: 'Community' },
+    { type: 'text', text: 'Underground' },
+    { type: 'text', text: 'Immersive' },
+    { type: 'text', text: 'Experience' },
+    { type: 'text', text: 'Innovation' },
+    { type: 'text', text: 'Visual' },
+    { type: 'text', text: 'Film' },
+    { type: 'text', text: 'Expression' },
+    { type: 'image', src: 'images/ethos/key-1.jpg' },
+    { type: 'image', src: 'images/ethos/key-2.jpg' },
+    { type: 'image', src: 'images/ethos/key-3.jpg' },
+    { type: 'image', src: 'images/ethos/key-4.jpg' },
+    { type: 'image', src: 'images/ethos/key-5.jpg' },
+    { type: 'image', src: 'images/ethos/key-6.jpg' },
+    { type: 'image', src: 'images/ethos/key-7.jpg' }
   ];
 
   itemTimers: any[] = [];
