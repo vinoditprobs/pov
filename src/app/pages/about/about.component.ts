@@ -19,39 +19,57 @@ export class AboutComponent {
 
   gallery = [
     {
+      id:1,
       img:'images/about/gallery/about-gallery-1.jpg',
+      webp:'images/about/gallery/about-gallery-1.webp',
       title:''
     },
     {
+      id:2,
       img:'images/about/gallery/about-gallery-2.jpg',
+      webp:'images/about/gallery/about-gallery-2.webp',
       title:''
     },
     {
+      id:3,
       img:'images/about/gallery/about-gallery-3.jpg',
+      webp:'images/about/gallery/about-gallery-3.webp',
       title:''
     },
     {
+      id:4,
       img:'images/about/gallery/about-gallery-4.jpg',
+      webp:'images/about/gallery/about-gallery-4.webp',
       title:''
     },
     {
+      id:5,
       img:'images/about/gallery/about-gallery-5.jpg',
+      webp:'images/about/gallery/about-gallery-5.webp',
       title:''
     },
     {
+      id:6,
       img:'images/about/gallery/about-gallery-6.jpg',
+      webp:'images/about/gallery/about-gallery-6.webp',
       title:''
     },
     {
+      id:7,
       img:'images/about/gallery/about-gallery-7.jpg',
+      webp:'images/about/gallery/about-gallery-7.webp',
       title:''
     },
     {
+      id:8,
       img:'images/about/gallery/about-gallery-8.jpg',
+      webp:'images/about/gallery/about-gallery-8.webp',
       title:''
     },
     {
+      id:9,
       img:'images/about/gallery/about-gallery-9.jpg',
+      webp:'images/about/gallery/about-gallery-9.webp',
       title:''
     }
   ]
