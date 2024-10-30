@@ -1,19 +1,18 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScrollMagicService } from '../../services/scroll-magic.service';
 import { NavbarThemeService } from '../../services/navbar-theme.service';
-import { LoaderService } from '../../services/loader.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent {
 
   navBarColor : string = 'transToLight'
 
-  constructor(private ScrollMagicService: ScrollMagicService, private NavbarThemeService: NavbarThemeService, private _loader: LoaderService){
-    this._loader.show();
+  constructor(private ScrollMagicService: ScrollMagicService, private NavbarThemeService: NavbarThemeService){
+    
   }
     slideAssets = [
       { 
@@ -53,13 +52,5 @@ export class HomeComponent implements AfterViewInit {
       this.NavbarThemeService.changeHeaderTheme('transToLight');
      // console.log('From Home');
     }
-
-    ngAfterViewInit(){
-      setTimeout(()=> {
-        this._loader.hide();
-      }, 500)
-     
-    }
-
 
 }
