@@ -17,24 +17,34 @@ export class HomeComponent implements AfterViewInit {
   }
     slideAssets = [
       { 
-        image: 'images/home/banner-1.jpg', 
-        title: 'expertise',
+        id:1,
+        image: 'images/home/banner-1.jpg',
+        webp: 'images/home/banner-1.webp', 
+        title: 'CREATIVITY FOR INFLUENCE',
       },
       { 
+        id:2,
         image: 'images/home/banner-2.jpg', 
-        title: 'expertise',
+        webp: 'images/home/banner-2.webp', 
+        title: 'CREATIVITY FOR INFLUENCE',
       },
       { 
-        image: 'images/home/banner-3.jpg', 
-        title: 'expertise',
+        id:3,
+        image: 'images/home/banner-3.jpg',
+        webp: 'images/home/banner-3.webp',  
+        title: 'CREATIVITY FOR INFLUENCE',
       },
       { 
+        id:4,
         image: 'images/home/banner-4.jpg', 
-        title: 'expertise',
+        webp: 'images/home/banner-4.webp',  
+        title: 'Point Of View',
       },
       { 
-        image: 'images/home/banner-5.jpg', 
-        title: 'expertise',
+        id:5,
+        image: 'images/home/banner-5.jpg',
+        webp: 'images/home/banner-5.webp',  
+        title: 'POV',
       }
     ];
 
