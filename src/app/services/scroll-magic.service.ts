@@ -1,5 +1,6 @@
 import { Injectable, Inject, PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser, DOCUMENT } from "@angular/common";
+import { gsap } from "gsap";
 // import { EasePack } from "gsap/all";
 
 declare const ScrollMagic: any;
