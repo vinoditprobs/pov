@@ -38,6 +38,7 @@ import { Error404Component } from './pages/error-404/error-404.component';
 import { NaharExcaliburComponent } from './pages/work/nahar-excalibur/nahar-excalibur.component';
 import { FullertonGrihashaktiComponent } from './pages/work/fullerton-grihashakti/fullerton-grihashakti.component';
 import { SuggestProjectsComponent } from './components/suggest-projects/suggest-projects.component'
+//import { gsap } from "gsap";
 
 @NgModule({
   declarations: [
