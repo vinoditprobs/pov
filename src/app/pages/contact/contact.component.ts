@@ -14,4 +14,7 @@ export class ContactComponent {
     this.NavbarThemeService.changeFooterTheme('light');
     this.ScrollMagicService.initScrollMagic();
   }
+  ngOnDestroy(){
+    this.NavbarThemeService.changeFooterTheme('dark');
+  }
 }
