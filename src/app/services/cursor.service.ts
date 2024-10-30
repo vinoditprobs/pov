@@ -1,14 +1,13 @@
-import { Component, HostListener, Inject, AfterViewInit, PLATFORM_ID } from '@angular/core';
+import { Injectable, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TweenMax } from 'gsap';
 
-@Component({
-  selector: 'app-cursor',
-  templateUrl: './cursor.component.html',
-  styleUrls: ['./cursor.component.scss'] // Updated this line
+@Injectable({
+  providedIn: 'root'
 })
-export class CursorComponent implements AfterViewInit {
-  
+export class CursorService {
+
+ 
   posX: number = 0;
   posY: number = 0;
   mouseX: number = 0;
@@ -17,11 +16,6 @@ export class CursorComponent implements AfterViewInit {
   follower!: HTMLElement;
 
   constructor(@Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngAfterViewInit(): void {
-    this.initializeCursorAnimation()
-  }
-
 
   initializeCursorAnimation(){
     if (isPlatformBrowser(this.platformId)) {
@@ -88,5 +82,5 @@ export class CursorComponent implements AfterViewInit {
     this.mouseX = event.pageX;
     this.mouseY = event.pageY;
   }
-  
+
 }

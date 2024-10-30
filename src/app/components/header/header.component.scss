@@ -1,66 +1,70 @@
 
 
+body{
 
-.loader{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    background-color: #fff;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    .logo{
-        
-    }
-
-    .pov_loader{
-        font-size: 30px;
-        line-height: 1;
-        font-weight: 600;
-        width: 150px;
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        .charV{
-        }
-        .leftChar{
-            position: absolute;
-            top:40%;
-            left: 0;
-        }
-        .rightChar{
-            position: absolute;
-            top:40%;
-            left: inherit;
-            right: 0;
-            opacity: 0.1;
-        }
-        .topChar{
-            position: absolute;
-            top:0;
-            left:39%;
-            writing-mode: vertical-rl;
-            opacity: 0.3;
-        }
-        .bottomChar{
-            position: absolute;
-            top:inherit;
-            bottom: 0;
-            left: 39%;
-            writing-mode: vertical-rl;
-            opacity: 0.6;
-        }
-
-    }
-
-    
 }
+
+.cursor {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  mix-blend-mode: difference;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  z-index: 10000;
+  transform: scale(1);
+  pointer-events: none;
+  user-select: none;
+  transition: 0.3s ease-in-out transform, 0.2s ease-in-out opacity;
+  &.star{
+    background-color: rgba(255, 0, 0, 1);
+    mix-blend-mode: normal;
+  }
+  &.active {
+    opacity: 0.5;
+    transform: scale(0);
+    mix-blend-mode: normal;
+  }
+  &.hovered {
+    opacity: 0.08;
+    mix-blend-mode: normal;
+  }
+}
+
+.cursor-follower {
+  position: absolute;
+  background-color: rgba(223, 223, 223, 0);
+  mix-blend-mode: difference;
+  background-position: center center;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  z-index: 10000;
+  transform: translate(5px, 5px);
+  user-select: none;
+  pointer-events: none;
+  transition: 0.3s ease-in-out transform, 0.2s ease-in-out opacity;
+  &.star{
+    background-image: url('/stage/images/cursor.svg');
+    background-color: rgba(223, 223, 223, 0);
+    mix-blend-mode: normal;
+  }
+  &.active {
+    opacity: 0.6;
+    background-color: rgba(223, 223, 223, 1);
+    transform: scale(3);
+    mix-blend-mode:lighten;
+  }
+
+  &.hovered {
+    opacity: 0.08;
+    background-color: rgba(223, 223, 223, 1);
+    mix-blend-mode: normal;
+  }
+}
+
+.link{
+cursor: none !important;
+}
+

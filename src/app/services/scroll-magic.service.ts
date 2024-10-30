@@ -14,8 +14,6 @@ export class ScrollMagicService {
   initScrollMagic() {
     if (isPlatformBrowser(this.platformId)){
       const controller = new ScrollMagic.Controller();
-
-
       // const parallaxKeywordSection = this.document.querySelectorAll('.parallaxKeywordSection .parallaxKeyword')
       // parallaxKeywordSection.forEach((item) => {
       //   const topTitle = item.querySelector('.parallax_title .title');
