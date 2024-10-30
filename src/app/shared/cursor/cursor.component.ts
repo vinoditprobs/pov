@@ -1,7 +1,6 @@
 import { Component, HostListener, Inject, OnInit, AfterViewInit, PLATFORM_ID } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TweenMax } from 'gsap';
-import { gsap } from "gsap";
 
 @Component({
   selector: 'app-cursor',
@@ -20,6 +19,7 @@ export class CursorComponent implements AfterViewInit {
   constructor(@Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) private platformId: Object){}
 
   ngAfterViewInit(): void {
+    //console.log('run');
     if (isPlatformBrowser(this.platformId)){
     this.cursor = this.document.querySelector('.cursor') as HTMLElement;
     this.follower = this.document.querySelector('.cursor-follower') as HTMLElement;
@@ -79,9 +79,8 @@ export class CursorComponent implements AfterViewInit {
           });
         });
       }
-}
-
-}
+    }
+  }
 
 
   @HostListener('document:mousemove', ['$event'])
