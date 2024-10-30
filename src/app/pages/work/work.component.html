@@ -19,7 +19,7 @@
                 <div class="col-sm-12">
                         <figure class="projectCard ">
                             <a class="clear link opacity-100 img" routerLink="/work/skechers" >
-                                <div class="ratio ratio-21x9 bg-dark"><img src="images/home/banner-3.jpg" alt=""></div>
+                                <div class="ratio ratio-21x9 bg-dark"><img src="images/home/banner-3.jpg" srcset="images/home/banner-3.webp" alt=""></div>
                             </a>
                             <figcaption >
                                 <a class="clear link opacity-100 img mb-2" routerLink="/work/skechers" >
@@ -58,7 +58,7 @@
                                 <figure class="projectCard" >
                                     <a class="clear link opacity-100 img" routerLink="{{project.exploreUrl}}" > 
                                         <div class="ratio ratio-4x3 bg-dark ">
-                                            <img src="{{project.image}}" alt="" >
+                                            <img [src]="project.webp ? project.webp : project.image" alt="{{project.title}}" >
                                         </div>
                                     </a>
                                     

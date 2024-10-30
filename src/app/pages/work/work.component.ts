@@ -5,9 +5,11 @@ import { DataService } from '../../services/data.service';
 
 
 interface projectInterface{
+  id: number,
   title: string,
   description: string
   image: string
+  webp: string
   categories: string[],
   exploreUrl: string
 }
