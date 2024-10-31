@@ -114,7 +114,7 @@ export class ScrollMagicService {
           duration: '75%', // Adjust duration as desired
           tweenChanges: true
         })
-          .setTween(gsap.to(item, { x: 250, ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .setTween(gsap.to(item, { x: 250,  autoAlpha: 1, ease: Linear.easeNone })) // Moves item 500px down from its current position
           .addTo(controller);
       });
 
@@ -126,7 +126,7 @@ export class ScrollMagicService {
           duration: '75%', // Adjust duration as desired
           tweenChanges: true
         })
-          .setTween(gsap.to(item, { x: -250, ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .setTween(gsap.to(item, { x: -250,  autoAlpha: 1, ease: Linear.easeNone })) // Moves item 500px down from its current position
           .addTo(controller);
       });
 
@@ -162,7 +162,7 @@ export class ScrollMagicService {
           triggerHook: 0,
           duration: "20%"
         })
-        .setTween(headline, { y: '20%', autoAlpha: 0, })
+        .setTween(headline, { y: '20%', autoAlpha: 0 })
         //.addIndicators()
         .addTo(controller);
       }

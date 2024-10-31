@@ -1208,7 +1208,9 @@ img{
         object-fit: cover;
         will-change: transform;
     }
-    
+    &.prxOpacity{
+        opacity: 0.4;
+    }
 }
 
 @media(min-width: 1200px){
