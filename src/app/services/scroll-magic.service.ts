@@ -1,6 +1,8 @@
 import { Injectable, Inject, PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser, DOCUMENT } from "@angular/common";
 // import { EasePack } from "gsap/all";
+import { TweenMax, gsap } from 'gsap';
+
 
 declare const ScrollMagic: any;
 
@@ -14,6 +16,7 @@ export class ScrollMagicService {
   initScrollMagic() {
     if (isPlatformBrowser(this.platformId)){
       const controller = new ScrollMagic.Controller();
+      const controllerForPrx = new ScrollMagic.Controller();
       // const parallaxKeywordSection = this.document.querySelectorAll('.parallaxKeywordSection .parallaxKeyword')
       // parallaxKeywordSection.forEach((item) => {
       //   const topTitle = item.querySelector('.parallax_title .title');
@@ -103,17 +106,54 @@ export class ScrollMagicService {
           .addTo(controller);
       }
 
-      // const parallaxUp = this.document.querySelectorAll(".parallaxUp");
-      // parallaxUp.forEach(item => {
-      //   new ScrollMagic.Scene({
-      //     triggerElement: item,
-      //     triggerHook: 0.5, // Adjust to 0.5 if you want to start earlier
-      //     duration: '50%', // Adjust duration as desired
-      //     tweenChanges: true
-      //   })
-      //     .setTween(gsap.to(item, { y: -300 })) // Moves item 500px down from its current position
-      //     .addTo(controller);
-      // });
+      const prxLeftToRight = this.document.querySelectorAll(".prxLeftToRight");
+      prxLeftToRight.forEach(item => {
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 0.5, // Adjust to 0.5 if you want to start earlier
+          duration: '75%', // Adjust duration as desired
+          tweenChanges: true
+        })
+          .setTween(gsap.to(item, { x: -250, ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .addTo(controller);
+      });
+
+      const prxRightToLeft = this.document.querySelectorAll(".prxRightToLeft");
+      prxRightToLeft.forEach(item => {
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 0.5, // Adjust to 0.5 if you want to start earlier
+          duration: '75%', // Adjust duration as desired
+          tweenChanges: true
+        })
+          .setTween(gsap.to(item, { x: 250, ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .addTo(controller);
+      });
+
+
+      const prxTopToBottom = this.document.querySelectorAll(".prxTopToBottom");
+      prxTopToBottom.forEach(item => {
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 1, // Adjust to 0.5 if you want to start earlier
+          duration: '150%', // Adjust duration as desired
+        })
+          .setTween(gsap.to(item, { y: 250, ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .addTo(controller);
+      });
+
+
+      const prxBottomToTop = this.document.querySelectorAll(".prxBottomToTop");
+      prxBottomToTop.forEach(item => {
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 1, // Adjust to 0.5 if you want to start earlier
+          duration: '150%', // Adjust duration as desired
+          tweenChanges: true
+        })
+          .setTween(gsap.to(item, { y: -250,  ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .addTo(controller);
+      });
       
       const headline = this.document.querySelector('.headline');
       //let shesKeys = gsap.to(".shes_keys", 1, {className: "shes_keys"});
