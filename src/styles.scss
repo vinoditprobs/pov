@@ -1175,14 +1175,14 @@ img{
 }
 
 img{
-    &.prxLeftToRight{
+    &.prxRightToLeft{
         height: 100%;
         min-width: calc(100% + 250px);
         width: auto;
         left: 0;
         object-fit: cover;
     }
-    &.prxRightToLeft{
+    &.prxLeftToRight{
         height: 100%;
         min-width: calc(100% + 250px);
         width: auto;
