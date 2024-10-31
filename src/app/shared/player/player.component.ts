@@ -14,7 +14,8 @@ export class PlayerComponent {
   @Input() videoSrc : string = ''
   @Input() posterSrc : string = ''
   @Input() autoPlay : boolean = false
-  @Input() cta : boolean = true
+  @Input() muteCTA : boolean = false
+  @Input() playCTA : boolean = false
 
   constructor(@Inject(DOCUMENT) private document: Document,  @Inject(PLATFORM_ID) private platformId: Object,){}
 

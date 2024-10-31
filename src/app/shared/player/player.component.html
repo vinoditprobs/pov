@@ -1,9 +1,11 @@
 
 
 <div #videoSection class="video_player" >
-   <div class="cta" *ngIf="cta" >
-        <span class="p_icon bg-white sm text-primary rounded" (click)="handlePlayPause()" ><i class="pi" [ngClass]="playing? 'pi-pause' : 'pi-play' " ></i></span>
+   <div class="cta" *ngIf="muteCTA" >
         <span class="p_icon bg-white sm text-primary rounded" (click)="handleMute()" ><i class="pi" [ngClass]="muted? 'pi-volume-off' : 'pi-volume-up' "  ></i></span>
+    </div>
+    <div class="play_cta" *ngIf="playCTA" [ngClass]="playing? 'hide' : '' " (click)="handlePlayPause()" >
+        <span class="p_icon bg-dark xl text-white border-0 rounded"  ><i class="pi" [ngClass]="playing? 'pi-pause' : 'pi-play' " ></i></span>
     </div>
     <video #video poster="{{posterSrc}}" class="video" loop playsinline  muted [controls]="false" preload="none">
         <source src="{{videoSrc}}" type="video/mp4" />
