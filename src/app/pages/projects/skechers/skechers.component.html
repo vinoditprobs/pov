@@ -38,12 +38,12 @@
             <div class="row gx-lg-5 mb-5" >
                 <div class="col-sm-12 col-md-6" >
                         <div class="ratio ratio-1x1 bg-light overflow-hidden" >
-                            <img src="projects/images/skechers/skechers-img-2.jpg" alt="" class="cover" >
+                            <img src="projects/images/skechers/skechers-img-2.jpg" alt="" class="prxZoomIn cover" >
                         </div>
                 </div>
                 <div class="col-sm-12 col-md-6" >
                     <div class="ratio ratio-1x1 bg-dark overflow-hidden" >
-                        <img src="projects/images/skechers/skechers-img-3.jpg" alt="" class="prxRightToLeft prxOpacity" >
+                        <img src="projects/images/skechers/skechers-img-3.jpg" alt="" class="prxZoomOut cover" >
                     </div>
             </div>
             </div>
@@ -52,8 +52,8 @@
                     <div class="container" >
                         <div class="row mb-4" >
                             <div class="col-sm-12 text-end" >
-                                <div class="ratio ratio-21x9 bg-dark" >
-
+                                <div class="ratio ratio-21x9 bg-dark overflow-hidden">
+                                    <img src="projects/images/skechers/skechers-img-4.jpg" alt="" class="prxTopToBottom" >
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ speak for themselves.
                     </div>
                 </div>
             </div>
-            <div class="row gx-lg-5 mb-5" >
+            <div class="row gx-lg-5 mb-5 " >
                 <div class="col-sm-12" >
                     <div class="ratio ratio-16x9 bg-dark" >
                         <app-player videoSrc="media/test.mp4" posterSrc="media/pov-films.jpg" [playCTA]="true" [muteCTA]="true"></app-player>
@@ -85,31 +85,39 @@ speak for themselves.
     </section>
     <section>
         <div class="container container_space " >
-            <div class="row gx-lg-5" >
-                <div class="col-sm-12 col-md-6" >
-                    <figure>
-                        <div class="figureImg mb-3" ></div>
-                        <figcaption class="p-4" >
-                            <h4 class="display-5 mb-3">BUILDING A HERO ARCHTYPE FOR RUNNING</h4>
-                            <p class="fs-5" >They asked, could we build our own hero rather than piggy backing an established star?</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-6" >
-                    <figure>
-                        <div class="figureImg mb-3" ></div>
-                        <figcaption class="p-4 text-end" >
-                            <p class="fs-4 mb-0" >Our answer,</p>
-                            <h4 class="display-5 mb-0">Kavita Raut Tungar.</h4>
-                        </figcaption>
-                    </figure>
+            <div class="row justify-content-center " >
+                <div class="col-sm-12 col-md-12 col-lg-8" >
+                    <div class="row gx-lg-5 mb-5 mt-5" >
+                        <div class="col-sm-12 col-md-6" >
+                            <figure class="prxBottomToTop" >
+                                <div class="figureImg mb-3" >
+                                    <img src="projects/images/skechers/skechers-img-5.jpg" alt=""  >
+                                </div>
+                                <figcaption class="p-4" >
+                                    <h4 class="display-5 mb-3">BUILDING A HERO ARCHTYPE FOR RUNNING</h4>
+                                    <p class="fs-5" >They asked, could we build our own hero rather than piggy backing an established star?</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-sm-12 col-md-6" >
+                            <figure class="prxTopToBottom" >
+                                <div class="figureImg mb-3" >
+                                    <img src="projects/images/skechers/skechers-img-6.jpg" alt="" >
+                                </div>
+                                <figcaption class="p-4 text-end" >
+                                    <p class="fs-4 mb-0" >Our answer,</p>
+                                    <h4 class="display-5 mb-0">Kavita Raut Tungar.</h4>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <!-- <section>
         <div class="container">
             <app-suggest-projects></app-suggest-projects>
         </div>
-    </section>
+    </section> -->
 </main>

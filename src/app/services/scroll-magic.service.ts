@@ -138,7 +138,7 @@ export class ScrollMagicService {
           triggerHook: 1, // Adjust to 0.5 if you want to start earlier
           duration: '150%', // Adjust duration as desired
         })
-          .setTween(gsap.to(item, { y: 250, ease: Linear.easeNone })) //  ease: Linear.easeNone Moves item 500px down from its current position
+          .setTween(gsap.to(item, { y: 250, autoAlpha: 1, ease: Linear.easeNone })) //  ease: Linear.easeNone Moves item 500px down from its current position
           .addTo(controller);
       });
 
@@ -151,10 +151,36 @@ export class ScrollMagicService {
           duration: '150%', // Adjust duration as desired
           tweenChanges: true
         })
-          .setTween(gsap.to(item, { y: -250,  ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .setTween(gsap.to(item, { y: -250, autoAlpha: 1, ease: Linear.easeNone })) // Moves item 500px down from its current position
           .addTo(controller);
       });
       
+
+      const prxZoomIn = this.document.querySelectorAll(".prxZoomIn");
+      prxZoomIn.forEach(item => {
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 1, // Adjust to 0.5 if you want to start earlier
+          duration: '150%', // Adjust duration as desired
+          tweenChanges: true
+        })
+          .setTween(gsap.to(item, { scale: 1.2, autoAlpha: 1,  ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .addTo(controller);
+      });
+
+
+      const prxZoomOut = this.document.querySelectorAll(".prxZoomOut");
+      prxZoomOut.forEach(item => {
+        new ScrollMagic.Scene({
+          triggerElement: item,
+          triggerHook: 1, // Adjust to 0.5 if you want to start earlier
+          duration: '150%', // Adjust duration as desired
+          tweenChanges: true
+        })
+          .setTween(gsap.to(item, { scale: 1, autoAlpha: 1, ease: Linear.easeNone })) // Moves item 500px down from its current position
+          .addTo(controller);
+      });
+
       const headline = this.document.querySelector('.headline');
       //let shesKeys = gsap.to(".shes_keys", 1, {className: "shes_keys"});
       if(headline){

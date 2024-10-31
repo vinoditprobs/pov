@@ -1161,7 +1161,7 @@ img{
 .figureImg{
     min-height: 200px;
     background-color: $dark;
-    max-height: 50vh;
+    overflow: hidden;
     img{
         width: 100%;
         height: auto;
@@ -1211,6 +1211,9 @@ img{
     &.prxOpacity{
         opacity: 0.4;
     }
+}
+.prxZoomOut{
+    transform: scale(1.2);
 }
 
 @media(min-width: 1200px){
