@@ -33,48 +33,8 @@ const routes: Routes = [
         component:WorkComponent
       },
       {
-        path:'skechers',
-        component:SkechersComponent
-      },
-      {
-        path:'essence',
-        component:EssenceComponent
-      },
-      {
-        path:'kaveri',
-        component:KaveriComponent
-      },
-      {
-        path:'zoi',
-        component:ZoiComponent
-      },
-      {
-        path:'baggit',
-        component:BaggitComponent
-      },
-      {
-        path:'ever-enviro',
-        component:EverEnviroComponent
-      },
-      {
-        path:'ozee',
-        component:OzeeComponent
-      },
-      {
-        path:'360-one',
-        component:One360Component
-      },
-      {
-        path:'ccc',
-        component:CccComponent
-      },
-      {
-        path:'nahar-excalibur',
-        component:NaharExcaliburComponent
-      },
-      {
-        path:'fullerton-grihashakti',
-        component:FullertonGrihashaktiComponent
+        path:'',
+        loadChildren:() => import('./pages/projects/projects.module').then(m => m.ProjectsModule)
       }
     ]
   },

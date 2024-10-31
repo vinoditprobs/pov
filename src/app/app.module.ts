@@ -25,19 +25,9 @@ import { ParallaxKeywordComponent } from './components/parallax-keyword/parallax
 import { InteractiveCursorSectionComponent } from './components/interactive-cursor-section/interactive-cursor-section.component';
 import { CursorComponent } from './shared/cursor/cursor.component';
 import { KeyFeaturesComponent } from './components/key-features/key-features.component';
-import { CccComponent } from './pages/projects/ccc/ccc.component';
-import { SkechersComponent } from './pages/projects/skechers/skechers.component';
-import { EssenceComponent } from './pages/projects/essence/essence.component';
-import { KaveriComponent } from './pages/projects/kaveri/kaveri.component';
-import { ZoiComponent } from './pages/projects/zoi/zoi.component';
-import { BaggitComponent } from './pages/projects/baggit/baggit.component';
-import { EverEnviroComponent } from './pages/projects/ever-enviro/ever-enviro.component';
-import { OzeeComponent } from './pages/projects/ozee/ozee.component';
-import { One360Component } from './pages/projects/one-360/one-360.component';
-import { Error404Component } from './pages/error-404/error-404.component';
-import { NaharExcaliburComponent } from './pages/projects/nahar-excalibur/nahar-excalibur.component';
-import { FullertonGrihashaktiComponent } from './pages/projects/fullerton-grihashakti/fullerton-grihashakti.component';
 import { SuggestProjectsComponent } from './components/suggest-projects/suggest-projects.component'
+import { Error404Component } from './pages/error-404/error-404.component';
+
 //import { gsap } from "gsap";
 
 @NgModule({
@@ -58,19 +48,8 @@ import { SuggestProjectsComponent } from './components/suggest-projects/suggest-
     InteractiveCursorSectionComponent,
     CursorComponent,
     KeyFeaturesComponent,
-    CccComponent,
-    SkechersComponent,
-    EssenceComponent,
-    KaveriComponent,
-    ZoiComponent,
-    BaggitComponent,
-    EverEnviroComponent,
-    OzeeComponent,
-    One360Component,
-    Error404Component,
-    NaharExcaliburComponent,
-    FullertonGrihashaktiComponent,
-    SuggestProjectsComponent
+    SuggestProjectsComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
