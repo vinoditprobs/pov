@@ -31,15 +31,13 @@ export class PlayerComponent {
   handleScroll() {
     const videoSectionOffsets = this.videoSection.nativeElement.getBoundingClientRect();
     const windowHalfHeight = window.innerHeight / 2;
-
+    
     if (videoSectionOffsets.top < windowHalfHeight && videoSectionOffsets.bottom > windowHalfHeight) {
       this.video.nativeElement.play();
-      this.playing = true;
-      this.muted = false
+      this.playing = true; 
     } else {
       this.video.nativeElement.pause();
       this.playing = false;
-      this.muted = false
     }
   }
 
@@ -48,11 +46,9 @@ export class PlayerComponent {
     if (this.playing) {
       this.playing = false;
       this.video.nativeElement.pause(); 
-      this.muted = false
     } else {
       this.playing = true;
       this.video.nativeElement.play(); 
-      this.muted = false
     }
   }
 
@@ -61,6 +57,5 @@ export class PlayerComponent {
     video.muted = !video.muted; // Toggle the mute state of the video
     this.muted = !this.muted;
   }
-
 
 }
