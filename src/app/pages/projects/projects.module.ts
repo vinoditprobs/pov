@@ -13,6 +13,7 @@ import { OzeeComponent } from './../../pages/projects/ozee/ozee.component';
 import { One360Component } from './../../pages/projects/one-360/one-360.component';
 import { NaharExcaliburComponent } from './../../pages/projects/nahar-excalibur/nahar-excalibur.component';
 import { FullertonGrihashaktiComponent } from './../../pages/projects/fullerton-grihashakti/fullerton-grihashakti.component';
+import { SharedModule } from "../../shared/shared.module";
 
 const router: Routes = [
     {
@@ -77,6 +78,7 @@ const router: Routes = [
     ],
     imports: [
         CommonModule,
+        SharedModule,
         RouterModule.forChild(router)
     ],
 })

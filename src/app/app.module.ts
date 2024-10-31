@@ -3,7 +3,6 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,15 +16,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WorkComponent } from './pages/work/work.component';
 import { EthosComponent } from './pages/ethos/ethos.component';
-import { SlideShowComponent } from './shared/slide-show/slide-show.component';
 import { ClientsComponent } from './components/clients/clients.component';
-import { PlayerComponent } from './shared/player/player.component';
-import { GalleryTickerComponent } from './shared/gallery-ticker/gallery-ticker.component';
 import { ParallaxKeywordComponent } from './components/parallax-keyword/parallax-keyword.component';
 import { InteractiveCursorSectionComponent } from './components/interactive-cursor-section/interactive-cursor-section.component';
 import { CursorComponent } from './shared/cursor/cursor.component';
 import { KeyFeaturesComponent } from './components/key-features/key-features.component';
-import { SuggestProjectsComponent } from './components/suggest-projects/suggest-projects.component'
+import { SharedModule } from './shared/shared.module';
 import { Error404Component } from './pages/error-404/error-404.component';
 
 //import { gsap } from "gsap";
@@ -40,23 +36,19 @@ import { Error404Component } from './pages/error-404/error-404.component';
     ContactComponent,
     WorkComponent,
     EthosComponent,
-    SlideShowComponent,
     ClientsComponent,
-    PlayerComponent,
-    GalleryTickerComponent,
     ParallaxKeywordComponent,
     InteractiveCursorSectionComponent,
     CursorComponent,
     KeyFeaturesComponent,
-    SuggestProjectsComponent,
     Error404Component
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    AnimateOnScrollModule
+    BrowserAnimationsModule,
+    SharedModule,
   ],
   providers: [
     provideClientHydration(),

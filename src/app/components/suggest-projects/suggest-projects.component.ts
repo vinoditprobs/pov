@@ -1,6 +1,16 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
 
+
+interface project {
+  id: number,
+  title: string,
+  description: string,
+  image:string,
+  webp: string,
+  categories:string []
+  exploreUrl: string
+}
 @Component({
   selector: 'app-suggest-projects',
   templateUrl: './suggest-projects.component.html',
