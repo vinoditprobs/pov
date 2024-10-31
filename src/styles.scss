@@ -1270,6 +1270,12 @@ img{
 }
 }
 
+@media(max-width:1200px){
+    .prxStopMd{
+        transform: none !important;
+    }
+}
+
 @media(max-width: 768px){
 .sm-vert-text{
     writing-mode: vertical-lr;
