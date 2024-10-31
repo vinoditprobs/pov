@@ -23,7 +23,6 @@ import { CursorComponent } from './shared/cursor/cursor.component';
 import { KeyFeaturesComponent } from './components/key-features/key-features.component';
 import { SharedModule } from './shared/shared.module';
 import { Error404Component } from './pages/error-404/error-404.component';
-
 //import { gsap } from "gsap";
 
 @NgModule({
@@ -41,7 +40,7 @@ import { Error404Component } from './pages/error-404/error-404.component';
     InteractiveCursorSectionComponent,
     CursorComponent,
     KeyFeaturesComponent,
-    Error404Component
+    Error404Component,
   ],
   imports: [
     BrowserModule,

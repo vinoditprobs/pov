@@ -8,6 +8,7 @@ import { SuggestProjectsComponent } from './../components/suggest-projects/sugge
 import { PlayerComponent } from "./player/player.component";
 import { GalleryTickerComponent } from "./gallery-ticker/gallery-ticker.component";
 import { SlideShowComponent } from "./slide-show/slide-show.component";
+import { ProjectResultComponent } from "../components/project-result/project-result.component";
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SlideShowComponent } from "./slide-show/slide-show.component";
         PlayerComponent,
         GalleryTickerComponent,
         SlideShowComponent,
+        ProjectResultComponent
     ],
     imports:[
         CommonModule,
@@ -28,6 +30,7 @@ import { SlideShowComponent } from "./slide-show/slide-show.component";
         AnimateOnScrollModule,
         GalleryTickerComponent,
         SlideShowComponent,
+        ProjectResultComponent
     ]
 })
 
