@@ -8,6 +8,7 @@ import Swiper from 'swiper';
   styleUrl: './project-result.component.scss'
 })
 export class ProjectResultComponent {
+@Input() results: any = []
 
   public swiperId: string = `swiper-result-${Math.random().toString(36).substring(2, 15)}`; // Unique ID
   private swiper: Swiper | undefined;
@@ -21,30 +22,20 @@ export class ProjectResultComponent {
   private initSwiper() {
     if (isPlatformBrowser(this.platformId)) {
       this.swiper = new Swiper(`#${this.swiperId}`, {  // Use unique ID selector
-        slidesPerView: 1.2,
-        spaceBetween: 24,
+        slidesPerView:'auto',
+        spaceBetween: 0,
+        rewind: true,
         freeMode: true,
-        watchSlidesProgress: true,
-        loop: true,
+        //loop: true,
         navigation: false,
         pagination: false,
         allowTouchMove: true,
-        speed: 5000,
+        speed: 6000,
+        mousewheel: true,
         autoplay: {
           delay: 0,
-          pauseOnMouseEnter: true
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1.2
-          },
-          768: {
-            slidesPerView: 2.2
-          },
-          1024: {
-            slidesPerView: 4.5
-          },
-        },
+          disableOnInteraction: false,
+        }
       });
     }
   }

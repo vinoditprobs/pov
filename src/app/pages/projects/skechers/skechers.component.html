@@ -115,11 +115,23 @@ speak for themselves.
             </div>
         </div>
     </section>
-    <section class="bg-dark mb-5" >
-        <div class="container-fluid py-3" >
+    <section class="bg-dark text-white mb-5" >
+        <div class="container-fluid py-4 py-lg-5" >
+            <div class="row mb-3" >
+                <div class="col-sm-12 " >
+                    <div class="container" >
+                        <h2 class="display-7 fw-lighter" >The Result</h2>
+                    </div>
+                </div>
+            </div>
+
             <div class="row" >
-                <div class="col-sm-12 text-white" >
-                    <app-project-result></app-project-result>
+                <div class="col-sm-12" >
+                    <app-project-result [results]="[
+                        {value:'2.5 MILLION',title:'Impressions over Social Media'},
+                        {value:'ABOVE 50%',title:'Engagement Rates'},
+                        {value:'TREMENDOUS ORGANIC',title:'WOM & PR TRACTION'}
+                        ]" ></app-project-result>
                 </div>
             </div>
         </div>

@@ -1,0 +1,9 @@
+.resultSwiper{
+    .swiper-wrapper{
+        transition-timing-function:linear !important;
+        text-align: center;
+        .swiper-slide{
+            width: auto !important;
+        }
+    }
+}
