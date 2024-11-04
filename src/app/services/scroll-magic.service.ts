@@ -286,16 +286,16 @@ export class ScrollMagicService {
             .addTo(controller);
         }
 
-        const povArt = this.document.querySelector('.povArt');
-        if (povArt) {
-            new ScrollMagic.Scene({
-              triggerElement:povArtSection, 
-              triggerHook:0,
-              duration: '100%'
-            })
-            .setTween(povArt, {  scale:1.2, opacity:1 })
-            .addTo(controller);
-        }
+        // const povArt = this.document.querySelector('.povArt');
+        // if (povArt) {
+        //     new ScrollMagic.Scene({
+        //       triggerElement:povArtSection, 
+        //       triggerHook:0,
+        //       duration: '100%'
+        //     })
+        //     .setTween(povArt, {  scale:1.2, opacity:1 })
+        //     .addTo(controller);
+        // }
 
      
 
