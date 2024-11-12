@@ -17,7 +17,7 @@ import { ProjectResultComponent } from "../components/project-result/project-res
         PlayerComponent,
         GalleryTickerComponent,
         SlideShowComponent,
-        ProjectResultComponent
+        ProjectResultComponent,
     ],
     imports:[
         CommonModule,

@@ -10,7 +10,7 @@ import { ScrollMagicService } from '../../../services/scroll-magic.service';
 export class EssenceComponent {
   constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService){}
   ngOnInit(){
-    this.NavbarThemeService.changeHeaderTheme('dark');
+    this.NavbarThemeService.changeHeaderTheme('transToLight');
     this.ScrollMagicService.initScrollMagic();
   }
 }

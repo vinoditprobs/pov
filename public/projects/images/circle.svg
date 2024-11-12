@@ -1,0 +1,13 @@
+<svg width="160" height="90" viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with Mask -->
+  <defs>
+    <mask id="circleMask">
+      <rect width="16" height="9" fill="white" />
+      <!-- Circle cut-out -->
+      <circle cx="8" cy="4.5" r="2" fill="black" />
+    </mask>
+  </defs>
+
+  <!-- Apply the mask to the black rectangle -->
+  <rect width="16" height="9" fill="black" mask="url(#circleMask)" />
+</svg>

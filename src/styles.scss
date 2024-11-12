@@ -840,14 +840,14 @@ section{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem 1.5rem;
-    justify-content: space-between;
+    gap: 2rem 1.5rem;
+    justify-content: flex-start;
     padding: 0;
     margin: 0;
     li{
         flex-shrink: 0;
         text-align: center;
-        width: 20%;
+        min-width: 20%;
         .tag{
             display: inline-block;
             padding:0.65rem 1.25rem;
@@ -1291,8 +1291,9 @@ img{
 }
 .tag_list{
     gap:1rem 0.5rem;
+    justify-content: space-around;
     li{
-        width: 30%;
+        min-width: 30%;
         .tag{
             font-size: 15px;
             padding: 0.5rem 1rem;

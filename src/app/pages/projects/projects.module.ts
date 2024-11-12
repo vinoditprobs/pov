@@ -14,6 +14,8 @@ import { One360Component } from './../../pages/projects/one-360/one-360.componen
 import { NaharExcaliburComponent } from './../../pages/projects/nahar-excalibur/nahar-excalibur.component';
 import { FullertonGrihashaktiComponent } from './../../pages/projects/fullerton-grihashakti/fullerton-grihashakti.component';
 import { SharedModule } from "../../shared/shared.module";
+import { WorkBannerComponent } from "../../components/work-banner/work-banner.component";
+
 
 const router: Routes = [
     {
@@ -75,6 +77,7 @@ const router: Routes = [
         One360Component,
         NaharExcaliburComponent,
         FullertonGrihashaktiComponent,
+        WorkBannerComponent,
     ],
     imports: [
         CommonModule,
