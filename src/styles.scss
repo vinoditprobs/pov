@@ -1353,7 +1353,7 @@ img{
 }
 .tag_list{
     gap:1rem 0.5rem;
-    justify-content: space-around;
+    justify-content: flex-start;
     li{
         min-width: 30%;
         .tag{
