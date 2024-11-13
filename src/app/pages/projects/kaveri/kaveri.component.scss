@@ -1,0 +1,97 @@
+
+   .palette_marquee{
+    height: 200px;
+    background-image: url('/projects/images/kaveri/kaveri-color-palette.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    animation: scroll 70s linear infinite;
+   }
+  @keyframes scroll {
+    from {
+      background-position-x:0;
+    }
+    to {
+        background-position-x:1000%;
+    }
+  }
+
+  .tripple-heart{
+    width: calc(2em + 2vw);
+    height: calc(2em + 2vw);
+    background-image: url('/projects/images/kaveri/heart-gray.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    animation: Heart 5s linear infinite alternate;
+    transform: translateY(170%);
+    &::before,&::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/projects/images/kaveri/heart-brown.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+     
+    }
+    &::before{
+      animation: brownHeart 5s linear infinite alternate;
+    }
+    &::after{
+      background-image: url('/projects/images/kaveri/heart-gold.svg');
+      animation: goldHeart 5s linear infinite alternate;
+    }
+    
+  }
+  @keyframes Heart {
+    0% {
+      transform: translateY(170%);
+    }
+    15% {
+      transform: translateY(85%);
+    }
+    30% {
+      transform: translateY(85%);
+    }
+    45% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes brownHeart {
+    0% {
+      transform: translateY(0%);
+    }
+    30% {
+      transform: translateY(0%);
+    }
+    45% {
+      transform: translateY(85%);
+    }
+    100% {
+      transform: translateY(85%);
+    }
+  }
+  @keyframes goldHeart {
+    0% {
+      transform: translateY(0%);
+    }
+    30% {
+      transform: translateY(0%);
+    }
+    45% {
+      transform: translateY(170%);
+    }
+    100% {
+      transform: translateY(170%);
+    }
+  }
+
+ 
