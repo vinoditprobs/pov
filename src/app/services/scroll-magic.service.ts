@@ -94,7 +94,7 @@ export class ScrollMagicService {
       
 
       const revealElements = this.document.querySelectorAll(
-        ".colUpAnim, .colDownAnim, .colLeftAnim, .colRightAnim, .customAnim"
+        ".colUpAnim, .colDownAnim, .colLeftAnim, .colRightAnim, .customAnim, .revealUpAnim, .revealDownAnim, .revealLeftAnim, .revealRightAnim"
       );
       for (let i = 0; i < revealElements.length; i++) {
         new ScrollMagic.Scene({

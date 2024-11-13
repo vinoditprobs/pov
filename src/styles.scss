@@ -398,6 +398,54 @@ button {
     }
 }
 
+.revealUpAnim,.revealDownAnim,.revealLeftAnim,.revealRightAnim{
+    overflow: hidden;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $light;
+        transition: transform cubic-bezier(0.39, 0.575, 0.565, 1) 0.75s;
+        z-index: 2;
+    }
+    &.dark{
+        &::after{
+            background-color: $dark;
+        }
+    }
+}
+.revealUpAnim{
+    &.visible{
+        &::after{
+            transform: translateY(-100%);
+        }
+    }  
+}
+.revealDownAnim{
+    &.visible{
+        &::after{
+            transform: translateY(100%);
+        }
+    }  
+}
+.revealLeftAnim{
+    &.visible{
+        &::after{
+            transform: translateX(-100%);
+        }
+    }  
+}
+.revealRightAnim{
+    &.visible{
+        &::after{
+            transform: translateX(100%);
+        }
+    }  
+}
 
 .container, .container-fluid{
     &.container_space{
