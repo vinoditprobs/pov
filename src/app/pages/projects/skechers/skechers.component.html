@@ -54,8 +54,10 @@ are already engaged<br>by other brands.<br>So how does one make<br>in-roads into
         <section >
             <div class="container-fluid g-0" >
                 <div class="row" >
-                    <div class="col-sm-12 maxInnerFit" >
-                        <app-player videoSrc="projects/images/zoi/zoi-logo-vid.mp4" posterSrc="projects/images/zoi/zoi-logo-vid.mp4" ></app-player>
+                    <div class="col-sm-12 overflow-hidden" >
+                        <div class="ratio ratio-21x9" style="transform: scale(1.01);" >
+                            <app-player [playCTA]="true" [muteCTA]="true" [autoPlay]="false" videoSrc="projects/images/skechers/kavita-raut-tungar.mp4" posterSrc="projects/images/skechers/kavita-raut-tungar.jpg" ></app-player>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,17 +66,27 @@ are already engaged<br>by other brands.<br>So how does one make<br>in-roads into
             <div class="container container_space" >
                 <div class="row mb-4 mb-lg-5" >
                     <div class="col-sm-12" >
-                        <p class="fs-5" >‘Choose Greatness’ was the theme on which we conceptualized a multi-film series, that chronicled Kavita Raut Tungar’s participation at the Skechers sponsored LA Marathon. It captures the grit and determination needed to rise to the top from difficult personal circumstances. The ensuing campaign helped Skechers engage runners and running communities across the country through an inspirational athelete's personal journey.</p>
+                        <p class="fs-5 mb-0" >‘Choose Greatness’ was the theme on which we conceptualized a multi-film series, that chronicled Kavita Raut Tungar’s participation at the Skechers sponsored LA Marathon. It captures the grit and determination needed to rise to the top from difficult personal circumstances. The ensuing campaign helped Skechers engage runners and running communities across the country through an inspirational athelete's personal journey.</p>
                     </div>
                 </div>
 
                 <div class="row mb-4 mb-lg-5 gx-lg-5" >
-                    <div class="col-sm-12 col-md-6" >1</div>
-                    <div class="col-sm-12 col-md-6" >2</div>
+                    <div class="col-sm-12 col-md-6" >
+                        <div class="ratio ratio-1x1 overflow-hidden revealUpAnim" >
+                        <app-player videoSrc="projects/images/skechers/skechers-img-1.mp4" posterSrc="projects/images/skechers/skechers-img-1.jpg" ></app-player>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6" >
+                        <div class="ratio ratio-1x1 overflow-hidden revealDownAnim" >
+                        <app-player videoSrc="projects/images/skechers/skechers-img-2.mp4" posterSrc="projects/images/skechers/skechers-img-2.jpg" ></app-player>
+                    </div>
+                    </div>
                 </div>
                 <div class="row gx-lg-5" >
-                    <div class="col-sm-12 col-md-6" >1</div>
-                    <div class="col-sm-12 col-md-6" >2</div>
+                    <div class="col-sm-12 col-md-6 revealDownAnim" ><img src="projects/images/skechers/skechers-img-3.jpg" alt="" class="w-100" ></div>
+                    <div class="col-sm-12 col-md-6 revealUpAnim" >
+                        <img src="projects/images/skechers/skechers-img-4.jpg" alt="" class="w-100" >
+                    </div>
                 </div>
             </div>
         </section>
