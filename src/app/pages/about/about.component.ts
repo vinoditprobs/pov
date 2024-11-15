@@ -64,12 +64,6 @@ export class AboutComponent{
       img:'images/about/tickr/tickr-8.jpg',
       webp:'images/about/tickr/tickr-8.webp',
       title:''
-    },
-    {
-      id:9,
-      img:'images/about/tickr/tickr-9.jpg',
-      webp:'images/about/tickr/tickr-9.webp',
-      title:''
     }
   ]
 
