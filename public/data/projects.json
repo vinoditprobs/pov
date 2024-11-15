@@ -1,20 +1,20 @@
 [
     {
       "id":1,
-      "title": "Essence",
+      "title": "Choose Greatness",
       "description": "We created a voice for the brand around Surf, Sand & Luxury. We wanted the message and medium to come together to `tell a story.",
-      "image": "images/projects/essence.jpg",
-      "webp": "images/projects/essence.webp",
-      "categories": ["Experience"],
-      "exploreUrl": "/work/essence"
+      "image": "images/projects/choose-greatness.jpg",
+      "webp": "images/projects/choose-greatness.webp",
+      "categories": ["Experience", "Digital","Innovations","Advertising"],
+      "exploreUrl": "/work/choose-greatness"
     },
     {
       "id":2,
       "title": "Kaveri",
-      "description": "Built around the voice ‘Everyday Beautiful’, we gave the brand a unique identity & communication palette that embraced a global idiom without losing its Indian roots..",
+      "description": "Built around the voice ‘Everyday Beautiful’, we gave the brand a unique identity & communication palette that embraced a global idiom without losing its Indian roots.",
       "image": "images/projects/kaveri.jpg",
       "webp": "images/projects/kaveri.webp",
-      "categories": ["Digital", "Innovations"],
+      "categories": ["Branding", "Visual Language", "Retail Space"],
       "exploreUrl": "/work/kaveri"
     },
     {
@@ -23,7 +23,7 @@
       "description": "We believe eating out is more than just food & drinks. We focused on the finer things in life that create a sense of memorability for a holistic hospitality brand.",
       "image": "images/projects/zoi.jpg",
       "webp": "images/projects/zoi.webp",
-      "categories": ["Experience", "Digital", "Innovations"],
+      "categories": ["Branding", "Strategy", "Digital"],
       "exploreUrl": "/work/zoi"
     },
     {
@@ -32,62 +32,80 @@
       "description": "We saw Baggit as an opportunity to evolve a brand voice that was different from the cataloguish nature of the category.",
       "image": "images/projects/baggit.jpg",
       "webp": "images/projects/baggit.webp",
-      "categories": ["Experience", "Innovations"],
+      "categories": ["Advertising", "Strategy","Communications"],
       "exploreUrl": "/work/baggit"
     },
     {
       "id":5,
-      "title": "Ozee",
-      "description": "We identified a natural constituent for OZEE—young, individualistic—that expects the world to revolve around their pace of life.",
-      "image": "images/projects/ozee.jpg",
-      "webp": "images/projects/ozee.webp",
+      "title": "Train Strong",
+      "description": "For a bad ass training shoe, the idea was fairly simple. Put the shoe in a tough training environment and let the visuals speak for themselves.",
+      "image": "images/projects/train-strong.jpg",
+      "webp": "images/projects/train-strong.webp",
       "categories": ["Experience", "Digital"],
-      "exploreUrl": "/work/ozee"
+      "exploreUrl": "/work/train-strong"
     },
     {
       "id":6,
       "title": "EverEnviro",
-      "description": "Built around the voice ‘Everyday Beautiful’, we gave the brand a unique identity & communication palette that embraced a global idiom without losing its Indian roots.",
+      "description": "POV was brought on - board to launch the brand through a concerted strategy exercise along with identity development.",
       "image": "images/projects/ever-enviro.jpg",
       "webp": "images/projects/ever-enviro.webp",
-      "categories": ["Experience", "Digital", "Innovations"],
+      "categories": ["Strategy", "Identity", "Branding", "Digital"],
       "exploreUrl": "/work/ever-enviro"
     },
     {
       "id":7,
-      "title": "360 ONE",
-      "description": "Built around the voice ‘Everyday Beautiful’, we gave the brand a unique identity & communication palette that embraced a global idiom without losing its Indian roots.",
-      "image": "images/projects/360-one.jpg",
-      "webp": "images/projects/360-one.webp",
-      "categories": [ "Digital", "Innovations"],
-      "exploreUrl": "/work/360-one"
+      "title": "Ozee",
+      "description": "We identified a natural constituent for OZEE — young, individualistic — that expects the world to revolve around their pace of life.",
+      "image": "images/projects/ozee.jpg",
+      "webp": "images/projects/ozee.webp",
+      "categories": [ "Advertising", "Digital", "Communications"],
+      "exploreUrl": "/work/ozee"
     },
     {
       "id":8,
+      "title": "Walking is a Sport",
+      "description": "To grow the shoe category, we conceptualized an event that pitched walking as a sport.",
+      "image": "images/projects/ccc.jpg",
+      "webp": "images/projects/ccc.webp",
+      "categories": ["Experience", "Digital", "Innovations"],
+      "exploreUrl": "/work/walking-is-a-sport"
+    },
+    {
+      "id":9,
+      "title": "360 ONE",
+      "description": "We went about with evolving a Brand Voice for 360 One that would then become the basis of a composite creative and content effort.",
+      "image": "images/projects/one-360.jpg",
+      "webp": "images/projects/one-360.webp",
+      "categories": ["Digital", "Strategy", "Communications", "Advertising"],
+      "exploreUrl": "/work/360-one"
+    },
+    {
+      "id":10,
       "title": "CCC",
       "description": "We were tasked with evolving a brand identity and visual design style that was global yet captured the regional identity and aspirations of the brand.",
       "image": "images/projects/ccc.jpg",
       "webp": "images/projects/ccc.webp",
-      "categories": ["Experience", "Digital", "Innovations"],
+      "categories": ["Identity",  "Visual Language"],
       "exploreUrl": "/work/ccc"
     },
     {
-      "id":9,
+      "id":11,
       "title": "Nahar Excalibur",
       "description": "When the promoters came to us with a luxury project that promised spectacular, timeless views, we knew we had something special on hand.",
       "image": "images/projects/nahar-excalibur.jpg",
       "webp": "images/projects/nahar-excalibur.webp",
-      "categories": ["Experience",  "Innovations"],
+      "categories": ["Strategy", "Identity", "Communications"],
       "exploreUrl": "/work/nahar-excalibur"
     },
     {
-      "id":10,
-      "title": "Fullerton Grihashakti",
-      "description": "At its heart, Fullerton Grihashakti would be a HFC that would ‘find a way’ to help those who came to them. We looked for symbolism that would reinforce the core values of the company. ",
-      "image": "images/projects/fullerton-grihashakti.jpg",
-      "webp": "images/projects/fullerton-grihashakti.webp",
-      "categories": ["Experience",  "Innovations"],
-      "exploreUrl": "/work/fullerton-grihashakti"
+      "id":12,
+      "title": "I-Pru Alternates",
+      "description": "Giving I-Pru Alternates Investments a design refresh. Our effort is intended to give the brand a design form that is distinct and helps it take shape as a luxury offering.",
+      "image": "images/projects/i-pru-alternates.jpg",
+      "webp": "images/projects/i-pru-alternates.webp",
+      "categories": ["Strategy", "Communications", "Advertising"],
+      "exploreUrl": "/work/i-pru-alternates"
     }
   ]
   

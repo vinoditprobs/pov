@@ -3,7 +3,6 @@ import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 
 import { CccComponent } from './../../pages/projects/ccc/ccc.component';
-import { SkechersComponent } from './../../pages/projects/skechers/skechers.component';
 import { EssenceComponent } from './../../pages/projects/essence/essence.component';
 import { KaveriComponent } from './../../pages/projects/kaveri/kaveri.component';
 import { ZoiComponent } from './../../pages/projects/zoi/zoi.component';
@@ -12,15 +11,18 @@ import { EverEnviroComponent } from './../../pages/projects/ever-enviro/ever-env
 import { OzeeComponent } from './../../pages/projects/ozee/ozee.component';
 import { One360Component } from './../../pages/projects/one-360/one-360.component';
 import { NaharExcaliburComponent } from './../../pages/projects/nahar-excalibur/nahar-excalibur.component';
-import { FullertonGrihashaktiComponent } from './../../pages/projects/fullerton-grihashakti/fullerton-grihashakti.component';
 import { SharedModule } from "../../shared/shared.module";
 import { WorkBannerComponent } from "../../components/work-banner/work-banner.component";
+import { ChooseGreatnessComponent } from './choose-greatness/choose-greatness.component';
+import { IPruAlternatesComponent } from './i-pru-alternates/i-pru-alternates.component';
+import { WalkingIsASportComponent } from './walking-is-a-sport/walking-is-a-sport.component';
+import { TrainStrongComponent } from './train-strong/train-strong.component';
 
 
 const router: Routes = [
     {
-        path:'skechers',
-        component:SkechersComponent
+        path:'choose-greatness',
+        component:ChooseGreatnessComponent
       },
       {
         path:'essence',
@@ -59,15 +61,22 @@ const router: Routes = [
         component:NaharExcaliburComponent
       },
       {
-        path:'fullerton-grihashakti',
-        component:FullertonGrihashaktiComponent
+        path:'i-pru-alternates',
+        component:IPruAlternatesComponent
+      },
+      {
+        path:'train-strong',
+        component:TrainStrongComponent
+      },
+      {
+        path:'walking-is-a-sport',
+        component:WalkingIsASportComponent
       }
 ]
 
 @NgModule({
     declarations: [
         CccComponent,
-        SkechersComponent,
         EssenceComponent,
         KaveriComponent,
         ZoiComponent,
@@ -76,8 +85,11 @@ const router: Routes = [
         OzeeComponent,
         One360Component,
         NaharExcaliburComponent,
-        FullertonGrihashaktiComponent,
         WorkBannerComponent,
+        ChooseGreatnessComponent,
+        IPruAlternatesComponent,
+        WalkingIsASportComponent,
+        TrainStrongComponent,
     ],
     imports: [
         CommonModule,
