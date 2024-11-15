@@ -24,15 +24,15 @@ export class GalleryTickerComponent implements AfterViewInit {
 
   private initSwiper() {
     if (isPlatformBrowser(this.platformId)) {
+
       this.swiper = new Swiper(`#${this.swiperId}`, {  // Use unique ID selector
         slidesPerView: 1.2,
         spaceBetween: 24,
-        freeMode: true,
-        watchSlidesProgress: true,
-        loop: true,
+        freeMode: false,
+        watchSlidesProgress: false,
         navigation: false,
         pagination: false,
-        allowTouchMove: true,
+        allowTouchMove: false,
         speed: 5000,
         autoplay: {
           delay: 0,
@@ -50,6 +50,7 @@ export class GalleryTickerComponent implements AfterViewInit {
             slidesPerView: 4.5
           },
         },
+        loop: true,
       });
     }
   }
