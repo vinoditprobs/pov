@@ -69,6 +69,18 @@ export class CursorService {
           this.follower.classList.remove('star');
         });
       });
+
+      const dragCursor = this.document.querySelectorAll('.dragCursor');
+      Array.from(dragCursor).forEach((drag) => {
+        drag.addEventListener('mouseenter', () => {
+          this.cursor.classList.add('drag');
+          this.follower.classList.add('drag');
+        });
+        drag.addEventListener('mouseleave', () => {
+          this.cursor.classList.remove('drag');
+          this.follower.classList.remove('drag');
+        });
+      });
     }
   }
 

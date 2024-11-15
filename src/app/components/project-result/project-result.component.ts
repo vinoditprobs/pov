@@ -30,12 +30,9 @@ export class ProjectResultComponent {
         navigation: false,
         pagination: false,
         allowTouchMove: true,
-        speed: 6000,
-        mousewheel: true,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-        }
+        speed: 0,
+        mousewheel: false,
+        autoplay:false
       });
     }
   }
