@@ -73,7 +73,8 @@ export class InteractiveCursorSectionComponent {
     const newItem = {
       ...randomItem,
       top: randomY,
-      left: randomX
+      left: randomX,
+      bgWhite: randomItem.type === 'text' ? Math.random() > 0.5 : false
     };
 
     this.items.push(newItem);
@@ -127,7 +128,8 @@ export class InteractiveCursorSectionComponent {
     const newItem = {
       ...randomItem,
       top: mouseY - 20, // Adjusting position vertically
-      left: mouseX - 20 // Adjusting position horizontally
+      left: mouseX - 20, // Adjusting position horizontally
+      bgWhite: randomItem.type === 'text' ? Math.random() > 0.5 : false
     };
 
     // Push the new item into the array to display multiple items
