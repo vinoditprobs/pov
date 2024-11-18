@@ -22,7 +22,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/projects/images/circle.svg');
+            background-image: url('/stage/projects/images/circle.svg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -38,22 +38,22 @@
         }
         &.octagon{
             &::before,&::after{
-                background-image: url('/projects/images/octagon.svg') !important;
+                background-image: url('/stage/projects/images/octagon.svg') !important;
             }
         }
         &.heptagon{
             &::before,&::after{
-                background-image: url('/projects/images/heptagon.svg') !important;
+                background-image: url('/stage/projects/images/heptagon.svg') !important;
             }
         }
         &.hexagon{
             &::before,&::after{
-                background-image: url('/projects/images/hexagon.svg') !important;
+                background-image: url('/stage/projects/images/hexagon.svg') !important;
             }
         }
         &.pentagon{
             &::before,&::after{
-                background-image: url('/projects/images/pentagon.svg') !important;
+                background-image: url('/stage/projects/images/pentagon.svg') !important;
             }
         }
     }   

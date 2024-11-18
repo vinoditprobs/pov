@@ -1,7 +1,7 @@
 
    .palette_marquee{
     height: 200px;
-    background-image: url('/projects/images/kaveri/kaveri-color-palette.jpg');
+    background-image: url('/stage/projects/images/kaveri/kaveri-color-palette.jpg');
     background-repeat: repeat-x;
     background-size: auto 100%;
     animation: scroll 70s linear infinite;
@@ -18,7 +18,7 @@
   .tripple-heart{
     width: calc(2em + 2vw);
     height: calc(2em + 2vw);
-    background-image: url('/projects/images/kaveri/heart-gray.svg');
+    background-image: url('/stage/projects/images/kaveri/heart-gray.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -32,7 +32,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-image: url('/projects/images/kaveri/heart-brown.svg');
+      background-image: url('/stage/projects/images/kaveri/heart-brown.svg');
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -42,7 +42,7 @@
       animation: brownHeart 5s linear infinite alternate;
     }
     &::after{
-      background-image: url('/projects/images/kaveri/heart-gold.svg');
+      background-image: url('/stage/projects/images/kaveri/heart-gold.svg');
       animation: goldHeart 5s linear infinite alternate;
     }
     
