@@ -26,7 +26,7 @@ export class GalleryTickerComponent implements AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
 
       this.swiper = new Swiper(`#${this.swiperId}`, {  // Use unique ID selector
-        slidesPerView: 1.2,
+        slidesPerView: 2.5,
         spaceBetween: 24,
         freeMode: false,
         watchSlidesProgress: false,
@@ -41,10 +41,10 @@ export class GalleryTickerComponent implements AfterViewInit {
         },
         breakpoints: {
           640: {
-            slidesPerView: 1.2
+            slidesPerView: 2.5
           },
           768: {
-            slidesPerView: 2.2
+            slidesPerView: 3.5
           },
           1024: {
             slidesPerView: 4.5
