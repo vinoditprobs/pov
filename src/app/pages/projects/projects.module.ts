@@ -17,6 +17,7 @@ import { ChooseGreatnessComponent } from './choose-greatness/choose-greatness.co
 import { IPruAlternatesComponent } from './i-pru-alternates/i-pru-alternates.component';
 import { WalkingIsASportComponent } from './walking-is-a-sport/walking-is-a-sport.component';
 import { TrainStrongComponent } from './train-strong/train-strong.component';
+import { BrowseAllWorkComponent } from "../../components/browse-all-work/browse-all-work.component";
 
 
 const router: Routes = [
@@ -90,6 +91,7 @@ const router: Routes = [
         IPruAlternatesComponent,
         WalkingIsASportComponent,
         TrainStrongComponent,
+        BrowseAllWorkComponent,
     ],
     imports: [
         CommonModule,
