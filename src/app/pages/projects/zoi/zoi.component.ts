@@ -10,7 +10,7 @@ import { ScrollMagicService } from '../../../services/scroll-magic.service';
 export class ZoiComponent {
   constructor(private NavbarThemeService: NavbarThemeService, private ScrollMagicService: ScrollMagicService){}
   ngOnInit(){
-    this.NavbarThemeService.changeHeaderTheme('dark');
+    this.NavbarThemeService.changeHeaderTheme('transToDark');
     this.ScrollMagicService.initScrollMagic();
   }
 }
