@@ -24,11 +24,11 @@
                             <figcaption >
                                 <a class="clear link opacity-100 img mb-2" routerLink="/work/essence" >
                                 <h3 class="title">Essence</h3>
-                                <p class="description h-auto">We created a voice 
+                                <!-- <p class="description h-auto">We created a voice 
                                     for the brand around Surf
                                     , Sand & Luxury.
                                     We wanted the message and medium to come together to `tell a story.
-                                </p>
+                                </p> -->
                             </a>
                                  <ul class="projectCategories" style="pointer-events: none;" >
                                     <li>
@@ -68,8 +68,8 @@
                                     <figcaption>
                                         <a class="clear link opacity-100 mb-2" routerLink="{{project.exploreUrl}}" >
                                         <h3 class="title "> {{project.title}}</h3>
-                                        <p class="description">{{project.description}}</p>
-                                        </a>
+                                        <!-- <p class="description">{{project.description}}</p>-->
+                                        </a> 
                                         <ul class="projectCategories mt-auto">
                                             <li *ngFor="let category of project.categories" >
                                                 <button class="category" [ngClass]="{ 'selected': selectedCategory === category }" (click)="onSelectCategory(category)" >{{category}}</button>
