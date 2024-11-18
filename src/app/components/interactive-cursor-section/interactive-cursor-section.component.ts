@@ -38,16 +38,18 @@ export class InteractiveCursorSectionComponent {
   autoItemInterval: any; // Interval for automatic item generation
   lastX: number = 0;
   lastY: number = 0;
-  minDistance: number = 150; // Minimum distance in pixels to trigger new items
+  minDistance: number = 250; // Minimum distance in pixels to trigger new items
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,){}
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)){
-      // if (window.innerWidth <= 1200) {
-      //   this.startAutoItemGeneration();
-      // }
-      this.startAutoItemGeneration();
+     if (window.innerWidth <= 1200) {
+         this.startAutoItemGeneration();
+      }else{
+        this.stopAutoItemGeneration();
+      }
+     
     }
 
   }
@@ -56,7 +58,7 @@ export class InteractiveCursorSectionComponent {
   startAutoItemGeneration() {
     this.autoItemInterval = setInterval(() => {
       this.addRandomItem();
-    }, 500); // Adjust interval time as needed (1000ms = 1 second)
+    }, 600); // Adjust interval time as needed (1000ms = 1 second)
   }
 
   // Method to display items at random positions
@@ -79,7 +81,7 @@ export class InteractiveCursorSectionComponent {
     // Create a timer for this specific item to disappear after 5 seconds
     const timer = setTimeout(() => {
       this.items = this.items.filter(item => item !== newItem);
-    }, 5000);
+    }, 4000);
 
     // Store the timer for this item so we can track it
     this.itemTimers.push(timer);
@@ -138,7 +140,7 @@ export class InteractiveCursorSectionComponent {
     // Create a timer for this specific item to disappear after 5 seconds
     const timer = setTimeout(() => {
       this.items = this.items.filter(item => item !== newItem);
-    }, 5000);
+    }, 4000);
 
     // Store the timer for this item so we can track it
     this.itemTimers.push(timer);

@@ -1,7 +1,7 @@
 <div [id]="swiperId" class="resultSwiper dragCursor"  >
     <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let result of results" >
-       <div class="result text-start px-4 px-lg-5" >
+      <div class="swiper-slide px-lg-2" *ngFor="let result of results" >
+       <div class="result text-start px-3 px-lg-5" >
         <h4 class="display-5 text-uppercase fw-normal mb-0" >{{result.value}}</h4>
         <p class="text-uppercase mb-0" >{{result.title}}</p>
        </div>

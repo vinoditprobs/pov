@@ -798,13 +798,13 @@ section{
         margin-bottom: 2rem;
         .sm-vert-text{
             transform-origin: 3px;  
-            text-align: right;
+            text-align: left;
         }
 
         &:nth-child(even){
             .sm-vert-text{
                // transform-origin: calc(100% - 10px); 
-                text-align: left;
+                text-align: right;
             }
             .col{
                 &:first-child{
