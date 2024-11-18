@@ -1326,6 +1326,18 @@ img{
 }
 
 
+@media(min-width:1680px) {
+    .container{
+        max-width: 1500px !important;
+    } 
+}
+
+@media(min-width:1920px) {
+    .container{
+        max-width: 1650px !important;
+    } 
+}
+
 @media(min-width: 1200px){
 
     
