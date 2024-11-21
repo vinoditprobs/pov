@@ -554,6 +554,9 @@ section{
         width: 100%;
         height: 100%;
         background-color: $secondary;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
         z-index: 1;
         .overlay{
             display: inline-block;
@@ -565,6 +568,9 @@ section{
             background-color: rgba($color: #000000, $alpha: 0.0);
             pointer-events: none;
             z-index: 1;
+        }
+        &.fixedBg{
+            background-attachment: fixed;
         }
     }
     .container{
