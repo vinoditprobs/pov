@@ -1,7 +1,8 @@
 <div class="swiper slideShow z-0 {{animStyle}}"  >
     <div class="swiper-wrapper">
       <div class="swiper-slide" *ngFor="let slide of sliderSlides" >
-        <img [src]="slide.webp ? slide.webp : slide.image" [alt]="slide.title" class="slide_bg" >
+        <img [src]="slide.webp ? slide.webp : slide.image" [alt]="slide.title" class="slide_bg" [ngClass]="slide.imageMob? 'd-none d-md-block' : ''" >
+        <img [src]="slide.webpMob ? slide.webpMob : slide.imageMob" [alt]="slide.title" class="slide_bg" [ngClass]="slide.imageMob? 'd-block d-md-none' : ''" >
       </div>
     </div>
   <div class="swiper-pagination aside" *ngIf="sliderPagination" ></div>
