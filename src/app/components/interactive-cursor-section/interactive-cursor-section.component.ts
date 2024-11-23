@@ -110,6 +110,11 @@ export class InteractiveCursorSectionComponent {
   }
 
   onMouseMove(event: MouseEvent) {
+
+    if (window.innerWidth <= 1200) {
+      return; 
+    }
+
     const mouseX = event.clientX;
     const mouseY = event.clientY;
 
