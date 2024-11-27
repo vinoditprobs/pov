@@ -38,7 +38,7 @@ export class InteractiveCursorSectionComponent {
   autoItemInterval: any; // Interval for automatic item generation
   lastX: number = 0;
   lastY: number = 0;
-  minDistance: number = 250; // Minimum distance in pixels to trigger new items
+  minDistance: number = 300; // Minimum distance in pixels to trigger new items
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,){}
 
@@ -58,7 +58,7 @@ export class InteractiveCursorSectionComponent {
   startAutoItemGeneration() {
     this.autoItemInterval = setInterval(() => {
       this.addRandomItem();
-    }, 600); // Adjust interval time as needed (1000ms = 1 second)
+    }, 700); // Adjust interval time as needed (1000ms = 1 second)
   }
 
   // Method to display items at random positions
@@ -90,16 +90,16 @@ export class InteractiveCursorSectionComponent {
   }
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    if (isPlatformBrowser(this.platformId)){
-    if (window.innerWidth <= 1200) {
-      this.startAutoItemGeneration();
-    } else {
-      this.stopAutoItemGeneration();
-    }
-  }
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: any) {
+  //   if (isPlatformBrowser(this.platformId)){
+  //   if (window.innerWidth <= 1200) {
+  //     this.startAutoItemGeneration();
+  //   } else {
+  //     this.stopAutoItemGeneration();
+  //   }
+  // }
+  // }
 
   // Stop automatic item generation
   stopAutoItemGeneration() {
@@ -113,44 +113,48 @@ export class InteractiveCursorSectionComponent {
 
     if (window.innerWidth <= 1200) {
       return; 
+    }else{
+
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+  
+      // Calculate the distance moved from the last item position
+      const distanceMoved = Math.sqrt(Math.pow(mouseX - this.lastX, 2) + Math.pow(mouseY - this.lastY, 2));
+  
+      // If the distance is less than the minimum threshold, do nothing
+      if (distanceMoved < this.minDistance) {
+        return;
+      }
+  
+      // Randomly pick an item from the possible items list
+      const randomItem = this.possibleItems[Math.floor(Math.random() * this.possibleItems.length)];
+  
+      // Add the new item at the current mouse position
+      const newItem = {
+        ...randomItem,
+        top: mouseY - 20, // Adjusting position vertically
+        left: mouseX - 20, // Adjusting position horizontally
+        bgWhite: randomItem.type === 'text' ? Math.random() > 0.5 : false
+      };
+  
+      // Push the new item into the array to display multiple items
+      this.items.push(newItem);
+  
+      // Store the current position as the last position
+      this.lastX = mouseX;
+      this.lastY = mouseY;
+  
+      // Create a timer for this specific item to disappear after 5 seconds
+      const timer = setTimeout(() => {
+        this.items = this.items.filter(item => item !== newItem);
+      }, 4000);
+  
+      // Store the timer for this item so we can track it
+      this.itemTimers.push(timer);
+
     }
 
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-    // Calculate the distance moved from the last item position
-    const distanceMoved = Math.sqrt(Math.pow(mouseX - this.lastX, 2) + Math.pow(mouseY - this.lastY, 2));
-
-    // If the distance is less than the minimum threshold, do nothing
-    if (distanceMoved < this.minDistance) {
-      return;
-    }
-
-    // Randomly pick an item from the possible items list
-    const randomItem = this.possibleItems[Math.floor(Math.random() * this.possibleItems.length)];
-
-    // Add the new item at the current mouse position
-    const newItem = {
-      ...randomItem,
-      top: mouseY - 20, // Adjusting position vertically
-      left: mouseX - 20, // Adjusting position horizontally
-      bgWhite: randomItem.type === 'text' ? Math.random() > 0.5 : false
-    };
-
-    // Push the new item into the array to display multiple items
-    this.items.push(newItem);
-
-    // Store the current position as the last position
-    this.lastX = mouseX;
-    this.lastY = mouseY;
-
-    // Create a timer for this specific item to disappear after 5 seconds
-    const timer = setTimeout(() => {
-      this.items = this.items.filter(item => item !== newItem);
-    }, 4000);
-
-    // Store the timer for this item so we can track it
-    this.itemTimers.push(timer);
+   
   }
 
   ngOnDestroy() {
