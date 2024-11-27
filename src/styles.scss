@@ -1331,6 +1331,11 @@ img{
     }
 }
 
+.ratio{
+    .img_overlay{
+        position: absolute;
+    }
+}
 
 @media(min-width:1680px) {
     .container{
@@ -1446,13 +1451,16 @@ img{
 .img_overlay{
     .vector{
         &.bgFixed{
-            background-size:calc(100% - 80px) auto;
+            background-size:contain;
             background-position: center center;
+            background-attachment: scroll;
         }
 
     }
     
 }
+
+
 }
 
 
