@@ -199,10 +199,10 @@ export class ScrollMagicService {
       if(brandSeek){
         new ScrollMagic.Scene({
           triggerElement: brandSeek,
-          triggerHook: 0.5,
-          duration: '50%'
+          triggerHook: 1,
+          duration: '100%'
         })
-        .setTween(brandSeek, { y:'20%', ease:'power2.out' })
+        .setTween(brandSeek, { y:'-40%', ease:'power2.out' })
         //.addIndicators()
         .addTo(controller);
       }

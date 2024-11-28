@@ -3,8 +3,10 @@
 .headline{
     line-height: 1;
 }
-.brandSeek{
-    line-height: 0.8;
+.keyword{
+    > span{
+        line-height: 0.8;
+    }
 }
 .stickySelectedWork{
     position: sticky;

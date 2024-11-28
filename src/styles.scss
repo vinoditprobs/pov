@@ -1420,6 +1420,13 @@ img{
 
 
 @media(max-width: 768px){
+
+   .noBrOnSM{
+    > br{
+        display: none;
+    }
+   } 
+
 .sm-vert-text{
     writing-mode: vertical-lr;
     transform: rotate(180deg);
