@@ -51,9 +51,7 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            },
-            "baseHref": "/stage/",
-            "deployUrl": "/stage/"
+            }
           },
           "configurations": {
             "production": {

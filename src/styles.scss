@@ -212,7 +212,7 @@ strong{
     height: 100%;
     background-color: rgba($color: $dark, $alpha: 0.5);
     z-index: 999;
-    cursor: url('/stage/images/close.png') 16 16, auto;
+    cursor: url('/images/close.png') 16 16, auto;
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
@@ -756,7 +756,7 @@ section{
         left: 51%;
     top: -0.7em;
     width: 30vw;
-    background-image: url('/stage/images/sfot.png');
+    background-image: url('/images/sfot.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 2em;
@@ -937,13 +937,13 @@ section{
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: url('/stage/images/option-3.gif');
+      background-image: url('/images/option-3.gif');
       background-size:100% auto;
       background-position:center center;
       background-repeat: no-repeat;
     }
     &.magnifying{
-        background-image: url('/stage/images/magnifying.png');
+        background-image: url('/images/magnifying.png');
         background-position:50%  50%;
         background-size:30% auto;
         &.visible{
