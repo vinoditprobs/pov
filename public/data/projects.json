@@ -1,7 +1,8 @@
 [
     {
       "id":1,
-      "title": "Choose Greatness",
+      "subText": "Choose Greatness",
+      "title": "Skechers",
       "description": "We created a voice for the brand around Surf, Sand & Luxury. We wanted the message and medium to come together to `tell a story.",
       "image": "images/projects/choose-greatness.jpg",
       "webp": "images/projects/choose-greatness.webp",

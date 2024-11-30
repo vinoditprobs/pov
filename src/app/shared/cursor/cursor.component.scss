@@ -85,3 +85,12 @@
   cursor: none !important;
 }
 
+.no_cursor{
+  .cursor{
+    display: none !important;
+  }
+  .cursor-follower{
+    display: none !important;
+  }
+}
+

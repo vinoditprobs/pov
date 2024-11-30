@@ -66,7 +66,8 @@
                                     </a>
                                     
                                     <figcaption>
-                                        <a class="clear link opacity-100 mb-2" routerLink="{{project.exploreUrl}}" >
+                                        <a class="clear link opacity-100 mb-2 mt-auto" routerLink="{{project.exploreUrl}}" >
+                                        <h3 class="subText" *ngIf="project.subText"> {{project.subText}}</h3>
                                         <h3 class="title "> {{project.title}}</h3>
                                         <!-- <p class="description">{{project.description}}</p>-->
                                         </a> 

@@ -993,10 +993,10 @@ section{
     max-width: 100%;
     width: 100%;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
-    gap: 1.55rem;
+    gap: 1.65rem;
     li{
         .logo{
             display: inline-block;
@@ -1026,7 +1026,6 @@ section{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
     text-decoration: none;
     .img{
         width: 100%;
@@ -1043,10 +1042,17 @@ section{
         flex-wrap: wrap;
         align-items: start;
         a{
-            display: inline-flex;
+        display: inline-flex;
         flex-wrap: wrap;
         align-items: start;
         width:100%;
+        }
+        .subText{
+            font-size: calc(1.2rem + 1vw);
+            font-weight: 200;
+            width: 100%;
+            line-height: 1;
+            text-decoration: none
         }
         .title{
             font-size: calc(1.5rem + 1.8vw);
@@ -1479,6 +1485,4 @@ img{
 
 
 }
-
-
 
