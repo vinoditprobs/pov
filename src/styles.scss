@@ -931,6 +931,18 @@ section{
             }
         }
     }
+    &.bordered{
+        li{
+            .tag{
+                background-color: transparent;
+                color: $dark;
+                &:hover{
+                    background-color: $dark;
+                    color: $light;
+                }
+            }
+        } 
+    }
 }
 
 .povArt{
