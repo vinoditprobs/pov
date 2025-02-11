@@ -898,6 +898,7 @@ section{
     justify-content: flex-start;
     padding: 0;
     margin: 0;
+    
     li{
         flex-shrink: 0;
         text-align: center;
@@ -916,6 +917,17 @@ section{
             &:hover{
                 background-color: transparent;
                 color: $dark;
+            }
+        }
+    }
+    &.light-outline{
+        li{
+            .tag{
+                border-color: $light;
+                &:hover{
+                    background-color: transparent;
+                    color: $light;
+                }
             }
         }
     }
